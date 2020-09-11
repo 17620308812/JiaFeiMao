@@ -1,0 +1,156 @@
+<template>
+  <div class="fix-header">
+    <div class="fix-header-left">
+      <img src="~@/resource/logo.png" />
+      <ul>
+        <router-link :class="[isIndex===true?'index':'other']" tag="li" to="/index">主页</router-link>
+        <li :class="[isIndex===true?'index':'other']">博客</li>
+        <li :class="[isIndex===true?'index':'other']">学院</li>
+        <li :class="[isIndex===true?'index':'other']">下载</li>
+        <li :class="[isIndex===true?'index':'other']">论坛</li>
+        <li :class="[isIndex===true?'index':'other']">问答</li>
+        <li :class="[isIndex===true?'index':'other']">直播</li>
+        <li :class="[isIndex===true?'index':'other']">会员</li>
+        <li :class="[isIndex===true?'index':'other']">
+          <IconShouji style="float:left" :width="30" :height="50" />
+          <span style="float:left">下载APP</span>
+        </li>
+      </ul>
+    </div>
+
+    <div style="width:30%;line-height:50px;margin:auto">
+      <el-input placeholder="请输入内容" size="small" v-model="searchText" class="input-with-select">
+        <el-button slot="append" icon="el-icon-search" @click="handleSearchBtn"></el-button>
+      </el-input>
+    </div>
+
+    <div class="fix-header-right">
+      <div style="padding-top:5px">
+        <el-avatar icon="el-icon-user-solid"></el-avatar>
+      </div>
+      <router-link tag="div" :class="['login-btn',isIndex===true?'index':'other']" to="/login">登陆</router-link>
+      <div :class="['register-btn',isIndex===true?'index':'other']">注册</div>
+      <el-badge :value="200" :max="99" class="item">
+        <el-button type="danger" size="small">评论</el-button>
+      </el-badge>
+    </div>
+  </div>
+</template>
+
+<script>
+import { IconShouji } from "@/components/icon.js";
+
+export default {
+  name: "Header",
+  components: {
+    IconShouji,
+  },
+  data() {
+    return {
+      searchText: "",
+      isIndex: true,
+    };
+  },
+  methods: {
+    handleSearchBtn() {
+      console.log(this.searchText);
+    },
+    handelChangePath(path) {
+      if (path === "/index") {
+        this.isIndex = true;
+      } else {
+        this.isIndex = false;
+      }
+    },
+  },
+  created() {
+    this.handelChangePath(this.$route.path);
+  },
+  watch: {
+    $route(to) {
+      this.handelChangePath(to.path);
+    },
+  },
+};
+</script>
+
+<style lang="less" scoped>
+.fix-header /deep/ .input-with-select .el-input-group__append {
+  background-color: rgb(212, 212, 212);
+}
+
+.fix-header /deep/ .input-with-select .el-input-group__append:hover {
+  background-color: #1890ff;
+  color: white;
+}
+
+.fix-header /deep/ .el-icon-search {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.fix-header /deep/ .el-badge__content.is-fixed {
+  top: 15px;
+  right: 15px;
+}
+
+.fix-header {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  //border-bottom: 1px solid rgb(222, 222, 222);
+  //background-image: url('~@/resource/head-bg.png');
+  .fix-header-left {
+    height: 100%;
+    img {
+      margin-left: 20px;
+      height: 100%;
+      float: left;
+      margin-right: 5px;
+    }
+    ul {
+      list-style: none;
+      float: left;
+      padding-left: 0px;
+      margin: 0px;
+      line-height: 50px;
+      li {
+        padding: 0 5px;
+        float: left;
+        cursor: pointer;
+      }
+    }
+  }
+  .fix-header-right {
+    float: right;
+    line-height: 50px;
+    display: flex;
+    padding-right: 40px;
+    .login-btn {
+      padding: 0px 10px;
+      cursor: pointer;
+    }
+    .register-btn {
+      padding: 0px 10px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+  .index {
+    //color: white;
+  }
+  .other {
+    color: black;
+  }
+  .index:hover {
+    //background-color: gray;
+    background-color: rgb(222, 222, 222);
+  }
+  .other:hover {
+    background-color: rgb(222, 222, 222);
+  }
+}
+</style>
