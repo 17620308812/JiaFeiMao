@@ -139,9 +139,9 @@ export default {
       cursor: pointer;
     }
   }
-  .index {
+  //.index {
     //color: white;
-  }
+  //}
   .other {
     color: black;
   }
