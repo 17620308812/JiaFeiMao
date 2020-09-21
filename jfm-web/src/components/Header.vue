@@ -96,11 +96,13 @@ export default {
 
 .fix-header {
   height: 50px;
+  min-width: 1350px;
   width: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
   display: flex;
+  z-index: 1;
   //border-bottom: 1px solid rgb(222, 222, 222);
   //background-image: url('~@/resource/head-bg.png');
   .fix-header-left {
@@ -139,16 +141,15 @@ export default {
       cursor: pointer;
     }
   }
-  //.index {
-    //color: white;
-  //}
+  .index {
+    color: white;
+  }
   .other {
     color: black;
   }
-  .index:hover {
-    //background-color: gray;
-    background-color: rgb(222, 222, 222);
-  }
+  // .index:hover {
+  //   background-color: gray;
+  // }
   .other:hover {
     background-color: rgb(222, 222, 222);
   }
