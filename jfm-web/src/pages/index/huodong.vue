@@ -96,7 +96,7 @@
           <el-tabs style="width:100%">
             <el-tab-pane label="综合">
               <div
-                style="color: #0da0b4;text-align:center;font-size:25px;line-height:60px;height:60px;text-align:center"
+                style="color: #0da0b4;text-align:center;font-size:25px;line-height:60px;height:60px;text-align:center;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
               >10.19版本更新公告：沙漠玫瑰 莎弥拉起舞而来</div>
               <div style="color:#424242">
                 <div style="display:flex;line-height: 40px;border-top: 1px solid rgb(222,222,222);">
