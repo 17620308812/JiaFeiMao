@@ -202,11 +202,13 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 283px;
+    //height: 283px;
+    height: 245px;
     border-radius: 5px;
     overflow: hidden;
     transform: translate(-50%, -50%);
     width: calc(100% - 30px);
+    //display: none;
   }
   .index-video {
     position: absolute;
