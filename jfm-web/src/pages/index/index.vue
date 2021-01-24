@@ -202,6 +202,7 @@
                 arrow="never"
                 :interval="5000"
                 ref="carousel"
+                @change="(curIndex, preIndex)=>handleCarouselChange(curIndex+1, preIndex)"
               >
                 <el-carousel-item name="1">
                   <img
@@ -405,7 +406,6 @@
       <Huodong />
       <!-- 推广视频 -->
       <TuiGuangVideo />
-
     </div>
   </div>
 </template>
@@ -417,10 +417,10 @@ import {
   JfmIconTianpingcheng,
   JfmIconHuodong,
   JfmIconKetang,
-  JfmIconYinle,
+  JfmIconYinle
 } from "@/components/colorFont.js";
-import TuiGuangVideo from '@/pages/index/tuiguang.vue'
-import Huodong from '@/pages/index/huodong.vue'
+import TuiGuangVideo from "@/pages/index/tuiguang.vue";
+import Huodong from "@/pages/index/huodong.vue";
 
 export default {
   name: "Index",
@@ -432,11 +432,11 @@ export default {
     JfmIconKetang,
     JfmIconYinle,
     TuiGuangVideo,
-    Huodong,
+    Huodong
   },
   data() {
     return {
-      currentSelect: "1",
+      currentSelect: "1"
     };
   },
   methods: {
@@ -444,7 +444,10 @@ export default {
       this.currentSelect = selectKey;
       this.$refs.carousel.setActiveItem(selectKey);
     },
-  },
+    handleCarouselChange(val) {
+      this.currentSelect = String(val);
+    }
+  }
 };
 </script>
 
@@ -466,9 +469,9 @@ export default {
 
 .index-header {
   height: 160px;
-  //background: url("~@/resource/index-header.png") no-repeat;
+  background: url("~@/resource/index-header.png") no-repeat;
   background-size: 100% 100%;
-  background-color: aqua;
+  //background-color: aqua;
   .index-header-bgc {
     position: absolute;
     top: 0px;

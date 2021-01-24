@@ -56,7 +56,7 @@ export default {
       console.log(this.searchText);
     },
     handelChangePath(path) {
-      if (path === "/index") {
+      if (path === "/index" || path === "/" ) {
         this.isIndex = true;
       } else {
         this.isIndex = false;

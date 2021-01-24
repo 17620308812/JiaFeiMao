@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import router from "@/pages/router/myRouter.js";
+import router from "@/router/myRouter.js";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 export default {
