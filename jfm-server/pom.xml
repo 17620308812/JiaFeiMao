@@ -13,6 +13,7 @@
         <module>jfm-authentication</module>
         <module>jfm-web-server</module>
         <module>jfm-common</module>
+        <module>jfm-gateway</module>
     </modules>
 
 

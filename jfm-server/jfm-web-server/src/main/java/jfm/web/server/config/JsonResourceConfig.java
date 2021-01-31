@@ -14,7 +14,7 @@ import java.util.List;
 
 
 @Configuration
-public class JsonConfig extends WebMvcConfigurationSupport {
+public class JsonResourceConfig extends WebMvcConfigurationSupport {
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {

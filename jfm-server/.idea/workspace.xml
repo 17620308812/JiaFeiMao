@@ -2,37 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="769383d1-3b25-4386-9eaa-5471de79f687" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/response/ServerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-eureka-server/src/main/java/jfm/eureka/server/JfmEurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-web-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/JfmWebServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/JsonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/service/ISessionAuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/service/impl/SessionAuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-web-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jfm-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jfm-web-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-web-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/JsonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/JsonResourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/jfm-eureka-server/target/" />
     <ignored path="$PROJECT_DIR$/jfm-authentication/target/" />
     <ignored path="$PROJECT_DIR$/jfm-web-server/target/" />
     <ignored path="$PROJECT_DIR$/jfm-common/target/" />
+    <ignored path="$PROJECT_DIR$/jfm-gateway/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,24 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ISessionAuthService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/service/ISessionAuthService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionAuthServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/service/impl/SessionAuthServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -69,25 +32,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/controller/IndexController.java">
+      <file leaf-file-name="RestTemplateConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/RestTemplateConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestTemplateConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/RestTemplateConfig.java">
+      <file leaf-file-name="JsonResourceConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/JsonResourceConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="173">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,26 +59,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jfm-web-server/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/JsonConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="109">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,42 +68,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/resources/application.yml">
+      <file leaf-file-name="JfmWebServerApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/JfmWebServerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="175">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-web-server/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="285">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jfm-gateway/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-authentication/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JfmAuthenticationApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
               <folding>
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#497#498#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-                <element signature="e#631#632#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#848#849#0" expanded="true" />
-                <element signature="e#883#884#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-200">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -187,7 +154,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/jfm-authentication/pom.xml" />
         <option value="$PROJECT_DIR$/jfm-eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/JfmWebServerApplication.java" />
         <option value="$PROJECT_DIR$/jfm-common/pom.xml" />
         <option value="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/service/ISessionAuthService.java" />
         <option value="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/User.java" />
@@ -199,8 +165,10 @@
         <option value="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/controller/UserController.java" />
         <option value="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/HttpConverterConfig.java" />
         <option value="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/FastJsonConfig.java" />
-        <option value="$PROJECT_DIR$/jfm-web-server/pom.xml" />
         <option value="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/JsonConfig.java" />
+        <option value="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/JfmWebServerApplication.java" />
+        <option value="$PROJECT_DIR$/jfm-web-server/pom.xml" />
+        <option value="$PROJECT_DIR$/jfm-gateway/pom.xml" />
       </list>
     </option>
   </component>
@@ -270,211 +238,20 @@
             <path>
               <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="response" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-web-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -599,16 +376,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612088833612</updated>
-      <workItem from="1612088836131" duration="6040000" />
+      <workItem from="1612088836131" duration="9483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6040000" />
+    <option name="totallyTimeSpent" value="9483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50030065" side_tool="true" weight="0.32957393" />
@@ -628,9 +404,9 @@
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49969932" visible="true" weight="0.32957393" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49969932" weight="0.32957393" />
       <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49969932" weight="0.32957393" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49969932" visible="true" weight="0.32957393" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.249549" />
       <window_info anchor="right" id="Bean Validation" />
       <window_info id="Web" side_tool="true" />
@@ -658,36 +434,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-authentication/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jfm-eureka-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -699,17 +449,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#352#353#0" expanded="true" />
             <element signature="e#384#385#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/JfmWebServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -780,23 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/RestTemplateConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -823,27 +545,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/RestTemplateConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/JsonResourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="109">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-authentication/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/JfmWebServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jfm-web-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        <state relative-caret-position="285">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/config/JsonConfig.java">
+    <entry file="file://$PROJECT_DIR$/jfm-gateway/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

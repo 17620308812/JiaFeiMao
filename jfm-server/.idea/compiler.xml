@@ -9,6 +9,7 @@
         <module name="jfm-authentication" />
         <module name="jfm-common" />
         <module name="jfm-eureka-server" />
+        <module name="jfm-gateway" />
         <module name="jfm-web-server" />
       </profile>
     </annotationProcessing>
