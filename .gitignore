@@ -1,2 +1,3 @@
-/jjfm-web/build
-/jjfm-web/node_modules
+/jfm-web/build
+/jfm-web/node_modules
+/jfm-server/**/target

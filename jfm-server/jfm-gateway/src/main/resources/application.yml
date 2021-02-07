@@ -1,0 +1,18 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: service-gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
+# url用于配置符合path的请求路径路由到的服务地址。
+zuul:
+  routes:
+    #此名称可以随意定义
+    web-service:
+      url: 'http://localhost:8083/'
+      path: /web-server/**
