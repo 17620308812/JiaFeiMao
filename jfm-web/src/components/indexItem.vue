@@ -6,7 +6,7 @@
         音乐
       </div>
     </div>
-    <div style="display: flex; height: 300px">
+    <div style="display: flex; height: 400px; overflow: hidden">
       <div style="width: 77%; height: 100%">
         <div style="margin-right: 10px">
           <div
@@ -16,7 +16,7 @@
               flex-wrap: wrap;
             "
           >
-            <div class="item-single-style">
+            <div v-for="it in 15" :key="it" class="item-single-style">
               <div
                 style="
                   height: 116px;
@@ -57,7 +57,7 @@
                 </div>
               </div>
               <div>
-                <div style="font-size: 14px; margin: 10px 0 8px">
+                <div style="font-size: 14px; margin: 10px 0 8px; height: 36px">
                   BLACKPINK 最美好的年华与你携手工地
                 </div>
                 <div
@@ -68,19 +68,17 @@
                     display: flex;
                   "
                 >
-                  <JfmIconUser size="15" /><span style="margin-left: 5px"
-                    >棒棒糖盟主</span
-                  >
+                  <JfmIconUser size="15" /><span style="margin-left: 5px">棒棒糖盟主</span >
                 </div>
               </div>
             </div>
+            <!-- <div class="item-single-style"></div>
             <div class="item-single-style"></div>
             <div class="item-single-style"></div>
             <div class="item-single-style"></div>
             <div class="item-single-style"></div>
             <div class="item-single-style"></div>
-            <div class="item-single-style"></div>
-            <div class="item-single-style"></div>
+            <div class="item-single-style"></div> -->
           </div>
         </div>
       </div>
@@ -90,6 +88,7 @@
             display: flex;
             justify-content: space-between;
             line-height: 36px;
+            margin-top: -7px;
           "
         >
           <div style="font-size: 20px">排行榜</div>
@@ -220,6 +219,7 @@ export default {
 @media screen and (max-width: 1600px) {
   .item-single-style {
     width: calc((100% - 45px) / 4);
+    margin-bottom: 15px;
   }
 }
 
@@ -227,13 +227,15 @@ export default {
 @media screen and (min-width: 1600px) {
   .item-single-style {
     width: calc((100% - 60px) / 5);
-    height: 190px;
+    //height: 190px;
+    margin-bottom: 15px;
   }
 }
 //大于1800
 @media screen and (min-width: 1800px) {
   .item-single-style {
     width: calc((100% - 75px) / 6);
+    margin-bottom: 15px;
   }
 }
 </style>

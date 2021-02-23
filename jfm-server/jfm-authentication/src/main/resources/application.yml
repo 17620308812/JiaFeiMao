@@ -7,3 +7,8 @@ server:
 spring:
   application:
     name: service-authentication
+  datasource:
+    url: jdbc:oracle:thin://localhost:1521/orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: jfm
+    password: jfm

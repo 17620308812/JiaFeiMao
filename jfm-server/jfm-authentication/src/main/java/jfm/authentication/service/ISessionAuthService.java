@@ -1,4 +1,4 @@
-package jfm.web.server.service;
+package jfm.authentication.service;
 
 
 import jfm.common.user.User;
@@ -7,5 +7,5 @@ public interface ISessionAuthService {
     /**
      * 创建session
      */
-    User createSession(String userAccount,String userPassword);
+    User createSession(User user) throws Exception;
 }

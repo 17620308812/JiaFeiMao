@@ -17,7 +17,6 @@ public class User {
      * 用户昵称
      */
     private String userNickName;
-
     /**
      * 用户头像
      */

@@ -16,3 +16,6 @@ zuul:
     web-service:
       url: 'http://localhost:8083/'
       path: /web-server/**
+    authentication-server:
+      url: 'http://localhost:8082/'
+      path: /authentication-server/**
