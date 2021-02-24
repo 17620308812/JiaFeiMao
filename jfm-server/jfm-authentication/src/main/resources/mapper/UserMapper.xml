@@ -2,5 +2,44 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="jfm.authentication.repository.UserMapper">
 
+    <resultMap id="User" type="jfm.common.user.User">
+        <result column="C_USER_ACCOUNT" property="userAccount"/>
+        <result column="C_USER_PASSWORD" property="userPassword"/>
+        <result column="C_USER_NICK_NAME" property="userNickName"/>
+        <result column="C_USER_HEAD_IMG" property="userHeaderImg"/>
+        <result column="D_REGISTER_DATE" property="userRegisterDate"/>
+        <result column="D_REGISTER_TIME" property="userRegisterTime"/>
+        <result column="C_STATUS" property="status"/>
+    </resultMap>
+
+    <select id="queryUser" resultMap="User">
+        SELECT A.C_USER_ACCOUNT,
+               A.C_USER_PASSWORD,
+               A.C_USER_NICK_NAME,
+               A.C_USER_HEAD_IMG,
+               A.D_REGISTER_DATE,
+               A.D_REGISTER_TIME,
+               A.C_STATUS FROM JFM_USER A
+               WHERE A.C_USER_ACCOUNT = #{userAccount} AND A.C_USER_PASSWORD = #{C_USER_PASSWORD}
+    </select>
+
+    <insert id="createUser">
+        INSERT INTO JFM_USER(
+            C_USER_ACCOUNT,
+            C_USER_PASSWORD,
+            C_USER_NICK_NAME,
+            C_USER_HEAD_IMG,
+            D_REGISTER_DATE,
+            D_REGISTER_TIME,
+            C_STATUS) VALUES (
+            #{userAccount},
+            #{userPassword},
+            #{userNickName},
+            #{userHeaderImg},
+            #{userRegisterDate},
+            #{userRegisterTime},
+            #{status}
+            );
+    </insert>
 
 </mapper>

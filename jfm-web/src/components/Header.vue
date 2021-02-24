@@ -50,9 +50,12 @@
         to="/login"
         >登陆</router-link
       >
-      <div :class="['register-btn', isIndex === true ? 'index' : 'other']">
+      <router-link 
+      tag="div"
+      :class="['register-btn', isIndex === true ? 'index' : 'other']"
+      to="/register" >
         注册
-      </div>
+      </router-link>
       <el-badge :value="200" :max="99" class="item">
         <el-button type="danger" size="small">评论</el-button>
       </el-badge>

@@ -2,10 +2,6 @@ package jfm.common.user;
 
 public class User {
     /**
-     * 用户ID
-     */
-    private String userId;
-    /**
      * 用户账号
      */
     private String userAccount;
@@ -22,20 +18,50 @@ public class User {
      */
     private String userHeaderImg;
 
+    /**
+     * 注册日期
+     */
+    private int userRegisterDate;
+    /**
+     * 注册时间
+     */
+    private int userRegisterTime;
+    /**
+     * 状态 状态 0正常 1冻结
+     */
+    private String status;
+
+
+    public int getUserRegisterDate() {
+        return userRegisterDate;
+    }
+
+    public void setUserRegisterDate(int userRegisterDate) {
+        this.userRegisterDate = userRegisterDate;
+    }
+
+    public int getUserRegisterTime() {
+        return userRegisterTime;
+    }
+
+    public void setUserRegisterTime(int userRegisterTime) {
+        this.userRegisterTime = userRegisterTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public String getUserHeaderImg() {
         return userHeaderImg;
     }
 
     public void setUserHeaderImg(String userHeaderImg) {
         this.userHeaderImg = userHeaderImg;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public String getUserAccount() {

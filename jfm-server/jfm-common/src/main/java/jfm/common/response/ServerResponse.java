@@ -13,6 +13,10 @@ public class ServerResponse<T> {
         return new ServerResponse("0", "", data);
     }
 
+    public static <T> ServerResponse<T> success() {
+        return new ServerResponse("0", "", null);
+    }
+
 
     public ServerResponse(String returnCode, String returnMsg, T data) {
         this.returnCode = returnCode;

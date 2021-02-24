@@ -9,6 +9,10 @@ import 'vue-video-player/src/custom-theme.css'
 import 'video.js/dist/video-js.css'
 // import 'vue-video-player/src/custom-theme.css'
 
+import Axios from '@/config/axios'
+
+Vue.prototype.$http = Axios;
+
 Vue.use(VideoPlayer, /* {
   options: global default options,
   events: global videojs events
