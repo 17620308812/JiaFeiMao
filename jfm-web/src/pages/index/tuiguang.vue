@@ -100,7 +100,7 @@
       </div>
     </div>
     <div
-      style="display:flex;padding-top:20px;overflow:hidden;height:0px;transition: height 0.5s"
+      style="display:flex;overflow:hidden;height:0px;transition: height 0.5s"
       ref="indexBottomImg"
       @mouseenter="onMouseHover_2()"
       @mouseleave="omMouseLeave_2()"
@@ -153,22 +153,26 @@ export default {
       this.isMoveEnter_1 = true;
       this.moveType = type;
       this.$refs.indexBottomImg.style.height = "145px";
+      this.$refs.indexBottomImg.style.paddingTop = '20px';
     },
 
     omMouseLeave_1() {
       this.isMoveEnter_1 = false;
       if (!this.isMoveEnter_2) {
         this.$refs.indexBottomImg.style.height = "0px";
+        this.$refs.indexBottomImg.style.paddingTop = '0px';
       }
     },
     onMouseHover_2() {
       this.isMoveEnter_2 = true;
       this.$refs.indexBottomImg.style.height = "145px";
+      this.$refs.indexBottomImg.style.paddingTop = '20px';
     },
     omMouseLeave_2() {
       this.isMoveEnter_2 = false;
       if (!this.isMoveEnter_1) {
         this.$refs.indexBottomImg.style.height = "0px";
+        this.$refs.indexBottomImg.style.paddingTop = '0px';
       }
     },
   },
@@ -203,7 +207,7 @@ export default {
     top: 50%;
     left: 50%;
     //height: 283px;
-    height: 245px;
+    height: 282px;
     border-radius: 5px;
     overflow: hidden;
     transform: translate(-50%, -50%);

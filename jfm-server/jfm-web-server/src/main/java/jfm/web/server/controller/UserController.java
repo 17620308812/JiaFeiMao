@@ -1,7 +1,7 @@
 package jfm.web.server.controller;
 
 import jfm.common.response.ServerResponse;
-import jfm.web.server.service.ISessionAuthService;
+import jfm.authentication.service.ISessionAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

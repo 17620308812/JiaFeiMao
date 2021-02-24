@@ -3,33 +3,59 @@
     <div class="fix-header-left">
       <img src="~@/resource/logo.png" />
       <ul>
-        <router-link :class="[isIndex===true?'index':'other']" tag="li" to="/index">主页</router-link>
-        <li :class="[isIndex===true?'index':'other']">博客</li>
-        <li :class="[isIndex===true?'index':'other']">学院</li>
-        <li :class="[isIndex===true?'index':'other']">下载</li>
-        <li :class="[isIndex===true?'index':'other']">论坛</li>
-        <li :class="[isIndex===true?'index':'other']">问答</li>
-        <li :class="[isIndex===true?'index':'other']">直播</li>
-        <li :class="[isIndex===true?'index':'other']">会员</li>
-        <li :class="[isIndex===true?'index':'other']">
-          <IconShouji style="float:left" :width="30" :height="50" />
-          <span style="float:left">下载APP</span>
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/index"
+          >主页</router-link
+        >
+        <li :class="[isIndex === true ? 'index' : 'other']">博客</li>
+        <li :class="[isIndex === true ? 'index' : 'other']">学院</li>
+        <li :class="[isIndex === true ? 'index' : 'other']">下载</li>
+        <li :class="[isIndex === true ? 'index' : 'other']">论坛</li>
+        <li :class="[isIndex === true ? 'index' : 'other']">问答</li>
+        <li :class="[isIndex === true ? 'index' : 'other']">直播</li>
+        <li :class="[isIndex === true ? 'index' : 'other']">会员</li>
+        <li :class="[isIndex === true ? 'index' : 'other']">
+          <div style="display: flex">
+            <span>下载APP</span>
+            <div style="padding-top: 10px;height: 40px;"><IconShouji :size="30" /></div>
+          </div>
         </li>
       </ul>
     </div>
 
-    <div style="width:30%;line-height:50px;margin:auto">
-      <el-input placeholder="请输入内容" size="small" v-model="searchText" class="input-with-select">
-        <el-button slot="append" icon="el-icon-search" @click="handleSearchBtn"></el-button>
+    <div style="width: 30%; line-height: 50px; margin: auto">
+      <el-input
+        placeholder="请输入内容"
+        size="small"
+        v-model="searchText"
+        class="input-with-select"
+      >
+        <el-button
+          slot="append"
+          icon="el-icon-search"
+          @click="handleSearchBtn"
+        ></el-button>
       </el-input>
     </div>
 
     <div class="fix-header-right">
-      <div style="padding-top:5px">
+      <div style="padding-top: 5px">
         <el-avatar icon="el-icon-user-solid"></el-avatar>
       </div>
-      <router-link tag="div" :class="['login-btn',isIndex===true?'index':'other']" to="/login">登陆</router-link>
-      <div :class="['register-btn',isIndex===true?'index':'other']">注册</div>
+      <router-link
+        tag="div"
+        :class="['login-btn', isIndex === true ? 'index' : 'other']"
+        to="/login"
+        >登陆</router-link
+      >
+      <router-link 
+      tag="div"
+      :class="['register-btn', isIndex === true ? 'index' : 'other']"
+      to="/register" >
+        注册
+      </router-link>
       <el-badge :value="200" :max="99" class="item">
         <el-button type="danger" size="small">评论</el-button>
       </el-badge>
@@ -38,7 +64,7 @@
 </template>
 
 <script>
-import { IconShouji } from "@/components/icon.js";
+import { IconShouji } from "@/components/colorFont";
 
 export default {
   name: "Header",
@@ -56,7 +82,7 @@ export default {
       console.log(this.searchText);
     },
     handelChangePath(path) {
-      if (path === "/index" || path === "/" ) {
+      if (path === "/index" || path === "/") {
         this.isIndex = true;
       } else {
         this.isIndex = false;
