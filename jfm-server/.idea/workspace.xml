@@ -2,48 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="769383d1-3b25-4386-9eaa-5471de79f687" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/config/StaticResourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/repository/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/service/ISessionAuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/service/impl/SessionAuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-authentication/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/utils/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/ZuulFilterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jfm-web/src/components/indexItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jfm-web/src/config/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jfm-web/src/pages/user/register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-authentication/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/controller/IndexController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-authentication/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-authentication/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-authentication/target/classes/jfm/authentication/JfmAuthenticationApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-authentication/target/classes/jfm/authentication/JfmAuthenticationApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-authentication/target/classes/jfm/authentication/controller/IndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/response/ServerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/response/ServerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jfm-authentication/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-authentication/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-common/target/classes/jfm/common/response/ServerResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-common/target/classes/jfm/common/response/ServerResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jfm-common/target/classes/jfm/common/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-common/target/classes/jfm/common/user/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-common/target/jfm-common-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-common/target/jfm-common-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/JfmZuulFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/JfmZuulFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/service/ISessionAuthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/service/impl/SessionAuthServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jfm-web-server/target/classes/jfm/web/server/service/impl/SessionAuthServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/jfm-web-server/target/classes/jfm/web/server/service/impl/SessionAuthServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/components/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/src/components/colorFont.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/components/colorFont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/src/components/icon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/src/pages/index/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/pages/index/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/src/pages/index/tuiguang.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/pages/index/tuiguang.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/src/pages/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/pages/user/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jfm-web/src/router/myRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/router/myRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jfm-web/src/config/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/config/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jfm-web/src/pages/user/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/src/pages/user/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jfm-web/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jfm-web/vue.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/jfm-eureka-server/target/" />
@@ -63,8 +28,8 @@
       <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            <state relative-caret-position="375">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -72,8 +37,8 @@
       <file leaf-file-name="SessionAuthServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/service/impl/SessionAuthServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+            <state relative-caret-position="950">
+              <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,19 +50,10 @@
         <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -115,25 +71,58 @@
         <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jfm-common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/resources/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="925">
+              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JfmZuulFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/JfmZuulFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZuulFilterConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/ZuulFilterConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JfmGatewayApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/JfmGatewayApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="875">
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="30" />
+              <folding>
+                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,7 +166,6 @@
         <option value="$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/JfmZuulFilter.java" />
         <option value="$PROJECT_DIR$/jfm-authentication/pom.xml" />
         <option value="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java" />
-        <option value="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java" />
         <option value="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/utils/DateUtil.java" />
         <option value="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/repository/UserMapper.java" />
         <option value="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/service/ISessionAuthService.java" />
@@ -186,6 +174,7 @@
         <option value="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/controller/UserController.java" />
         <option value="$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/service/impl/SessionAuthServiceImpl.java" />
+        <option value="$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java" />
         <option value="$PROJECT_DIR$/jfm-authentication/src/main/resources/mapper/UserMapper.xml" />
       </list>
     </option>
@@ -199,7 +188,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="userSettingsFile" value="D:\apache-maven-3.6.2\conf\settings.xml" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -253,8 +242,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,51 +319,55 @@
             <path>
               <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
-              <item name="jfm-eureka-server" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jfm-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jfm-server" type="462c0819:PsiDirectoryNode" />
+              <item name="jfm-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -521,53 +512,64 @@
       <workItem from="1614182582217" duration="121000" />
       <workItem from="1614182721393" duration="236000" />
       <workItem from="1614182973317" duration="1541000" />
+      <workItem from="1614220098147" duration="1706000" />
+      <workItem from="1614224455542" duration="609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33727000" />
+    <option name="totallyTimeSpent" value="36042000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="944" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015033" side_tool="true" weight="0.46592316" />
+      <window_info anchor="bottom" id="GenProtobuf" order="8" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32952496" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.1867168" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49849668" weight="0.4649123" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49969932" weight="0.32957393" />
       <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17919423" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.48997495" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3283767" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49849668" visible="true" weight="0.46592316" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49969932" weight="0.32957393" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2705953" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48997495" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3283767" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="GenProtobuf" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -577,7 +579,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/service/impl/SessionAuthServiceImpl.java</url>
-          <line>39</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -586,13 +588,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -799,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/JfmGatewayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jfm-web-server/src/main/java/jfm/web/server/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-144">
@@ -813,21 +801,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/ZuulFilterConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar!/org/apache/commons/lang/StringUtils.class" />
-    <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/JfmZuulFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -881,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jfm-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -905,14 +872,24 @@
     <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/JfmAuthenticationApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/service/impl/SessionAuthServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -921,25 +898,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="375">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/java/jfm/authentication/service/impl/SessionAuthServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/jfm-common/src/main/java/jfm/common/user/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+        <state relative-caret-position="875">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jfm-authentication/src/main/resources/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        <state relative-caret-position="925">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/JfmGatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/ZuulFilterConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jfm-gateway/src/main/java/jfm/gateway/config/JfmZuulFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
         </state>
       </provider>
     </entry>

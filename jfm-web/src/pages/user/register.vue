@@ -138,9 +138,13 @@ export default {
             url: "/user/insert",
             method: "post",
             data: this.ruleForm,
-          }).then((res) => console.log(res));
+          }).then((res) => {
+            this.$message({
+              message: "注册成功",
+              type: "success",
+            });
+          });
         } else {
-          console.log("error submit!!");
           return false;
         }
       });

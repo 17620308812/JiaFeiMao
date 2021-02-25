@@ -10,6 +10,7 @@
         <result column="D_REGISTER_DATE" property="userRegisterDate"/>
         <result column="D_REGISTER_TIME" property="userRegisterTime"/>
         <result column="C_STATUS" property="status"/>
+        <result column="C_PHONE_NUMBER" property="phoneNumber"/>
     </resultMap>
 
     <select id="queryUser" resultMap="User">
@@ -19,7 +20,7 @@
                A.C_USER_HEAD_IMG,
                A.D_REGISTER_DATE,
                A.D_REGISTER_TIME,
-               A.C_STATUS FROM JFM_USER A
+               A.C_STATUS,A.C_PHONE_NUMBER FROM JFM_USER A
                WHERE A.C_USER_ACCOUNT = #{userAccount} AND A.C_USER_PASSWORD = #{C_USER_PASSWORD}
     </select>
 
@@ -31,14 +32,16 @@
             C_USER_HEAD_IMG,
             D_REGISTER_DATE,
             D_REGISTER_TIME,
-            C_STATUS) VALUES (
+            C_STATUS,
+            C_PHONE_NUMBER) VALUES (
             #{userAccount},
             #{userPassword},
             #{userNickName},
             #{userHeaderImg,jdbcType=VARCHAR},
             #{userRegisterDate},
             #{userRegisterTime},
-            #{status}
+            #{status},
+            #{phoneNumber}
             )
     </insert>
 

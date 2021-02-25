@@ -30,7 +30,18 @@ public class User {
      * 状态 状态 0正常 1冻结
      */
     private String status;
+    /**
+     * 手机号
+     */
+    private String phoneNumber;
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     public int getUserRegisterDate() {
         return userRegisterDate;
