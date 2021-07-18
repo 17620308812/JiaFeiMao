@@ -921,9 +921,9 @@ export default {
 
 .index-header {
   height: 160px;
-  //background: url("~@/resource/index-header.png") no-repeat;
+  background: url("~@/resource/index-header.png") no-repeat;
   background-size: 100% 100%;
-  background-color: aqua;
+  //background-color: aqua;
   .index-header-bgc {
     position: absolute;
     top: 0px;

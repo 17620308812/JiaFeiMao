@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/jfm-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jfm-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jfm-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jfm-live2d-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jfm-web-server" charset="UTF-8" />
   </component>
 </project>

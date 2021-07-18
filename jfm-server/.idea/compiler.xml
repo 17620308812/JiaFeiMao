@@ -10,6 +10,7 @@
         <module name="jfm-common" />
         <module name="jfm-eureka-server" />
         <module name="jfm-gateway" />
+        <module name="jfm-live2d-server" />
         <module name="jfm-web-server" />
       </profile>
     </annotationProcessing>
