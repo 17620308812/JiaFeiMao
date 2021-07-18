@@ -14,14 +14,15 @@ export default (option) => {
             data: option.data,
             timeout: option.timeout ? option.timeout : 2000000, //超时时间
         }).then((response) => {
+            console.log('response = ',response)
+            resolve(response.data.data);
             if (response.status === 200) {
-                if (response.data.returnCode === '000000') {
+                if (response.data.returnCode === '0') {
                     resolve(response.data.data);
                 } else {
                     reject(response.data.returnMsg);
                 }
             } else {
-
                 reject(response.message);
             }
         }).catch((error) => {
