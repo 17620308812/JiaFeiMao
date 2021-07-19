@@ -1,4 +1,6 @@
 /jfm-web/build
 /jfm-web/node_modules
-/jfm-server/**/target
+/jfm-web/dist
+
+/jfm-server/*/target
 /jfm-server/.idea
