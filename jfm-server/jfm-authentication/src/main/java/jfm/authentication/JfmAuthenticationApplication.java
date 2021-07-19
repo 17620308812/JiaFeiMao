@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.stereotype.Repository;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"jfm.authentication","jfm.common.config"})
 @EnableEurekaClient
 @MapperScan(basePackages = {"jfm.authentication.repository"}, annotationClass = Repository.class)
 public class JfmAuthenticationApplication {

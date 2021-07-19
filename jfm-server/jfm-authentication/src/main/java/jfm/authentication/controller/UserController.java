@@ -24,4 +24,9 @@ public class UserController {
         sessionAuthService.createUser(user);
         return ServerResponse.success();
     }
+
+    @GetMapping("/list")
+    public ServerResponse list() {
+        return ServerResponse.successResponse("123");
+    }
 }

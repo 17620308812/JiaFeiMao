@@ -337,9 +337,11 @@ function loadTipsMessage(result) {
             url: live2d_settings.modelAPI + modelTexturesRandMode + '_textures/?id=' + modelId + '-' + modelTexturesId,
             dataType: "json",
             success: function (result) {
-                if (result.textures['id'] == 1 && (modelTexturesId == 1 || modelTexturesId == 0))
+                if (result.textures['id'] == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) {
                     showMessage(waifu_tips.load_rand_textures[0], 3000, true);
-                else showMessage(waifu_tips.load_rand_textures[1], 3000, true);
+                } else {
+                    showMessage(waifu_tips.load_rand_textures[1], 3000, true);
+                }
                 loadModel(modelId, result.textures['id']);
             }
         });
