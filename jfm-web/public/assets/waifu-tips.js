@@ -137,6 +137,8 @@ function initModel(waifuPath, type) {
     live2d_settings.waifuTipsSize = live2d_settings.waifuTipsSize.split('x');
     live2d_settings.waifuEdgeSide = live2d_settings.waifuEdgeSide.split(':');
 
+
+    $(".waifu").css("width", live2d_settings.waifuSize[0] + "px");
     $("#live2d").attr("width", live2d_settings.waifuSize[0]);
     $("#live2d").attr("height", live2d_settings.waifuSize[1]);
     $(".waifu-tips").width(live2d_settings.waifuTipsSize[0]);
@@ -331,18 +333,18 @@ function loadTipsMessage(result) {
         var modelId = modelStorageGetItem('modelId');
         var modelTexturesId = modelStorageGetItem('modelTexturesId');
         var modelTexturesRandMode = live2d_settings.modelTexturesRandMode;
-
         $.ajax({
             cache: modelTexturesRandMode == 'switch' ? true : false,
-            url: live2d_settings.modelAPI + modelTexturesRandMode + '_textures/?id=' + modelId + '-' + modelTexturesId,
+            //url: live2d_settings.modelAPI + modelTexturesRandMode + '_textures/?id=' + modelId + '-' + modelTexturesId,
+            url: live2d_settings.modelAPI + "/model/modelTexturesId?modelId=" + modelId,
             dataType: "json",
             success: function (result) {
-                if (result.textures['id'] == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) {
+                if (result == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) {
                     showMessage(waifu_tips.load_rand_textures[0], 3000, true);
                 } else {
                     showMessage(waifu_tips.load_rand_textures[1], 3000, true);
                 }
-                loadModel(modelId, result.textures['id']);
+                loadModel(modelId, result);
             }
         });
     }

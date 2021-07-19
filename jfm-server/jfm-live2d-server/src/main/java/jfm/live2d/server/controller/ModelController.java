@@ -5,6 +5,9 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import io.micrometer.core.instrument.util.IOUtils;
 import jfm.live2d.server.pojo.Model;
+import jfm.live2d.server.pojo.ModelExpressions;
+import jfm.live2d.server.pojo.ModelMotions;
+import jfm.live2d.server.pojo.ModelMotionsIdle;
 import jfm.live2d.server.utils.ConstUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.core.io.Resource;
@@ -12,11 +15,10 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.*;
 
 @RestController
 @RequestMapping("/model")
@@ -43,9 +45,8 @@ public class ModelController {
 
 
     @GetMapping("/get/{modelId}/{modelTexturesId}")
-    public String getModelById(@PathVariable("modelId") String modelId, @PathVariable String modelTexturesId) {
-        Model model = ConstUtils.MODEL.get(modelId + "-" + modelTexturesId);
-        return JSON.toJSONString(model);
+    public Object getModelById(@PathVariable("modelId") String modelId, @PathVariable String modelTexturesId) {
+        return ConstUtils.MODEL.get(modelId + "-" + modelTexturesId);
     }
 
     /**
@@ -78,4 +79,6 @@ public class ModelController {
         ArrayList<String> list = new ArrayList<>(result);
         return list.get(new Random().nextInt(list.size()));
     }
+
+
 }
