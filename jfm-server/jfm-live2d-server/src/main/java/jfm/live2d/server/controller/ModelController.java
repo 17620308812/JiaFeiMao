@@ -17,11 +17,11 @@ public class ModelController {
 
         return "{\n" +
                 "    \"version\": \"Sample 1.0.0\",\n" +
-                "    \"model\": \"http://localhost:8086/mocfile/model.moc\",\n" +
+                "    \"model\": \"/HyperdimensionNeptunia/nepmaid/moc/model.moc\"," +
                 "    \"textures\": [\n" +
-                "        \"../model/HyperdimensionNeptunia/nepmaid/textures.1024/00.png\",\n" +
-                "        \"../model/HyperdimensionNeptunia/nepmaid/textures.1024/01.png\",\n" +
-                "        \"../model/HyperdimensionNeptunia/nepmaid/textures.1024/02.png\"\n" +
+                "        \"/HyperdimensionNeptunia/nepmaid/textures/00.png\",\n" +
+                "        \"/HyperdimensionNeptunia/nepmaid/textures/01.png\",\n" +
+                "        \"/HyperdimensionNeptunia/nepmaid/textures/02.png\"\n" +
                 "    ],\n" +
                 "    \"pose\": \"../model/HyperdimensionNeptunia/nepmaid/../nepnep/general/pose.json\",\n" +
                 "    \"physics\": \"../model/HyperdimensionNeptunia/nepmaid/physics.json\",\n" +
@@ -51,43 +51,43 @@ public class ModelController {
                 "    \"expressions\": [\n" +
                 "        {\n" +
                 "            \"name\": \"normal\",\n" +
-                "            \"file\": \"../model/HyperdimensionNeptunia/nepmaid/expressions/../../nepnep/general/exp/normal.json\"\n" +
+                "            \"file\": \"/HyperdimensionNeptunia/nepmaid/exp/normal.json\"\n" +
                 "        },\n" +
                 "        {\n" +
                 "            \"name\": \"happy\",\n" +
-                "            \"file\": \"../model/HyperdimensionNeptunia/nepmaid/expressions/../../nepnep/general/exp/happy.json\"\n" +
+                "            \"file\": \"/HyperdimensionNeptunia/nepmaid/exp/happy.json\"\n" +
                 "        },\n" +
                 "        {\n" +
                 "            \"name\": \"unhappy\",\n" +
-                "            \"file\": \"../model/HyperdimensionNeptunia/nepmaid/expressions/../../nepnep/general/exp/unhappy.json\"\n" +
+                "            \"file\": \"/HyperdimensionNeptunia/nepmaid/exp/unhappy.json\"\n" +
                 "        },\n" +
                 "        {\n" +
                 "            \"name\": \"kira\",\n" +
-                "            \"file\": \"../model/HyperdimensionNeptunia/nepmaid/expressions/../../nepnep/general/exp/kira.json\"\n" +
+                "            \"file\": \"/HyperdimensionNeptunia/nepmaid/exp/kira.json\"\n" +
                 "        },\n" +
                 "        {\n" +
                 "            \"name\": \"deformed\",\n" +
-                "            \"file\": \"../model/HyperdimensionNeptunia/nepmaid/expressions/../../nepnep/general/exp/deformed.json\"\n" +
+                "            \"file\": \"/HyperdimensionNeptunia/nepmaid/exp/deformed.json\"\n" +
                 "        },\n" +
                 "        {\n" +
                 "            \"name\": \"enjoy\",\n" +
-                "            \"file\": \"../model/HyperdimensionNeptunia/nepmaid/expressions/../../nepnep/general/exp/enjoy.json\"\n" +
+                "            \"file\": \"/HyperdimensionNeptunia/nepmaid/exp/enjoy.json\"\n" +
                 "        }\n" +
                 "    ],\n" +
                 "    \"motions\": {\n" +
                 "        \"idle\": [\n" +
                 "            {\n" +
-                "                \"file\": \"../model/HyperdimensionNeptunia/nepmaid/motions/../../nepnep/general/mtn/idle_00.mtn\",\n" +
+                "                \"file\": \"/HyperdimensionNeptunia/nepmaid/mtn/idle_00.mtn\",\n" +
                 "                \"fade_in\": 2000,\n" +
                 "                \"fade_out\": 2000\n" +
                 "            },\n" +
                 "            {\n" +
-                "                \"file\": \"../model/HyperdimensionNeptunia/nepmaid/motions/../../nepnep/general/mtn/idle_01.mtn\",\n" +
+                "                \"file\": \"/HyperdimensionNeptunia/nepmaid/mtn/idle_01.mtn\",\n" +
                 "                \"fade_in\": 2000,\n" +
                 "                \"fade_out\": 2000\n" +
                 "            },\n" +
                 "            {\n" +
-                "                \"file\": \"../model/HyperdimensionNeptunia/nepmaid/motions/../../nepnep/general/mtn/idle_02.mtn\",\n" +
+                "                \"file\": \"/HyperdimensionNeptunia/nepmaid/mtn/idle_02.mtn\",\n" +
                 "                \"fade_in\": 2000,\n" +
                 "                \"fade_out\": 2000\n" +
                 "            }\n" +

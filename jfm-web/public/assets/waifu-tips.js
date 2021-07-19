@@ -26,7 +26,7 @@ window.live2d_settings = Array(); /*
 
 // 后端接口
 //live2d_settings['modelAPI'] = 'https://api3.fghrsh.net/live2d/';   // 自建 API 修改这里
-live2d_settings['modelAPI'] = 'http://localhost:8086/model/'
+live2d_settings['modelAPI'] = 'http://localhost:8086'
 
 live2d_settings['tipsMessage'] = 'waifu-tips.json';            // 同目录下可省略路径
 live2d_settings['hitokotoAPI'] = 'lwl12.com';                  // 一言 API，可选 'lwl12.com', 'hitokoto.cn', 'jinrishici.com'(古诗词)
@@ -213,8 +213,8 @@ function loadModel(modelId, modelTexturesId = 0) {
         sessionStorage.setItem('modelId', modelId);
         sessionStorage.setItem('modelTexturesId', modelTexturesId);
     }
-    debugger
-    loadlive2d('live2d', live2d_settings.modelAPI + 'get/' + modelId + '/' + modelTexturesId, (live2d_settings.showF12Status ? console.log('[Status]', 'live2d', '模型', modelId + '-' + modelTexturesId, '加载完成') : null));
+    //loadlive2d('live2d', live2d_settings.modelAPI + 'get/' + modelId + '/' + modelTexturesId, (live2d_settings.showF12Status ? console.log('[Status]', 'live2d', '模型', modelId + '-' + modelTexturesId, '加载完成') : null));
+    loadlive2d('live2d', { modelAPI: live2d_settings.modelAPI, modelId: modelId, modelTexturesId: modelTexturesId }, (live2d_settings.showF12Status ? console.log('[Status]', 'live2d', '模型', modelId + '-' + modelTexturesId, '加载完成') : null));
 }
 
 function loadTipsMessage(result) {
@@ -373,7 +373,7 @@ function loadTipsMessage(result) {
     function showHitokoto() {
         switch (live2d_settings.hitokotoAPI) {
             case 'lwl12.com':
-                $.getJSON('https://api.lwl12.com/hitokoto/v1?encode=realjson', function (result) {
+                $.getJSON('https://v1.hitokoto.cn/?encode=json', function (result) {
                     if (!empty(result.source)) {
                         var text = waifu_tips.hitokoto_api_message['lwl12.com'][0];
                         if (!empty(result.author)) text += waifu_tips.hitokoto_api_message['lwl12.com'][1];
