@@ -1,0 +1,61 @@
+{
+  "modelId": "8",
+  "modelTexturesId": "9",
+  "posted": "Dreamer-Paul",
+  "name": "Platelet",
+  "model": "/static/jfm-owner/platelet2/moc/model.moc",
+  "textures": [
+    "/static/jfm-owner/platelet2/textures/texture_00.png"
+  ],
+  "physics": "/static/jfm-owner/platelet2/physics/physics.json",
+  "motions": {
+    "tap_body": [
+      {
+        "file": "/static/jfm-owner/platelet2/mtn/smile.mtn",
+        "fade_in": 2000,
+        "fade_out": 2000
+      },
+      {
+        "file": "/static/jfm-owner/platelet2/mtn/shy.mtn",
+        "fade_in": 2000,
+        "fade_out": 2000
+      }
+    ]
+  },
+  "hit_areas_custom": {
+    "head_x": [
+      -0.35,
+      0.6
+    ],
+    "head_y": [
+      0.19,
+      -0.2
+    ],
+    "body_x": [
+      -0.3,
+      -0.25
+    ],
+    "body_y": [
+      0.3,
+      -0.9
+    ]
+  },
+  "expressions": [
+    {
+      "name": "F00.exp.json",
+      "file": "/static/jfm-owner/platelet2/exp/F00.exp.json"
+    },
+    {
+      "name": "F01.exp.json",
+      "file": "/static/jfm-owner/platelet2/exp/F01.exp.json"
+    },
+    {
+      "name": "F02.exp.json",
+      "file": "/static/jfm-owner/platelet2/exp/F02.exp.json"
+    },
+    {
+      "name": "F03.exp.json",
+      "file": "/static/jfm-owner/platelet2/exp/F03.exp.json"
+    }
+  ]
+}

@@ -46,16 +46,16 @@
   "motions": {
     "flick_head": [
       {
-        "file": "../model/ShizukuTalk/shizuku-48/motions/double_tap1.mtn"
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/double_tap1.mtn"
       },
       {
-        "file": "../model/ShizukuTalk/shizuku-48/motions/double_tap2.mtn"
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/double_tap2.mtn"
       },
       {
-        "file": "../model/ShizukuTalk/shizuku-48/motions/double_tap3.mtn"
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/double_tap3.mtn"
       },
       {
-        "file": "../model/ShizukuTalk/shizuku-48/motions/double_tap4.mtn"
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/double_tap4.mtn"
       }
     ],
     "idle": [
@@ -213,24 +213,24 @@
     "tap_body": [
       {
         "dialogue": 0.0,
-        "file": "../model/ShizukuTalk/shizuku-48/motions/touch1.mtn"
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/touch1.mtn"
       },
       {
         "dialogue": 0.0,
-        "file": "../model/ShizukuTalk/shizuku-48/motions/touch2.mtn"
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/touch2.mtn"
       },
       {
         "dialogue": 0.0,
-        "file": "../model/ShizukuTalk/shizuku-48/motions/touch3.mtn"
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/touch3.mtn"
       },
       {
         "dialogue": 0.0,
-        "file": "../model/ShizukuTalk/shizuku-48/motions/touch4.mtn"
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/touch4.mtn"
       }
     ]
   },
-  "physics": "../model/ShizukuTalk/shizuku-48/physics.json",
-  "pose": "../model/ShizukuTalk/shizuku-48/pose.json",
+  "physics": "/static/ShizukuTalk/shizuku-48/physics/physics.json",
+  "pose": "/static/ShizukuTalk/shizuku-48/pose/pose.json",
   "textures": [
     "/static/ShizukuTalk/shizuku-48/textures/00.png",
     "/static/ShizukuTalk/shizuku-48/textures/01.png",

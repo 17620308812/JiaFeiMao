@@ -48,7 +48,7 @@ public class GetHttpData {
      */
     public static void saveFileToHttp(String urlPath, String fileNamePath) {
         try {
-            URL url = new URL(urlPath);
+            URL url = new URL(urlPath.replace(" ","%20"));
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             DataInputStream in = new DataInputStream(connection.getInputStream());
             DataOutputStream out = new DataOutputStream(new FileOutputStream(fileNamePath));

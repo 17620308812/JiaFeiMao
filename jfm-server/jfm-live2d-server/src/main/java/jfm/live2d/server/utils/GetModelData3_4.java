@@ -3,9 +3,7 @@ package jfm.live2d.server.utils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import jfm.live2d.server.pojo.Model;
-import jfm.live2d.server.pojo.ModelExpressions;
-import jfm.live2d.server.pojo.ModelMotionsIdle;
+import jfm.live2d.server.pojo.*;
 import org.apache.commons.lang.StringUtils;
 
 import java.io.BufferedWriter;
@@ -23,7 +21,6 @@ public class GetModelData3_4 {
         for (int i = 1; i < 157; i++) {
             System.err.println("请求：" + "https://api3.fghrsh.net/live2d/get/?id=4-" + i);
             String str = GetHttpData.getHttpInterface("https://api3.fghrsh.net/live2d/get/?id=4-" + i);
-            //String str = "{\"type\":\"Live2D Model Setting\",\"name\":\"22-3695903\",\"label\":\"22\",\"model\":\"../model/bilibili-live/22/model.moc\",\"textures\":[\"../model/bilibili-live/22/texture_00/closet-default-v2.png\",\"../model/bilibili-live/22/texture_01/cba-normal-upper.png\",\"../model/bilibili-live/22/texture_02/cba-normal-lower.png\",\"../model/bilibili-live/22/texture_03/cba-hat.png\"],\"layout\":{\"center_x\":0,\"center_y\":0.1,\"width\":2.3,\"height\":2.3},\"hit_areas_custom\":{\"head_x\":[-0.33,0.6],\"head_y\":[0.19,-0.2],\"body_x\":[-0.3,-0.25],\"body_y\":[0.3,-0.9]},\"motions\":{\"idle\":[{\"file\":\"../model/bilibili-live/22/motions/idle-01.mtn\",\"fade_in\":2000,\"fade_out\":2000},{\"file\":\"../model/bilibili-live/22/motions/idle-02.mtn\",\"fade_in\":2000,\"fade_out\":2000},{\"file\":\"../model/bilibili-live/22/motions/idle-03.mtn\",\"fade_in\":100,\"fade_out\":100}],\"flick_head\":[{\"file\":\"../model/bilibili-live/22/motions/touch.mtn\",\"fade_in\":500,\"fade_out\":200}],\"tap_body\":[{\"file\":\"../model/bilibili-live/22/motions/touch.mtn\",\"fade_in\":500,\"fade_out\":200}],\"thanking\":[{\"file\":\"../model/bilibili-live/22/motions/thanking.mtn\",\"fade_in\":2000,\"fade_out\":2000}]}}\n";
             Model model = JSONObject.parseObject(str, Model.class);
             model.setModelId("4");
             model.setModelTexturesId(i + "");
@@ -35,7 +32,7 @@ public class GetModelData3_4 {
             String substring3 = substring2.substring(0, substring2.lastIndexOf("."));
 
 
-            String basePath = "C:\\Users\\admin\\Desktop\\create\\" + split[split.length - 3] + "\\" + split[split.length - 2] + "\\" + substring1+"-"+substring3;
+            String basePath = "C:\\Users\\lsh18\\Desktop\\create\\" + split[split.length - 3] + "\\" + split[split.length - 2] + "\\" + substring1+"-"+substring3;
             File file = new File(basePath);
             if (!file.exists()) {
                 file.mkdirs();
@@ -101,6 +98,32 @@ public class GetModelData3_4 {
         }
         mc.getMotions().setIdle(b);
         //=====================
+        List<ModelMotionsFlickHead> flick_head = model.getMotions().getFlick_head();
+        List<ModelMotionsFlickHead> b1 = new ArrayList<>();
+        for (ModelMotionsFlickHead m : flick_head) {
+            String[] split = m.getFile().split("/");
+            String s = split[split.length - 1];
+            String c = model.getModel().replace("../model", "/static").replace("/model.moc", "/" + sc1 +"-"+sc3 + "/mtn/" + s);
+            ModelMotionsFlickHead modelMotionsIdle = new ModelMotionsFlickHead();
+            modelMotionsIdle.setFile(c);
+            b1.add(modelMotionsIdle);
+        }
+        mc.getMotions().setFlick_head(b1);
+        //=====================
+        List<ModelMotionsTapBody> tap_body = model.getMotions().getTap_body();
+        List<ModelMotionsTapBody> b2 = new ArrayList<>();
+        for (ModelMotionsTapBody m : tap_body) {
+            String[] split = m.getFile().split("/");
+            String s = split[split.length - 1];
+            String c = model.getModel().replace("../model", "/static").replace("/model.moc", "/" + sc1 +"-"+sc3 + "/mtn/" + s);
+            ModelMotionsTapBody modelMotionsIdle = new ModelMotionsTapBody();
+            modelMotionsIdle.setSound(m.getSound());
+            modelMotionsIdle.setDialogue(m.getDialogue());
+            modelMotionsIdle.setFile(c);
+            b2.add(modelMotionsIdle);
+        }
+        mc.getMotions().setTap_body(b2);
+        //=====================
         mc.setModelTexturesId(model.getModelTexturesId());
         mc.setModelId(model.getModelId());
         //=====================
@@ -145,6 +168,13 @@ public class GetModelData3_4 {
         }
         List<ModelMotionsIdle> idle = model.getMotions().getIdle();
         for (ModelMotionsIdle m : idle) {
+            String urlPath = m.getFile().replace("../model", "https://api3.fghrsh.net/live2d/model");
+            String[] split2 = m.getFile().split("/");
+            GetHttpData.saveFileToHttp(urlPath, basePath + "\\mtn\\" + split2[split2.length - 1]);
+        }
+
+        List<ModelMotionsFlickHead> flick_head = model.getMotions().getFlick_head();
+        for (ModelMotionsFlickHead m : flick_head) {
             String urlPath = m.getFile().replace("../model", "https://api3.fghrsh.net/live2d/model");
             String[] split2 = m.getFile().split("/");
             GetHttpData.saveFileToHttp(urlPath, basePath + "\\mtn\\" + split2[split2.length - 1]);

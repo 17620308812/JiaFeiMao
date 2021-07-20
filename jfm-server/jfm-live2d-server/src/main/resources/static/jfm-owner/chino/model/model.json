@@ -1,0 +1,35 @@
+{
+  "show":false,
+  "modelId": "8",
+  "modelTexturesId": "2",
+  "posted": "Dreamer-Paul",
+  "type": "Live2D Model Setting",
+  "name": "Chino",
+  "model": "/static/jfm-owner/chino/moc/model.moc",
+  "textures": [
+    "/static/jfm-owner/chino/textures/texture_00.png"
+  ],
+  "hit_areas_custom": {
+    "head_x": [
+      -0.35,
+      0.6
+    ],
+    "head_y": [
+      0.19,
+      -0.2
+    ],
+    "body_x": [
+      -0.3,
+      -0.25
+    ],
+    "body_y": [
+      0.3,
+      -0.9
+    ]
+  },
+  "layout": {
+    "center_x": 0.0,
+    "center_y": -0.05,
+    "width": 2.0
+  }
+}

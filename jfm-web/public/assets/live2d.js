@@ -254,6 +254,7 @@
         this.debugMode && i.log("Load Physics : " + t);
         var e = this;
         try {
+          console.log('sssss = ',t)
           i.loadBytes(t,
             function (t) {
               e.physics = l.load(t)
@@ -501,7 +502,7 @@
       },
       l.load = function (t) {
         for (var i = new l,
-          e = c.getPlatformManager(), r = e.jsonParseFromBytes(t), o = r.physics_hair, n = o.length, s = 0; s < n; s++) {
+          e = c.getPlatformManager(),/* r = e.jsonParseFromBytes(t)*/ r = JSON.parse(String.fromCharCode.apply(null, new Uint8Array(t))), o = r.physics_hair, n = o.length, s = 0; s < n; s++) {
           var _ = o[s],
             a = new PhysicsHair,
             h = _.setup,
@@ -542,7 +543,7 @@
       },
       $.load = function (t) {
         for (var i = new $,
-          e = c.getPlatformManager(), r = e.jsonParseFromBytes(t), o = r.parts_visible, n = o.length, s = 0; s < n; s++) {
+          e = c.getPlatformManager(), /*r = e.jsonParseFromBytes(t)*/ r = JSON.parse(String.fromCharCode.apply(null, new Uint8Array(t))), o = r.parts_visible, n = o.length, s = 0; s < n; s++) {
           for (var _ = o[s], a = _.group, h = a.length, l = new Array, p = 0; p < h; p++) {
             var f = a[p],
               d = new u(f.id);

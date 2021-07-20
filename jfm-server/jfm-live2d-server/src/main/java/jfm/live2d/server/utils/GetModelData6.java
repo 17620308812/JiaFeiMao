@@ -2,9 +2,7 @@ package jfm.live2d.server.utils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import jfm.live2d.server.pojo.Model;
-import jfm.live2d.server.pojo.ModelExpressions;
-import jfm.live2d.server.pojo.ModelMotionsIdle;
+import jfm.live2d.server.pojo.*;
 import org.apache.commons.lang.StringUtils;
 
 import java.io.*;
@@ -17,14 +15,14 @@ public class GetModelData6 {
 
     public static void main(String[] args) throws IOException {
         //6:1-21
-        for (int i = 1; i < 3; i++) {
+        for (int i = 1; i < 21; i++) {
             System.err.println("请求：" + "https://api3.fghrsh.net/live2d/get/?id=6-" + i);
             String str = GetHttpData.getHttpInterface("https://api3.fghrsh.net/live2d/get/?id=6-" + i);
             Model model = JSONObject.parseObject(str, Model.class);
             model.setModelId("6");
             model.setModelTexturesId(i + "");
             String[] split = model.getModel().split("/");
-            String basePath = "C:\\Users\\admin\\Desktop\\create\\" + split[split.length - 3] + "\\" + split[split.length - 2];
+            String basePath = "C:\\Users\\lsh18\\Desktop\\create\\" + split[split.length - 3] + "\\" + split[split.length - 2];
             File file = new File(basePath);
             if (!file.exists()) {
                 file.mkdirs();
@@ -34,9 +32,11 @@ public class GetModelData6 {
             moc(basePath, str, model);
             mtn(basePath, str, model);
             textures(basePath, str, model);
+            physics(basePath, str, model);
+            pose(basePath, str, model);
+            vioce(basePath, str, model);
         }
     }
-
 
 
     public static void model(String basePath, String str, Model model) throws IOException {
@@ -85,9 +85,57 @@ public class GetModelData6 {
         }
         mc.getMotions().setIdle(b);
         //=====================
+        List<ModelMotionsFlickHead> flick_head = model.getMotions().getFlick_head();
+        if(flick_head != null){
+            List<ModelMotionsFlickHead> b1 = new ArrayList<>();
+            for (ModelMotionsFlickHead m : flick_head) {
+                String[] split = m.getFile().split("/");
+                String s = split[split.length - 1];
+                String c = model.getModel().replace("../model", "/static").replace("/model.moc", "/mtn/" + s);
+                ModelMotionsFlickHead modelMotionsIdle = new ModelMotionsFlickHead();
+                modelMotionsIdle.setFile(c);
+                b1.add(modelMotionsIdle);
+            }
+            mc.getMotions().setFlick_head(b1);
+        }
+        //=====================
+        List<ModelMotionsTapBody> tap_body = model.getMotions().getTap_body();
+        if(tap_body != null){
+            List<ModelMotionsTapBody> b2 = new ArrayList<>();
+            for (ModelMotionsTapBody m : tap_body) {
+                String[] split = m.getFile().split("/");
+                String s = split[split.length - 1];
+                String c = model.getModel().replace("../model", "/static").replace("/model.moc", "/mtn/" + s);
+
+                String[] splitcc = m.getSound().split("/");
+                String scc = splitcc[splitcc.length - 1];
+                String ccc = model.getModel().replace("../model", "/static").replace("/model.moc", "/vioce/" + scc);
+
+
+                ModelMotionsTapBody modelMotionsIdle = new ModelMotionsTapBody();
+                modelMotionsIdle.setSound(ccc);
+                modelMotionsIdle.setDialogue(m.getDialogue());
+                modelMotionsIdle.setFile(c);
+                b2.add(modelMotionsIdle);
+            }
+            mc.getMotions().setTap_body(b2);
+        }
+
+        //=====================
         mc.setModelTexturesId(model.getModelTexturesId());
         mc.setModelId(model.getModelId());
         //=====================
+        if (StringUtils.isNotEmpty(model.getPhysics())) {
+            String physics = model.getPhysics().replace("../model", "/static").replace("physics.json", "physics/physics.json");
+            mc.setPhysics(physics);
+        }
+        //=====================
+        if (StringUtils.isNotEmpty(model.getPose())) {
+            String pose = model.getModel().replace("../model", "/static").replace("model.moc", "pose/pose.json");
+            mc.setPose(pose);
+        }
+        //=====================
+
         File a11 = new File(basePath + "\\model\\model.json");
         BufferedWriter bw = new BufferedWriter(new FileWriter(a11));
         bw.write(JSON.toJSONString(mc));//在创建好的文件中写入"Hello I/O"
@@ -135,6 +183,26 @@ public class GetModelData6 {
             String[] split2 = m.getFile().split("/");
             GetHttpData.saveFileToHttp(urlPath, basePath + "\\mtn\\" + split2[split2.length - 1]);
         }
+
+        List<ModelMotionsFlickHead> flick_head = model.getMotions().getFlick_head();
+        if(flick_head != null){
+            for (ModelMotionsFlickHead m : flick_head) {
+                String[] split1 = m.getFile().split("/../../");
+                String urlPath = "https://api3.fghrsh.net/live2d/model/" + split[split.length - 3] + "/" + split1[1];
+                String[] split2 = m.getFile().split("/");
+                GetHttpData.saveFileToHttp(urlPath, basePath + "\\mtn\\" + split2[split2.length - 1]);
+            }
+        }
+
+        List<ModelMotionsTapBody> tap_body = model.getMotions().getTap_body();
+        if(tap_body != null){
+            for (ModelMotionsTapBody m : tap_body) {
+                String[] split1 = m.getFile().split("/../../");
+                String urlPath = "https://api3.fghrsh.net/live2d/model/" + split[split.length - 3] + "/" + split1[1];
+                String[] split2 = m.getFile().split("/");
+                GetHttpData.saveFileToHttp(urlPath, basePath + "\\mtn\\" + split2[split2.length - 1]);
+            }
+        }
     }
 
     public static void textures(String basePath, String str, Model model) throws IOException {
@@ -150,5 +218,47 @@ public class GetModelData6 {
         }
     }
 
+
+    public static void physics(String basePath, String str, Model model) throws IOException {
+        File a1 = new File(basePath + "\\physics");
+        if (!a1.exists()) {
+            a1.mkdirs();
+        }
+        if(StringUtils.isEmpty(model.getPhysics())){
+            return;
+        }
+        String physics = model.getPhysics().replace("../model", "https://api3.fghrsh.net/live2d/model");
+        GetHttpData.saveFileToHttp(physics, basePath + "\\physics\\physics.json");
+    }
+
+    public static void pose(String basePath, String str, Model model) throws IOException {
+        File a1 = new File(basePath + "\\pose");
+        if (!a1.exists()) {
+            a1.mkdirs();
+        }
+
+        if(StringUtils.isEmpty(model.getPose())){
+            return;
+        }
+        //String physics = model.getModel().replace("../model", "https://api3.fghrsh.net/live2d/model").replace("model.moc", "general/pose.json");
+        GetHttpData.saveFileToHttp("https://api3.fghrsh.net/live2d/model/HyperdimensionNeptunia/nepnep/general/pose.json", basePath + "\\pose\\pose.json");
+    }
+    public static void vioce(String basePath, String str, Model model) throws IOException {
+        File a1 = new File(basePath + "\\vioce");
+        if (!a1.exists()) {
+            a1.mkdirs();
+        }
+
+        List<ModelMotionsTapBody> tap_body = model.getMotions().getTap_body();
+        if(tap_body != null){
+            String[] split = model.getModel().split("/");
+            for (ModelMotionsTapBody m : tap_body) {
+                String[] split1 = m.getSound().split("/../../");
+                String urlPath = "https://api3.fghrsh.net/live2d/model/" + split[split.length - 3] + "/" + split1[1];
+                String[] split2 = m.getSound().split("/");
+                GetHttpData.saveFileToHttp(urlPath, basePath + "\\vioce\\" + split2[split2.length - 1]);
+            }
+        }
+    }
 
 }
