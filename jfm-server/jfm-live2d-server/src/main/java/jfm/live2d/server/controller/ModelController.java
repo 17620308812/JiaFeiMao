@@ -19,6 +19,7 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/model")
@@ -30,7 +31,6 @@ public class ModelController {
         ConstUtils.MODEL.clear();
         try {
             Resource[] resources = new PathMatchingResourcePatternResolver().getResources("static/**/model/model.json");
-            System.err.println(resources.length);
             for (int i = 0; i < resources.length; i++) {
                 InputStream inputStream = resources[i].getInputStream();
                 String s = IOUtils.toString(inputStream);
@@ -53,23 +53,40 @@ public class ModelController {
      * 获取modelId
      */
     @GetMapping("/modelId")
-    public String getModelId() {
+    public String getModelId(@RequestParam(required = false) String modelId) {
 
         Set<String> strings = ConstUtils.MODEL.keySet();
         Set<String> result = new HashSet<>();
         for (String s : strings) {
             result.add(s.substring(0, s.indexOf("-")));
         }
-        ArrayList<String> list = new ArrayList<>(result);
-        return list.get(new Random().nextInt(list.size()));
+        List<String> list = new ArrayList<>(result);
+        if (StringUtils.isNotEmpty(modelId)) {
+            List<Integer> collect = list.stream().map(item -> Integer.valueOf(item)).collect(Collectors.toList());
+            Collections.sort(collect);
+            for (Integer i : collect) {
+                if (i > Integer.valueOf(modelId)) {
+                    return String.valueOf(i);
+                }
+            }
+            return String.valueOf(collect.get(0));
+        } else {
+            return list.get(new Random().nextInt(list.size()));
+        }
+
     }
 
     /**
      * 获取modelId
      */
     @GetMapping("/modelTexturesId")
-    public String getModelId(@RequestParam String modelId) {
+    public String getModelTexturesId(@RequestParam(required = false) String modelId, @RequestParam(required = false) String modelTexturesId) {
         Set<String> strings = ConstUtils.MODEL.keySet();
+        if (StringUtils.isEmpty(modelId)) {
+            List<String> list = new ArrayList<>(strings);
+            return list.get(0);
+        }
+
         Set<String> result = new HashSet<>();
         for (String s : strings) {
             if (StringUtils.startsWith(s, modelId + "-")) {
@@ -77,8 +94,18 @@ public class ModelController {
             }
         }
         ArrayList<String> list = new ArrayList<>(result);
-        return list.get(new Random().nextInt(list.size()));
+        if (StringUtils.isNotEmpty(modelTexturesId)) {
+            List<Integer> collect = list.stream().map(item -> Integer.valueOf(item)).collect(Collectors.toList());
+            Collections.sort(collect);
+            for (Integer i : collect) {
+                if (i > Integer.valueOf(modelTexturesId)) {
+                    return String.valueOf(i);
+                }
+            }
+            return String.valueOf(collect.get(0));
+        } else {
+            return list.get(new Random().nextInt(list.size()));
+        }
     }
-
 
 }

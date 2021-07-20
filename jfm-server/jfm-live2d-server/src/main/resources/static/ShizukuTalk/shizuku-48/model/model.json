@@ -1,0 +1,244 @@
+{
+  "expressions": [
+    {
+      "file": "/static/ShizukuTalk/shizuku-48/exp/f01.json",
+      "name": "f01"
+    },
+    {
+      "file": "/static/ShizukuTalk/shizuku-48/exp/f02.json",
+      "name": "f02"
+    },
+    {
+      "file": "/static/ShizukuTalk/shizuku-48/exp/f03.json",
+      "name": "f03"
+    },
+    {
+      "file": "/static/ShizukuTalk/shizuku-48/exp/f04.json",
+      "name": "f04"
+    }
+  ],
+  "hit_areas_custom": {
+    "body_x": [
+      -0.3,
+      -0.25
+    ],
+    "body_y": [
+      0.3,
+      -0.9
+    ],
+    "head_x": [
+      -0.35,
+      0.6
+    ],
+    "head_y": [
+      0.19,
+      -0.2
+    ]
+  },
+  "layout": {
+    "center_x": 0.0,
+    "center_y": -0.16,
+    "width": 1.8
+  },
+  "model": "/static/ShizukuTalk/shizuku-48/moc/model.moc",
+  "modelId": "5",
+  "modelTexturesId": "1",
+  "motions": {
+    "flick_head": [
+      {
+        "file": "../model/ShizukuTalk/shizuku-48/motions/double_tap1.mtn"
+      },
+      {
+        "file": "../model/ShizukuTalk/shizuku-48/motions/double_tap2.mtn"
+      },
+      {
+        "file": "../model/ShizukuTalk/shizuku-48/motions/double_tap3.mtn"
+      },
+      {
+        "file": "../model/ShizukuTalk/shizuku-48/motions/double_tap4.mtn"
+      }
+    ],
+    "idle": [
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idl_00.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idl_01.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idl_02.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idl_03.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idl_04.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idl_05.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_01.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_02.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_03.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_04.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_05.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_06.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_07.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_08.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_09.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_A.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_A2.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_B.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_B2.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_C.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_C2.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/idle_C2_copy.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/kurakura1.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/kurakura2.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/kurakura3.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/wait_01.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/wait_02.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/wait_03.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/wait_04.mtn"
+      },
+      {
+        "fade_in": 0.0,
+        "fade_out": 0.0,
+        "file": "/static/ShizukuTalk/shizuku-48/mtn/wait_05.mtn"
+      }
+    ],
+    "tap_body": [
+      {
+        "dialogue": 0.0,
+        "file": "../model/ShizukuTalk/shizuku-48/motions/touch1.mtn"
+      },
+      {
+        "dialogue": 0.0,
+        "file": "../model/ShizukuTalk/shizuku-48/motions/touch2.mtn"
+      },
+      {
+        "dialogue": 0.0,
+        "file": "../model/ShizukuTalk/shizuku-48/motions/touch3.mtn"
+      },
+      {
+        "dialogue": 0.0,
+        "file": "../model/ShizukuTalk/shizuku-48/motions/touch4.mtn"
+      }
+    ]
+  },
+  "physics": "../model/ShizukuTalk/shizuku-48/physics.json",
+  "pose": "../model/ShizukuTalk/shizuku-48/pose.json",
+  "textures": [
+    "/static/ShizukuTalk/shizuku-48/textures/00.png",
+    "/static/ShizukuTalk/shizuku-48/textures/01.png",
+    "/static/ShizukuTalk/shizuku-48/textures/02.png",
+    "/static/ShizukuTalk/shizuku-48/textures/03.png",
+    "/static/ShizukuTalk/shizuku-48/textures/04.png",
+    "/static/ShizukuTalk/shizuku-48/textures/05.png",
+    "/static/ShizukuTalk/shizuku-48/textures/06.png",
+    "/static/ShizukuTalk/shizuku-48/textures/07.png"
+  ]
+}

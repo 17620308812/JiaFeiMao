@@ -207,7 +207,7 @@ function initModel(waifuPath, type) {
     } loadModel(modelId, modelTexturesId);
 }
 
-function loadModel(modelId, modelTexturesId = 0) {
+function loadModel(modelId, modelTexturesId = 1) {
     if (live2d_settings.modelStorage) {
         localStorage.setItem('modelId', modelId);
         localStorage.setItem('modelTexturesId', modelTexturesId);
@@ -315,15 +315,15 @@ function loadTipsMessage(result) {
     function loadOtherModel() {
         var modelId = modelStorageGetItem('modelId');
         var modelRandMode = live2d_settings.modelRandMode;
-
         $.ajax({
             cache: modelRandMode == 'switch' ? true : false,
-            url: live2d_settings.modelAPI + modelRandMode + '/?id=' + modelId,
+            url: live2d_settings.modelAPI + "/model/modelId?modelId=" + modelId,
             dataType: "json",
             success: function (result) {
-                loadModel(result.model['id']);
-                var message = result.model['message'];
-                $.each(waifu_tips.model_message, function (i, val) { if (i == result.model['id']) message = getRandText(val) });
+                loadModel(result);
+                //var message = result.model['message'];
+                var message = "SIX SIX SIX";
+                $.each(waifu_tips.model_message, function (i, val) { if (i == result) message = getRandText(val) });
                 showMessage(message, 3000, true);
             }
         });
@@ -336,7 +336,7 @@ function loadTipsMessage(result) {
         $.ajax({
             cache: modelTexturesRandMode == 'switch' ? true : false,
             //url: live2d_settings.modelAPI + modelTexturesRandMode + '_textures/?id=' + modelId + '-' + modelTexturesId,
-            url: live2d_settings.modelAPI + "/model/modelTexturesId?modelId=" + modelId,
+            url: live2d_settings.modelAPI + "/model/modelTexturesId?modelId=" + modelId + "&modelTexturesId=" + modelTexturesId,
             dataType: "json",
             success: function (result) {
                 if (result == 1 && (modelTexturesId == 1 || modelTexturesId == 0)) {

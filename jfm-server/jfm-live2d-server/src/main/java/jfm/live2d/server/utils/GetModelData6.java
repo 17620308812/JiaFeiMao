@@ -16,14 +16,15 @@ import java.util.List;
 public class GetModelData6 {
 
     public static void main(String[] args) throws IOException {
-        for (int i = 1; i < 21; i++) {
+        //6:1-21
+        for (int i = 1; i < 3; i++) {
             System.err.println("请求：" + "https://api3.fghrsh.net/live2d/get/?id=6-" + i);
-            String str = getHttpInterface("https://api3.fghrsh.net/live2d/get/?id=6-" + i);
+            String str = GetHttpData.getHttpInterface("https://api3.fghrsh.net/live2d/get/?id=6-" + i);
             Model model = JSONObject.parseObject(str, Model.class);
             model.setModelId("6");
             model.setModelTexturesId(i + "");
             String[] split = model.getModel().split("/");
-            String basePath = "C:\\Users\\lsh18\\Desktop\\create\\" + split[split.length - 3] + "\\" + split[split.length - 2];
+            String basePath = "C:\\Users\\admin\\Desktop\\create\\" + split[split.length - 3] + "\\" + split[split.length - 2];
             File file = new File(basePath);
             if (!file.exists()) {
                 file.mkdirs();
@@ -36,61 +37,6 @@ public class GetModelData6 {
         }
     }
 
-    // 调用http接口获取数据
-    public static String getHttpInterface(String path) {
-        BufferedReader in = null;
-        StringBuffer result = null;
-        try {
-            URL url = new URL(path);
-            //打开和url之间的连接
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-            connection.setRequestProperty("Charset", "utf-8");
-            connection.connect();
-
-            result = new StringBuffer();
-            //读取URL的响应
-            in = new BufferedReader(new InputStreamReader(
-                    connection.getInputStream()));
-            String line;
-            while ((line = in.readLine()) != null) {
-                result.append(line);
-            }
-            return result.toString();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (in != null) {
-                    in.close();
-                }
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
-        }
-        return null;
-    }
-
-    /**
-     * 通过流下载文件
-     */
-    public static void saveFileToHttp(String urlPath, String fileNamePath) {
-        try {
-            URL url = new URL(urlPath);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            DataInputStream in = new DataInputStream(connection.getInputStream());
-            DataOutputStream out = new DataOutputStream(new FileOutputStream(fileNamePath));
-            byte[] buffer = new byte[4096];
-            int count = 0;
-            while ((count = in.read(buffer)) > 0) {
-                out.write(buffer, 0, count);
-            }
-            out.close();
-            in.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
 
     public static void model(String basePath, String str, Model model) throws IOException {
@@ -158,7 +104,7 @@ public class GetModelData6 {
             String[] split = model.getModel().split("/");
             for (ModelExpressions m : expressions) {
                 String[] split1 = m.getFile().split("/../../");
-                String s = getHttpInterface("https://api3.fghrsh.net/live2d/model/" + split[split.length - 3] + "/" + split1[1]);
+                String s = GetHttpData.getHttpInterface("https://api3.fghrsh.net/live2d/model/" + split[split.length - 3] + "/" + split1[1]);
                 File a12 = new File(basePath + "\\exp\\" + m.getName() + ".json");
                 BufferedWriter bw1 = new BufferedWriter(new FileWriter(a12));
                 bw1.write(s);//在创建好的文件中写入"Hello I/O"
@@ -173,7 +119,7 @@ public class GetModelData6 {
             a1.mkdirs();
         }
         String replace = model.getModel().replace("../model", "https://api3.fghrsh.net/live2d/model");
-        saveFileToHttp(replace, basePath + "\\moc\\" + "model.moc");
+        GetHttpData.saveFileToHttp(replace, basePath + "\\moc\\" + "model.moc");
     }
 
     public static void mtn(String basePath, String str, Model model) throws IOException {
@@ -187,7 +133,7 @@ public class GetModelData6 {
             String[] split1 = m.getFile().split("/../../");
             String urlPath = "https://api3.fghrsh.net/live2d/model/" + split[split.length - 3] + "/" + split1[1];
             String[] split2 = m.getFile().split("/");
-            saveFileToHttp(urlPath, basePath + "\\mtn\\" + split2[split2.length - 1]);
+            GetHttpData.saveFileToHttp(urlPath, basePath + "\\mtn\\" + split2[split2.length - 1]);
         }
     }
 
@@ -200,7 +146,7 @@ public class GetModelData6 {
         for (String s : textures) {
             String replace = s.replace("../model", "https://api3.fghrsh.net/live2d/model");
             String[] split = s.split("/");
-            saveFileToHttp(replace, basePath + "\\textures\\" + split[split.length - 1]);
+            GetHttpData.saveFileToHttp(replace, basePath + "\\textures\\" + split[split.length - 1]);
         }
     }
 
