@@ -17,6 +17,10 @@ public class ServerResponse<T> {
         return new ServerResponse("0", "", null);
     }
 
+    public static <T> ServerResponse<T> result(ResponseEnum responseEnum) {
+        return new ServerResponse(responseEnum.getCode(), responseEnum.getValue(), null);
+    }
+
 
     public ServerResponse(String returnCode, String returnMsg, T data) {
         this.returnCode = returnCode;

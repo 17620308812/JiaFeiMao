@@ -14,8 +14,11 @@ zuul:
   routes:
     #此名称可以随意定义
     web-service:
-      url: 'http://localhost:8083/'
+      serviceId: service-web
       path: /web-server/**
     authentication-server:
-      url: 'http://localhost:8082/'
+      serviceId: service-authentication
       path: /authentication-server/**
+    live2d-server:
+      serviceId: service-live2d
+      path: /live2d-server/**

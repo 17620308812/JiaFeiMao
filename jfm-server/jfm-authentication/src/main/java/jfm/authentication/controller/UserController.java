@@ -25,8 +25,5 @@ public class UserController {
         return ServerResponse.success();
     }
 
-    @GetMapping("/list")
-    public ServerResponse list() {
-        return ServerResponse.successResponse("123");
-    }
+
 }

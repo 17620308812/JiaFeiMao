@@ -7,3 +7,7 @@ server:
 spring:
   application:
     name: service-live2d
+
+jfm:
+  config:
+    static-file-path: C:\Users\admin\Desktop\static-file
