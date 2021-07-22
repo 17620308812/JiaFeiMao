@@ -22,7 +22,7 @@ public class SessionAuthServiceImpl implements ISessionAuthService {
     public User createSession(User user) {
 
         String md5Password = DigestUtils.md5DigestAsHex(user.getUserPassword().getBytes());
-        userMapper.queryUser(user.getUserAccount(),md5Password);
+        userMapper.queryUser(user.getUserCode(),md5Password);
 
         return null;
     }
@@ -33,7 +33,7 @@ public class SessionAuthServiceImpl implements ISessionAuthService {
     @Override
     public void createUser(User user){
         String md5Password = DigestUtils.md5DigestAsHex(user.getUserPassword().getBytes());
-        user.setUserAccount(UUID.randomUUID().toString());
+        user.setUserCode(UUID.randomUUID().toString());
         user.setUserPassword(md5Password);
         user.setStatus("0");
         user.setUserRegisterDate(DateUtil.getCurrentDate());

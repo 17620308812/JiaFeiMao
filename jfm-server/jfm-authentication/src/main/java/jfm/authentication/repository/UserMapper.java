@@ -10,7 +10,7 @@ public interface UserMapper {
     /**
      * 查询用户
      */
-    User queryUser(@Param("userAccount") String userAccount, @Param("userPassword") String userPassword);
+    User queryUser(@Param("userCode") String userCode, @Param("userPassword") String userPassword);
     /**
      * 新增用户
      */

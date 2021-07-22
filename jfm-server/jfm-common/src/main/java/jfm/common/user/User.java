@@ -2,9 +2,9 @@ package jfm.common.user;
 
 public class User {
     /**
-     * 用户账号
+     * 用户代码
      */
-    private String userAccount;
+    private String userCode;
     /**
      * 用户密码
      */
@@ -75,12 +75,12 @@ public class User {
         this.userHeaderImg = userHeaderImg;
     }
 
-    public String getUserAccount() {
-        return userAccount;
+    public String getUserCode() {
+        return userCode;
     }
 
-    public void setUserAccount(String userAccount) {
-        this.userAccount = userAccount;
+    public void setUserCode(String userCode) {
+        this.userCode = userCode;
     }
 
     public String getUserPassword() {
