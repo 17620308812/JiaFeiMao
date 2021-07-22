@@ -34,7 +34,7 @@
             D_REGISTER_TIME,
             C_STATUS,
             C_PHONE_NUMBER) VALUES (
-            #{userCode},
+            SEQ_BASE.NEXTVAL,
             #{userPassword},
             #{userNickName},
             #{userHeaderImg,jdbcType=VARCHAR},
