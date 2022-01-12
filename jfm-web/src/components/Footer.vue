@@ -68,9 +68,9 @@ export default {
   name: "Footer",
   data() {
     return {
-      BG_ICON,
+      BG_ICON
     };
-  },
+  }
 };
 </script>
 

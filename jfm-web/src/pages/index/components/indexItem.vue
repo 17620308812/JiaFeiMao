@@ -2,9 +2,7 @@
   <div style="margin-top: 20px">
     <div style="display: flex; margin-bottom: 15px">
       <JfmIconErJi :size="45" />
-      <div style="line-height: 45px; margin-left: 15px; font-size: 25px">
-        音乐
-      </div>
+      <div style="line-height: 45px; margin-left: 15px; font-size: 25px">音乐</div>
     </div>
     <div style="display: flex; height: 400px; overflow: hidden">
       <div style="width: 77%; height: 100%">
@@ -27,7 +25,7 @@
                 "
               >
                 <img
-                  src="~@/resource/index-scroll/index-scroll-2.jpg"
+                  :src="require('@/resource/index-scroll/index-scroll-'+(it % 5 +1) +'.jpg')"
                   style="width: 100%"
                 />
                 <div
@@ -52,14 +50,12 @@
                     display: flex;
                     right: 5px;
                   "
-                >
-                  13:21
-                </div>
+                >13:21</div>
               </div>
               <div>
-                <div style="font-size: 14px; margin: 10px 0 8px; height: 36px">
-                  BLACKPINK 最美好的年华与你携手工地
-                </div>
+                <div
+                  style="font-size: 14px; margin: 10px 0 8px; height: 36px"
+                >BLACKPINK 最美好的年华与你携手工地</div>
                 <div
                   style="
                     font-size: 12px;
@@ -68,7 +64,8 @@
                     display: flex;
                   "
                 >
-                  <JfmIconUser size="15" /><span style="margin-left: 5px">棒棒糖盟主</span >
+                  <JfmIconUser size="15" />
+                  <span style="margin-left: 5px">棒棒糖盟主</span>
                 </div>
               </div>
             </div>
@@ -78,7 +75,7 @@
             <div class="item-single-style"></div>
             <div class="item-single-style"></div>
             <div class="item-single-style"></div>
-            <div class="item-single-style"></div> -->
+            <div class="item-single-style"></div>-->
           </div>
         </div>
       </div>
@@ -93,10 +90,7 @@
         >
           <div style="font-size: 20px">排行榜</div>
           <div style="margin-right: 10px; font-size: 12px">
-            <span
-              style="border: 1px solid rgb(222, 222, 222); padding: 2px 10px"
-              >更多 ></span
-            >
+            <span style="border: 1px solid rgb(222, 222, 222); padding: 2px 10px">更多 ></span>
           </div>
         </div>
         <div
@@ -118,8 +112,7 @@
               border-radius: 2px;
               display: inline-block;
             "
-            >1</span
-          >
+          >1</span>
           <div
             style="
               width: calc(100% - 38px);
@@ -129,10 +122,7 @@
             "
           >
             <div style="width: 40%">
-              <img
-                src="~@/resource/index-scroll/index-scroll-2.jpg"
-                style="width: 100%"
-              />
+              <img src="~@/resource/index-scroll/index-scroll-2.jpg" style="width: 100%" />
             </div>
             <div
               style="
@@ -150,9 +140,7 @@
                   position: absolute;
                   bottom: 0px;
                 "
-              >
-                综合评分：6.6
-              </div>
+              >综合评分：6.6</div>
             </div>
           </div>
         </div>
@@ -162,6 +150,8 @@
             justify-content: space-between;
             margin-bottom: 18px;
           "
+          v-for="item in 7"
+          :key="item"
         >
           <span
             style="
@@ -175,8 +165,7 @@
               border-radius: 2px;
               display: inline-block;
             "
-            >2</span
-          >
+          >{{item+1}}</span>
           <div
             style="
               width: calc(100% - 38px);
@@ -184,9 +173,7 @@
               text-overflow: ellipsis;
               white-space: nowrap;
             "
-          >
-            加菲猫！加菲猫
-          </div>
+          >加菲猫！加菲猫</div>
         </div>
       </div>
     </div>
@@ -198,7 +185,7 @@ import {
   JfmIconErJi,
   JfmIconUser,
   JfmIconBoFang,
-  JfmIconZan,
+  JfmIconZan
 } from "@/components/colorFont.js";
 
 export default {
@@ -207,8 +194,8 @@ export default {
     JfmIconErJi,
     JfmIconUser,
     JfmIconBoFang,
-    JfmIconZan,
-  },
+    JfmIconZan
+  }
 };
 </script>
 

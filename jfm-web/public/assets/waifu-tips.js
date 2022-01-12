@@ -59,7 +59,7 @@ live2d_settings['showCopyMessage'] = true;         // 显示 复制内容 提示
 live2d_settings['showWelcomeMessage'] = true;         // 显示进入面页欢迎词
 
 //看板娘样式设置
-live2d_settings['waifuSize'] = '280x265';    // 看板娘大小，例如 '280x250', '600x535'
+live2d_settings['waifuSize'] = '280x320';    // 看板娘大小，例如 '280x250', '600x535'
 live2d_settings['waifuTipsSize'] = '250x70';     // 提示框大小，例如 '250x70', '570x150'
 live2d_settings['waifuFontSize'] = '12px';       // 提示框字体，例如 '12px', '30px'
 live2d_settings['waifuToolFont'] = '14px';       // 工具栏字体，例如 '14px', '36px'
@@ -67,7 +67,7 @@ live2d_settings['waifuToolLine'] = '20px';       // 工具栏行高，例如 '20
 live2d_settings['waifuToolTop'] = '0px'         // 工具栏顶部边距，例如 '0px', '-60px'
 live2d_settings['waifuMinWidth'] = 'disable';      // 面页小于 指定宽度 隐藏看板娘，例如 'disable'(禁用), '768px'
 live2d_settings['waifuEdgeSide'] = 'right:0';     // 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
-live2d_settings['waifuDraggable'] = 'axis-x';    // 拖拽样式，例如 'disable'(禁用), 'axis-x'(只能水平拖拽), 'unlimited'(自由拖拽)
+live2d_settings['waifuDraggable'] = 'unlimited';    // 拖拽样式，例如 'disable'(禁用), 'axis-x'(只能水平拖拽), 'unlimited'(自由拖拽)
 live2d_settings['waifuDraggableRevert'] = false;         // 松开鼠标还原拖拽位置，可选 true(真), false(假)
 
 // 其他杂项设置
@@ -278,14 +278,14 @@ function loadTipsMessage(result) {
         var text;
         if (window.location.href == live2d_settings.homePageUrl) {
             var now = (new Date()).getHours();
-            if (now > 23 || now <= 5) text = getRandText(result.waifu.hour_tips.t23 - 5);
-            else if (now > 5 && now <= 7) text = getRandText(result.waifu.hour_tips.t5 - 7);
-            else if (now > 7 && now <= 11) text = getRandText(result.waifu.hour_tips.t7 - 11);
-            else if (now > 11 && now <= 14) text = getRandText(result.waifu.hour_tips.t11 - 14);
-            else if (now > 14 && now <= 17) text = getRandText(result.waifu.hour_tips.t14 - 17);
-            else if (now > 17 && now <= 19) text = getRandText(result.waifu.hour_tips.t17 - 19);
-            else if (now > 19 && now <= 21) text = getRandText(result.waifu.hour_tips.t19 - 21);
-            else if (now > 21 && now <= 23) text = getRandText(result.waifu.hour_tips.t21 - 23);
+            if (now > 23 || now <= 5) text = getRandText(result.waifu.hour_tips["t23-5"]);
+            else if (now > 5 && now <= 7) text = getRandText(result.waifu.hour_tips["t5-7"]);
+            else if (now > 7 && now <= 11) text = getRandText(result.waifu.hour_tips["t7-11"]);
+            else if (now > 11 && now <= 14) text = getRandText(result.waifu.hour_tips["t11-14"]);
+            else if (now > 14 && now <= 17) text = getRandText(result.waifu.hour_tips["t14-17"]);
+            else if (now > 17 && now <= 19) text = getRandText(result.waifu.hour_tips["t17-19"]);
+            else if (now > 19 && now <= 21) text = getRandText(result.waifu.hour_tips["t19-21"]);
+            else if (now > 21 && now <= 23) text = getRandText(result.waifu.hour_tips["t21-23"]);
             else text = getRandText(result.waifu.hour_tips.default);
         } else {
             var referrer_message = result.waifu.referrer_message;
@@ -335,7 +335,6 @@ function loadTipsMessage(result) {
         var modelTexturesRandMode = live2d_settings.modelTexturesRandMode;
         $.ajax({
             cache: modelTexturesRandMode == 'switch' ? true : false,
-            //url: live2d_settings.modelAPI + modelTexturesRandMode + '_textures/?id=' + modelId + '-' + modelTexturesId,
             url: live2d_settings.modelAPI + "/model/modelTexturesId?modelId=" + modelId + "&modelTexturesId=" + modelTexturesId,
             dataType: "json",
             success: function (result) {
@@ -353,7 +352,9 @@ function loadTipsMessage(result) {
 
     /* 检测用户活动状态，并在空闲时显示一言 */
     if (live2d_settings.showHitokoto) {
-        window.getActed = false; window.hitokotoTimer = 0; window.hitokotoInterval = false;
+        window.getActed = false;
+        window.hitokotoTimer = 0;
+        window.hitokotoInterval = false;
         $(document).mousemove(function (e) { getActed = true; }).keydown(function () { getActed = true; });
         setInterval(function () { if (!getActed) ifActed(); else elseActed(); }, 1000);
     }
@@ -361,7 +362,7 @@ function loadTipsMessage(result) {
     function ifActed() {
         if (!hitokotoInterval) {
             hitokotoInterval = true;
-            hitokotoTimer = window.setInterval(showHitokotoActed, 30000);
+            hitokotoTimer = window.setInterval(showHitokotoActed, 15000);
         }
     }
 
@@ -371,51 +372,58 @@ function loadTipsMessage(result) {
     }
 
     function showHitokotoActed() {
-        if ($(document)[0].visibilityState == 'visible') showHitokoto();
+        if ($(document)[0].visibilityState == 'visible') {
+            showHitokoto();
+        }
     }
 
     function showHitokoto() {
-        switch (live2d_settings.hitokotoAPI) {
-            case 'lwl12.com':
-                $.getJSON('https://v1.hitokoto.cn/?encode=json', function (result) {
-                    if (!empty(result.source)) {
-                        var text = waifu_tips.hitokoto_api_message['lwl12.com'][0];
-                        if (!empty(result.author)) text += waifu_tips.hitokoto_api_message['lwl12.com'][1];
-                        text = text.render({ source: result.source, creator: result.author });
-                        window.setTimeout(function () { showMessage(text + waifu_tips.hitokoto_api_message['lwl12.com'][2], 3000, true); }, 5000);
-                    } showMessage(result.text, 5000, true);
-                }); break;
-            case 'fghrsh.net':
-                $.getJSON('https://api.fghrsh.net/hitokoto/rand/?encode=jsc&uid=3335', function (result) {
-                    if (!empty(result.source)) {
-                        var text = waifu_tips.hitokoto_api_message['fghrsh.net'][0];
-                        text = text.render({ source: result.source, date: result.date });
-                        window.setTimeout(function () { showMessage(text, 3000, true); }, 5000);
-                        showMessage(result.hitokoto, 5000, true);
-                    }
-                }); break;
-            case 'jinrishici.com':
-                $.ajax({
-                    url: 'https://v2.jinrishici.com/one.json',
-                    xhrFields: { withCredentials: true },
-                    success: function (result, status) {
-                        if (!empty(result.data.origin.title)) {
-                            var text = waifu_tips.hitokoto_api_message['jinrishici.com'][0];
-                            text = text.render({ title: result.data.origin.title, dynasty: result.data.origin.dynasty, author: result.data.origin.author });
-                            window.setTimeout(function () { showMessage(text, 3000, true); }, 5000);
-                        } showMessage(result.data.content, 5000, true);
-                    }
-                }); break;
-            default:
-                $.getJSON('https://v1.hitokoto.cn', function (result) {
-                    if (!empty(result.from)) {
-                        var text = waifu_tips.hitokoto_api_message['hitokoto.cn'][0];
-                        text = text.render({ source: result.from, creator: result.creator });
-                        window.setTimeout(function () { showMessage(text, 3000, true); }, 5000);
-                    }
-                    showMessage(result.hitokoto, 5000, true);
-                });
-        }
+        $.getJSON(live2d_settings.modelAPI + '/model/getText', function (result) {
+            showMessage(result, 5000, true);
+        });
+
+
+        // switch (live2d_settings.hitokotoAPI) {
+        //     case 'lwl12.com':
+        //         $.getJSON('https://v1.hitokoto.cn/?encode=json', function (result) {
+        //             if (!empty(result.source)) {
+        //                 var text = waifu_tips.hitokoto_api_message['lwl12.com'][0];
+        //                 if (!empty(result.author)) text += waifu_tips.hitokoto_api_message['lwl12.com'][1];
+        //                 text = text.render({ source: result.source, creator: result.author });
+        //                 window.setTimeout(function () { showMessage(text + waifu_tips.hitokoto_api_message['lwl12.com'][2], 3000, true); }, 5000);
+        //             } showMessage(result.text, 5000, true);
+        //         }); break;
+        //     case 'fghrsh.net':
+        //         $.getJSON('https://api.fghrsh.net/hitokoto/rand/?encode=jsc&uid=3335', function (result) {
+        //             if (!empty(result.source)) {
+        //                 var text = waifu_tips.hitokoto_api_message['fghrsh.net'][0];
+        //                 text = text.render({ source: result.source, date: result.date });
+        //                 window.setTimeout(function () { showMessage(text, 3000, true); }, 5000);
+        //                 showMessage(result.hitokoto, 5000, true);
+        //             }
+        //         }); break;
+        //     case 'jinrishici.com':
+        //         $.ajax({
+        //             url: 'https://v2.jinrishici.com/one.json',
+        //             xhrFields: { withCredentials: true },
+        //             success: function (result, status) {
+        //                 if (!empty(result.data.origin.title)) {
+        //                     var text = waifu_tips.hitokoto_api_message['jinrishici.com'][0];
+        //                     text = text.render({ title: result.data.origin.title, dynasty: result.data.origin.dynasty, author: result.data.origin.author });
+        //                     window.setTimeout(function () { showMessage(text, 3000, true); }, 5000);
+        //                 } showMessage(result.data.content, 5000, true);
+        //             }
+        //         }); break;
+        //     default:
+        //         $.getJSON('https://v1.hitokoto.cn', function (result) {
+        //             if (!empty(result.from)) {
+        //                 var text = waifu_tips.hitokoto_api_message['hitokoto.cn'][0];
+        //                 text = text.render({ source: result.from, creator: result.creator });
+        //                 window.setTimeout(function () { showMessage(text, 3000, true); }, 5000);
+        //             }
+        //             showMessage(result.hitokoto, 5000, true);
+        //         });
+        // }
     }
 
     $('.waifu-tool .fui-eye').click(function () { loadOtherModel() });

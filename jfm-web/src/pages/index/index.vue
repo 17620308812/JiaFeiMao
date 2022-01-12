@@ -869,9 +869,9 @@ import {
   JfmIconKetang,
   JfmIconYinle,
 } from "@/components/colorFont.js";
-import TuiGuangVideo from "@/pages/index/tuiguang.vue";
-import Huodong from "@/pages/index/huodong.vue";
-import IndexItem from '@/components/indexItem'
+import TuiGuangVideo from "@/pages/index/components/tuiguang.vue";
+import Huodong from "@/pages/index/components/huodong.vue";
+import IndexItem from '@/pages/index/components/indexItem.vue'
 
 export default {
   name: "Index",
@@ -921,7 +921,7 @@ export default {
 
 .index-header {
   height: 160px;
-  background: url("~@/resource/index-header.png") no-repeat;
+  background: url("~@/resource/index-header2.png") no-repeat;
   background-size: 100% 100%;
   //background-color: aqua;
   .index-header-bgc {

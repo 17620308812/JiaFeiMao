@@ -24,5 +24,21 @@ export default new Router({
             path: '/register',
             component: Register
         },
+        {
+            path: '/search',
+            component: ()=> import('@/pages/search/searchIndex.vue')
+        },
+        {
+            path: '/video',
+            component: ()=> import('@/pages/videoPlay/videoIndex.vue')
+        },
+        {
+            path: '/editor',
+            component: ()=> import('@/pages/editor/editorIndex.vue')
+        },
+        {
+            path: '/category',
+            component: ()=> import('@/pages/category/category.vue')
+        },
     ]
 })

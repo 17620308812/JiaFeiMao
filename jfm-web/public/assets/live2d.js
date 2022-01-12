@@ -254,7 +254,6 @@
         this.debugMode && i.log("Load Physics : " + t);
         var e = this;
         try {
-          console.log('sssss = ',t)
           i.loadBytes(t,
             function (t) {
               e.physics = l.load(t)
@@ -6003,7 +6002,6 @@
     var o = e(2);
     r.prototype.loadBytes = function (t, i) {
       var e = new XMLHttpRequest;
-      console.log("ccccc = ",t)
       e.open("GET", t, !0),
         e.responseType = "arraybuffer",
         e.onload = function () {
