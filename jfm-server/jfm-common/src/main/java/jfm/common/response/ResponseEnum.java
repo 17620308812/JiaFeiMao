@@ -6,8 +6,9 @@ public enum ResponseEnum {
 
     UNAUTHORIZED("001", "无权限"),
 
-    TOKEN_EXPIRE("002", "TOKEN已过期")
+    TOKEN_EXPIRE("002", "TOKEN已过期"),
 
+    UN_KNOW("003", "未知错误"),
     ;
 
     private String code;

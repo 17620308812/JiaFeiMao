@@ -1,7 +1,7 @@
 package jfm.authentication.service.impl;
 
-import jfm.authentication.repository.UserMapper;
-import jfm.common.user.User;
+import jfm.authentication.dao.UserMapper;
+import jfm.common.pojo.JfmUser;
 import jfm.authentication.service.ISessionAuthService;
 import jfm.common.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class SessionAuthServiceImpl implements ISessionAuthService {
      * 创建会话 登陆
      */
     @Override
-    public User createSession(User user) {
+    public JfmUser createSession(JfmUser user) {
 
         String md5Password = DigestUtils.md5DigestAsHex(user.getUserPassword().getBytes());
         userMapper.queryUser(user.getUserCode(),md5Password);
@@ -31,7 +31,7 @@ public class SessionAuthServiceImpl implements ISessionAuthService {
      * 创建用户
      */
     @Override
-    public void createUser(User user){
+    public void createUser(JfmUser user){
         String md5Password = DigestUtils.md5DigestAsHex(user.getUserPassword().getBytes());
         user.setUserCode(UUID.randomUUID().toString());
         user.setUserPassword(md5Password);

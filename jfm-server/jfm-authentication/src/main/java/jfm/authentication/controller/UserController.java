@@ -1,8 +1,8 @@
 package jfm.authentication.controller;
 
 import jfm.authentication.service.ISessionAuthService;
+import jfm.common.pojo.JfmUser;
 import jfm.common.response.ServerResponse;
-import jfm.common.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +14,13 @@ public class UserController {
     private ISessionAuthService sessionAuthService;
 
     @PostMapping("/login")
-    public ServerResponse login(@RequestBody User user) {
-        User session = sessionAuthService.createSession(user);
+    public ServerResponse login(@RequestBody JfmUser user) {
+        JfmUser session = sessionAuthService.createSession(user);
         return ServerResponse.successResponse(session);
     }
 
     @PostMapping("/insert")
-    public ServerResponse insertUser(@RequestBody User user) {
+    public ServerResponse insertUser(@RequestBody JfmUser user) {
         sessionAuthService.createUser(user);
         return ServerResponse.success();
     }

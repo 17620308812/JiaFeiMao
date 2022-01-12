@@ -10,7 +10,11 @@ public class ServerResponse<T> {
 
 
     public static <T> ServerResponse<T> successResponse(T data) {
-        return new ServerResponse("0", "", data);
+        return new ServerResponse(ResponseEnum.SUCCESS.getCode(), "", data);
+    }
+
+    public static <T> ServerResponse<T> error(String message) {
+        return new ServerResponse(ResponseEnum.UN_KNOW.getCode(), message, null);
     }
 
     public static <T> ServerResponse<T> success() {

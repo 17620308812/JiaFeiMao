@@ -1,6 +1,6 @@
-package jfm.common.user;
+package jfm.common.pojo;
 
-public class User {
+public class JfmUser {
     /**
      * 用户代码
      */

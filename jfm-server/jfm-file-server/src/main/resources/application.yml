@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+server:
+  port: 8087
+spring:
+  application:
+    name: service-file
+  datasource:
+    url: jdbc:oracle:thin:@49.233.196.166:1521:orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: JFM
+    password: lsh1996A
+
+mybatis: #配置文件版和注解版区别:主要是需要配置此处的mybatis
+  mapper-locations: classpath:/mapper/*.xml

@@ -15,6 +15,7 @@
         <module>jfm-common</module>
         <module>jfm-gateway</module>
         <module>jfm-live2d-server</module>
+        <module>jfm-file-server</module>
     </modules>
 
 
