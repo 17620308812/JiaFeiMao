@@ -5,4 +5,4 @@
 /jfm-server/*/target
 /jfm-server/.idea
 /jfm-server/*/*.iml
-/static
+/jfm-server/static
