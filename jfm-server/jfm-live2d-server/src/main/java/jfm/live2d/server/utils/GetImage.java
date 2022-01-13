@@ -3,9 +3,6 @@
 package jfm.live2d.server.utils;
 
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.sun.xml.internal.bind.v2.runtime.XMLSerializer;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;

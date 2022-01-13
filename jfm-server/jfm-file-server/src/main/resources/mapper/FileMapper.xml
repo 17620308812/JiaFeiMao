@@ -11,6 +11,7 @@
         <result column="c_upload_time" property="uploadTime"/>
         <result column="c_path" property="path"/>
         <result column="N_SIZE" property="size"/>
+        <result column="C_FILE_TYPE" property="fileType"/>
     </resultMap>
 
     <select id="selectOne" resultMap="JfmFile">
@@ -21,7 +22,7 @@
                A.C_UPLOAD_DATE,
                A.C_UPLOAD_TIME,
                A.C_PATH,
-               A.N_SIZE FROM JFM_FILE A where A.c_file_code = #{fileCode}
+               A.N_SIZE,C_FILE_TYPE FROM JFM_FILE A where A.c_file_code = #{fileCode}
     </select>
 
     <select id="getSeqFileId" resultType="int">
@@ -36,14 +37,16 @@
             c_upload_user,
             c_upload_date,
             c_upload_time,
-            c_path) VALUES (
+            c_path,N_SIZE,C_FILE_TYPE) VALUES (
             #{fileCode},
             #{fileName},
             #{fileOriginalName},
             #{uploadUser,jdbcType=VARCHAR},
             #{uploadDate},
             #{uploadTime},
-            #{path})
+            #{path},
+            #{size},
+            #{fileType})
     </insert>
 
 </mapper>

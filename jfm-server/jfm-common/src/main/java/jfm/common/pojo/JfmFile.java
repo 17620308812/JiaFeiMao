@@ -34,7 +34,7 @@ public class JfmFile {
     /**
      *
      */
-    private int size;
+    private Long size;
 
     /**
      *
@@ -49,11 +49,11 @@ public class JfmFile {
         this.fileType = fileType;
     }
 
-    public int getSize() {
+    public Long getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Long size) {
         this.size = size;
     }
 
