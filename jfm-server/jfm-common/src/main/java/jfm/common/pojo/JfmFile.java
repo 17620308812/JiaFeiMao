@@ -31,6 +31,32 @@ public class JfmFile {
      */
     private String path;
 
+    /**
+     *
+     */
+    private int size;
+
+    /**
+     *
+     */
+    private String fileType;
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
     public String getFileCode() {
         return fileCode;
     }

@@ -3,6 +3,7 @@ package jfm.file.server.config;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import jfm.file.server.emum.FilePathEnum;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -17,9 +18,12 @@ public class FileConfig extends WebMvcConfigurationSupport {
 
     @PostConstruct
     private void createDir(){
-        File file = new File("static");
-        if(!file.exists()){
-            file.mkdirs();
+        FilePathEnum[] values = FilePathEnum.values();
+        for (FilePathEnum en:values){
+            File file = new File(en.getPath());
+            if(!file.exists()){
+                file.mkdirs();
+            }
         }
     }
 

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="jfm.file.server.dao.FileDao">
 
-    <resultMap id="User" type="jfm.common.pojo.JfmFile">
+    <resultMap id="JfmFile" type="jfm.common.pojo.JfmFile">
         <result column="c_file_code" property="fileCode"/>
         <result column="c_file_name" property="fileName"/>
         <result column="c_file_original_name" property="fileOriginalName"/>
@@ -10,7 +10,19 @@
         <result column="c_upload_date" property="uploadDate"/>
         <result column="c_upload_time" property="uploadTime"/>
         <result column="c_path" property="path"/>
+        <result column="N_SIZE" property="size"/>
     </resultMap>
+
+    <select id="selectOne" resultMap="JfmFile">
+        SELECT A.C_FILE_CODE,
+               A.C_FILE_NAME,
+               A.C_FILE_ORIGINAL_NAME,
+               A.C_UPLOAD_USER,
+               A.C_UPLOAD_DATE,
+               A.C_UPLOAD_TIME,
+               A.C_PATH,
+               A.N_SIZE FROM JFM_FILE A where A.c_file_code = #{fileCode}
+    </select>
 
     <select id="getSeqFileId" resultType="int">
         select SEQ_FILE_ID.NEXTVAL from dual

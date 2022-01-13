@@ -4,13 +4,14 @@ package jfm.file.server.service.impl;
 import jfm.common.pojo.JfmFile;
 import jfm.common.utils.DateUtil;
 import jfm.file.server.dao.FileDao;
+import jfm.file.server.emum.FilePathEnum;
 import jfm.file.server.service.FileService;
+import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.UUID;
 
 @Service
@@ -42,6 +43,30 @@ public class FileServiceImpl implements FileService {
             fileDao.insertFile(jfmFile);
             return jfmFile;
         } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 图片压缩 等比例压缩
+     */
+    @Override
+    public byte[] getThumbnail(String fileCode) {
+        try {
+            JfmFile jfmFile = fileDao.selectOne(fileCode);
+            if (jfmFile == null) {
+                return null;
+            }
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            File file = new File(FilePathEnum.IMAGE_ORIGIN.getPath() + "/" + jfmFile.getFileName());
+            float scale = 1f;
+            if (file.length() > 1024 * 200) {
+
+            }
+            Thumbnails.of(file).scale(scale).toOutputStream(outputStream);
+            return outputStream.toByteArray();
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
