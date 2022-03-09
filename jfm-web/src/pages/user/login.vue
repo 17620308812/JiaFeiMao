@@ -1,7 +1,10 @@
 <template>
   <div style="padding-bottom:20px">
-    <div style="margin-top:50px;height:86px;background-color:#00a0d8;text-align: center;">
-      <img src="~@/resource/login-header.png" />
+    <div style="margin-top:50px;height:86px;background-color:rgb(80 169 219);text-align: center;">
+      <div style="position: relative;margin: 0 auto;width: 700px;">
+        <img src="~@/pages/user/resource/1646811103_225981.png" style="height:90px;top: 0px;position: absolute;left: 80px;" />
+        <img src="~@/pages/user/resource/visit.png" style="height:100px;position: absolute;right: 0px;" />
+      </div>
     </div>
     <div style="width:980px;margin: 40px auto;">
       <el-divider>
@@ -13,7 +16,16 @@
           <div style="overflow:hidden;margin-top: -8px;">
             <img src="~@/assets/login-erweima.png" style="margin:-10px;height:150px;width:150px" />
           </div>
-          <div class="erweima-bottom">
+          <div class="erweima-bottom" style="position:relative">
+<img
+          src="~@/pages/user/resource/3a157c61f120d49a.png"
+          style="height:140px;top: 0px;position: absolute;left: 20px;transform: scaleX(-1);"
+        />
+        <img
+          src="~@/pages/user/resource/1.png"
+          style="height:140px;position: absolute;right: 20px;"
+        />
+
             <p style="font-size:20px;">扫描二维码登录</p>
 
             <span style="color:#717171;font-size:14px">请使用</span>
@@ -135,17 +147,17 @@ export default {
       ruleForm: {
         account: "",
         pass: "",
-        remeber: false,
+        remeber: false
       },
       rules: {
         account: [{ validator: validateAccount, trigger: "blur" }],
-        pass: [{ validator: validatePass, trigger: "blur" }],
-      },
+        pass: [{ validator: validatePass, trigger: "blur" }]
+      }
     };
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
+      this.$refs[formName].validate(valid => {
         if (valid) {
           alert("submit!");
         } else {
@@ -159,8 +171,8 @@ export default {
     },
     handelLoginType(type) {
       this.loginType = type;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -178,7 +190,7 @@ export default {
   margin: auto;
 }
 .erweima-bottom {
-  background: url("~@/resource/2233login.af9c53d.png") no-repeat;
+  // background: url("~@/resource/2233login.af9c53d.png") no-repeat;
   width: 480px;
   height: 155px;
   padding: 5px;

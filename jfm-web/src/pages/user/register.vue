@@ -8,7 +8,16 @@
         text-align: center;
       "
     >
-      <img src="~@/resource/login-header.png" />
+      <div style="position: relative;margin: 0 auto;width: 700px;">
+        <img
+          src="~@/pages/user/resource/1646811103_225981.png"
+          style="height:90px;top: 0px;position: absolute;left: 80px;"
+        />
+        <img
+          src="~@/pages/user/resource/visit.png"
+          style="height:100px;position: absolute;right: 0px;"
+        />
+      </div>
     </div>
     <div style="width: 980px; margin: 40px auto">
       <el-divider>
@@ -31,10 +40,7 @@
           class="demo-ruleForm"
         >
           <el-form-item prop="userNickName">
-            <el-input
-              v-model="ruleForm.userNickName"
-              placeholder="昵称"
-            ></el-input>
+            <el-input v-model="ruleForm.userNickName" placeholder="昵称"></el-input>
           </el-form-item>
           <el-form-item prop="userPassword">
             <el-input
@@ -50,11 +56,7 @@
               v-model="ruleForm.phoneNumber"
               class="input-with-select"
             >
-              <el-select
-                v-model="ruleForm.district"
-                slot="prepend"
-                placeholder="区域"
-              >
+              <el-select v-model="ruleForm.district" slot="prepend" placeholder="区域">
                 <el-option label="中国大陆" value="86"></el-option>
                 <el-option label="中国香港" value="2"></el-option>
               </el-select>
@@ -85,8 +87,7 @@
               type="primary"
               @click="submitForm('ruleForm')"
               :disabled="!ruleForm.isAgree"
-              >注册</el-button
-            >
+            >注册</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -104,12 +105,12 @@ export default {
         userPassword: "",
         district: "86",
         verificationCode: "",
-        isAgree: false,
+        isAgree: false
       },
       rules: {
         userNickName: [
           { required: true, message: "请输入昵称", trigger: "blur" },
-          { min: 3, max: 5, message: "长度在 3 到 10 个字符", trigger: "blur" },
+          { min: 3, max: 5, message: "长度在 3 到 10 个字符", trigger: "blur" }
         ],
         userPassword: [
           { required: true, message: "请输入密码", trigger: "blur" },
@@ -117,39 +118,39 @@ export default {
             min: 6,
             max: 20,
             message: "长度在 3 到 25 个字符",
-            trigger: "blur",
-          },
+            trigger: "blur"
+          }
         ],
         phoneNumber: [
           { required: true, message: "请输入手机号", trigger: "blur" },
-          { min: 11, max: 11, message: "手机号格式不正确", trigger: "blur" },
+          { min: 11, max: 11, message: "手机号格式不正确", trigger: "blur" }
         ],
         verificationCode: [
-          { required: true, message: "请输入验证码", trigger: "blur" },
-        ],
-      },
+          { required: true, message: "请输入验证码", trigger: "blur" }
+        ]
+      }
     };
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
+      this.$refs[formName].validate(valid => {
         if (valid) {
           this.$http({
             url: "/user/insert",
             method: "post",
-            data: this.ruleForm,
-          }).then((res) => {
+            data: this.ruleForm
+          }).then(res => {
             this.$message({
               message: "注册成功",
-              type: "success",
+              type: "success"
             });
           });
         } else {
           return false;
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 

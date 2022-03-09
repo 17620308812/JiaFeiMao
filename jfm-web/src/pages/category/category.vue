@@ -4,8 +4,8 @@
       <div style="width: 80%;margin: 0px auto;diplay: flex;padding-top: 30px;display: flex;">
         <div style="width: 180px;">
           <div>
-            <div>
-              <img src="~@/pages/category/resource/zhuanlan.png" style="width: 120px;" />
+            <div style="display:flex">
+              <img src="~@/pages/category/resource/1646807144_507416.png" style="width: 120px;" />
             </div>
           </div>
           <div style="height: 30px;line-height: 30px;display: flex;margin-top: 20px;">
@@ -660,5 +660,4 @@ export default {
   line-height: 18px;
   border-radius: 4px;
 }
-
 </style>

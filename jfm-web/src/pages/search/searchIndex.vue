@@ -178,10 +178,11 @@ export default {
 }
 
 .search-logo {
-  background-image: url("~@/pages/search/resource/sprite-690be8a6ea.png");
-  width: 131px;
-  height: 35px;
-  background-position: -261px -72px;
+  background-image: url("~@/pages/search/resource/1646807300_429213.png");
+  width: 125px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hover-bg {
