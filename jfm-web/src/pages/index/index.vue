@@ -84,181 +84,101 @@
         <div style="margin-left: 10px; width: 100%">
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >架构</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">架构</span>
               <el-tag size="mini">999+</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >前端</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">前端</span>
               <el-tag size="mini">999+</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >音乐</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">音乐</span>
               <el-tag size="mini">999+</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >电影</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">电影</span>
               <el-tag size="mini">999+</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >语言</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">语言</span>
               <el-tag size="mini">27</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >开发</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">开发</span>
               <el-tag size="mini">999+</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >技术</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">技术</span>
               <el-tag size="mini">999+</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >后端</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">后端</span>
               <el-tag size="mini">999+</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >网络圈</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">网络圈</span>
               <el-tag size="mini">999+</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >娱乐</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">娱乐</span>
               <el-tag size="mini">356</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >公司</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">公司</span>
               <el-tag size="mini">999</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >放映厅</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">放映厅</span>
               <el-tag size="mini">569</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >北方</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">北方</span>
               <el-tag size="mini">999+</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >播放</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">播放</span>
               <el-tag size="mini">999+</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >笔迹</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">笔迹</span>
               <el-tag size="mini">996</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >会议室</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">会议室</span>
               <el-tag size="mini">999+</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >咨询</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">咨询</span>
               <el-tag size="mini">999+</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >运维</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">运维</span>
               <el-tag size="mini">999+</el-tag>
             </div>
           </div>
           <div style="min-width: 80px; width: 10%; float: left">
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >数据库</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">数据库</span>
               <el-tag size="mini">999</el-tag>
             </div>
             <div style="height: 30px; line-height: 30px">
-              <span
-                class="two-title-hover"
-                style="margin-right: 2px; cursor: pointer"
-                >数据</span
-              >
+              <span class="two-title-hover" style="margin-right: 2px; cursor: pointer">数据</span>
               <el-tag size="mini">999+</el-tag>
             </div>
           </div>
@@ -277,11 +197,8 @@
               <div style="padding-top: 4px; margin-right: 4px">
                 <JfmIconZhuanlan size="25" />
               </div>
-              <div
-                class="two-title-hover"
-                style="height: 30px; line-height: 30px"
-              >
-                专栏
+              <div class="two-title-hover" style="height: 30px; line-height: 30px">
+                <router-link tag="span" to="/category">专栏</router-link>
               </div>
             </div>
             <div
@@ -295,12 +212,7 @@
               <div style="padding-top: 2px; margin-right: 4px">
                 <JfmIconZhibo size="25" />
               </div>
-              <div
-                class="two-title-hover"
-                style="height: 30px; line-height: 30px"
-              >
-                直播
-              </div>
+              <div class="two-title-hover" style="height: 30px; line-height: 30px">直播</div>
             </div>
           </div>
           <div style="min-width: 80px">
@@ -315,11 +227,8 @@
               <div style="padding-top: 4px; margin-right: 4px">
                 <JfmIconHuodong size="25" />
               </div>
-              <div
-                class="two-title-hover"
-                style="height: 30px; line-height: 30px"
-              >
-                活动
+              <div class="two-title-hover" style="height: 30px; line-height: 30px">
+                <router-link tag="span" to="/activity">活动</router-link>
               </div>
             </div>
             <div
@@ -333,12 +242,7 @@
               <div style="padding-top: 4px; margin-right: 4px">
                 <JfmIconKetang size="25" />
               </div>
-              <div
-                class="two-title-hover"
-                style="height: 30px; line-height: 30px"
-              >
-                课堂
-              </div>
+              <div class="two-title-hover" style="height: 30px; line-height: 30px">课堂</div>
             </div>
           </div>
           <div style="min-width: 80px">
@@ -353,12 +257,7 @@
               <div style="padding-top: 4px; margin-right: 4px">
                 <JfmIconTianpingcheng size="25" />
               </div>
-              <div
-                class="two-title-hover"
-                style="height: 30px; line-height: 30px"
-              >
-                小黑屋
-              </div>
+              <div class="two-title-hover" style="height: 30px; line-height: 30px">小黑屋</div>
             </div>
             <div
               style="
@@ -371,12 +270,7 @@
               <div style="padding-top: 4px; margin-right: 4px">
                 <JfmIconYinle size="25" />
               </div>
-              <div
-                class="two-title-hover"
-                style="height: 30px; line-height: 30px"
-              >
-                音乐PLUS
-              </div>
+              <div class="two-title-hover" style="height: 30px; line-height: 30px">音乐PLUS</div>
             </div>
           </div>
         </div>
@@ -512,8 +406,7 @@
                         border-radius: 5px;
                         margin-right: 10px;
                       "
-                      >作者</span
-                    >
+                    >作者</span>
                     <span>咸鱼的鱼</span>
                   </div>
                   <div
@@ -522,9 +415,7 @@
                       font-size: 13px;
                       margin-top: 5px;
                     "
-                  >
-                    42.0万播放
-                  </div>
+                  >42.0万播放</div>
                 </div>
               </div>
               <div
@@ -552,8 +443,7 @@
                         border-radius: 5px;
                         margin-right: 10px;
                       "
-                      >作者</span
-                    >
+                    >作者</span>
                     <span>灵风</span>
                   </div>
                   <div
@@ -562,9 +452,7 @@
                       font-size: 13px;
                       margin-top: 5px;
                     "
-                  >
-                    42.0万播放
-                  </div>
+                  >42.0万播放</div>
                 </div>
               </div>
             </div>
@@ -587,9 +475,7 @@
                   />
                 </div>
                 <div class="mover-text">
-                  <p>
-                    杂申椒与菌桂兮，岂惟纫夫蕙茝！彼尧、舜之耿介兮，既遵道而得路
-                  </p>
+                  <p>杂申椒与菌桂兮，岂惟纫夫蕙茝！彼尧、舜之耿介兮，既遵道而得路</p>
                   <div
                     style="
                       color: antiquewhite;
@@ -603,8 +489,7 @@
                         border-radius: 5px;
                         margin-right: 10px;
                       "
-                      >作者</span
-                    >
+                    >作者</span>
                     <span>长虹贯日</span>
                   </div>
                   <div
@@ -613,9 +498,7 @@
                       font-size: 13px;
                       margin-top: 5px;
                     "
-                  >
-                    763.0万播放
-                  </div>
+                  >763.0万播放</div>
                 </div>
               </div>
               <div
@@ -629,9 +512,7 @@
                   />
                 </div>
                 <div class="mover-text">
-                  <p>
-                    何桀纣之昌披兮，夫唯捷径以窘步。惟夫党人之偷乐兮，路幽昧以险隘
-                  </p>
+                  <p>何桀纣之昌披兮，夫唯捷径以窘步。惟夫党人之偷乐兮，路幽昧以险隘</p>
                   <div
                     style="
                       color: antiquewhite;
@@ -645,8 +526,7 @@
                         border-radius: 5px;
                         margin-right: 10px;
                       "
-                      >作者</span
-                    >
+                    >作者</span>
                     <span>ThinkPad</span>
                   </div>
                   <div
@@ -655,9 +535,7 @@
                       font-size: 13px;
                       margin-top: 5px;
                     "
-                  >
-                    586.0万播放
-                  </div>
+                  >586.0万播放</div>
                 </div>
               </div>
             </div>
@@ -680,9 +558,7 @@
                   />
                 </div>
                 <div class="mover-text">
-                  <p>
-                    汩余若将不及兮，恐年岁之不吾与。朝搴阰之木兰兮，夕揽洲之宿莽。
-                  </p>
+                  <p>汩余若将不及兮，恐年岁之不吾与。朝搴阰之木兰兮，夕揽洲之宿莽。</p>
                   <div
                     style="
                       color: antiquewhite;
@@ -696,8 +572,7 @@
                         border-radius: 5px;
                         margin-right: 10px;
                       "
-                      >作者</span
-                    >
+                    >作者</span>
                     <span>明日之后</span>
                   </div>
                   <div
@@ -706,9 +581,7 @@
                       font-size: 13px;
                       margin-top: 5px;
                     "
-                  >
-                    42.0万播放
-                  </div>
+                  >42.0万播放</div>
                 </div>
               </div>
               <div
@@ -722,9 +595,7 @@
                   />
                 </div>
                 <div class="mover-text">
-                  <p>
-                    乘骐骥以驰骋兮，来吾道夫先路！昔三后之纯粹兮，固众芳之所在。
-                  </p>
+                  <p>乘骐骥以驰骋兮，来吾道夫先路！昔三后之纯粹兮，固众芳之所在。</p>
                   <div
                     style="
                       color: antiquewhite;
@@ -738,8 +609,7 @@
                         border-radius: 5px;
                         margin-right: 10px;
                       "
-                      >作者</span
-                    >
+                    >作者</span>
                     <span>加菲猫</span>
                   </div>
                   <div
@@ -748,9 +618,7 @@
                       font-size: 13px;
                       margin-top: 5px;
                     "
-                  >
-                    42.0万播放
-                  </div>
+                  >42.0万播放</div>
                 </div>
               </div>
             </div>
@@ -773,9 +641,7 @@
                   />
                 </div>
                 <div class="mover-text">
-                  <p>
-                    忽奔走以先后兮，及前王之踵武。荃不查余之中情兮，反信谗而齌怒。
-                  </p>
+                  <p>忽奔走以先后兮，及前王之踵武。荃不查余之中情兮，反信谗而齌怒。</p>
                   <div
                     style="
                       color: antiquewhite;
@@ -789,8 +655,7 @@
                         border-radius: 5px;
                         margin-right: 10px;
                       "
-                      >作者</span
-                    >
+                    >作者</span>
                     <span>高渐离</span>
                   </div>
                   <div
@@ -799,9 +664,7 @@
                       font-size: 13px;
                       margin-top: 5px;
                     "
-                  >
-                    657.0万播放
-                  </div>
+                  >657.0万播放</div>
                 </div>
               </div>
               <div
@@ -815,9 +678,7 @@
                   />
                 </div>
                 <div class="mover-text">
-                  <p>
-                    余固知謇謇之为患兮，忍而不能舍也。指九天以为正兮，夫惟灵修之故也
-                  </p>
+                  <p>余固知謇謇之为患兮，忍而不能舍也。指九天以为正兮，夫惟灵修之故也</p>
                   <div
                     style="
                       color: antiquewhite;
@@ -831,8 +692,7 @@
                         border-radius: 5px;
                         margin-right: 10px;
                       "
-                      >作者</span
-                    >
+                    >作者</span>
                     <span>路演直通</span>
                   </div>
                   <div
@@ -841,9 +701,7 @@
                       font-size: 13px;
                       margin-top: 5px;
                     "
-                  >
-                    123.0万播放
-                  </div>
+                  >123.0万播放</div>
                 </div>
               </div>
             </div>
@@ -855,7 +713,7 @@
       <!-- 推广视频 -->
       <TuiGuangVideo />
       <!-- 自定义标签 -->
-      <IndexItem  />
+      <IndexItem />
     </div>
   </div>
 </template>
@@ -867,11 +725,11 @@ import {
   JfmIconTianpingcheng,
   JfmIconHuodong,
   JfmIconKetang,
-  JfmIconYinle,
+  JfmIconYinle
 } from "@/components/colorFont.js";
 import TuiGuangVideo from "@/pages/index/components/tuiguang.vue";
 import Huodong from "@/pages/index/components/huodong.vue";
-import IndexItem from '@/pages/index/components/indexItem.vue'
+import IndexItem from "@/pages/index/components/indexItem.vue";
 
 export default {
   name: "Index",
@@ -888,7 +746,7 @@ export default {
   },
   data() {
     return {
-      currentSelect: "1",
+      currentSelect: "1"
     };
   },
   methods: {
@@ -898,8 +756,8 @@ export default {
     },
     handleCarouselChange(val) {
       this.currentSelect = String(val);
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -1008,5 +866,4 @@ export default {
     }
   }
 }
-
 </style>

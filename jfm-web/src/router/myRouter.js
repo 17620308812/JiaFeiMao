@@ -26,19 +26,23 @@ export default new Router({
         },
         {
             path: '/search',
-            component: ()=> import('@/pages/search/searchIndex.vue')
+            component: () => import('@/pages/search/searchIndex.vue')
         },
         {
             path: '/video',
-            component: ()=> import('@/pages/videoPlay/videoIndex.vue')
+            component: () => import('@/pages/videoPlay/videoIndex.vue')
         },
         {
             path: '/editor',
-            component: ()=> import('@/pages/editor/editorIndex.vue')
+            component: () => import('@/pages/editor/editorIndex.vue')
         },
         {
             path: '/category',
-            component: ()=> import('@/pages/category/category.vue')
+            component: () => import('@/pages/category/category.vue')
+        },
+        {
+            path: '/activity',
+            component: () => import('@/pages/activity/activity.vue')
         },
     ]
 })
