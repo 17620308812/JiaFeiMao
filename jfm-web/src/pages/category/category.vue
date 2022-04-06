@@ -487,7 +487,7 @@
         <div style="width: 300px;">
           <div style="margin-left: 40px;">
             <div>
-              <el-input placeholder="搜索专栏文章" suffix-icon="el-icon-search" v-model="input1"></el-input>
+              <el-input placeholder="搜索专栏文章" suffix-icon="el-icon-search" ></el-input>
             </div>
             <div
               style="line-height:25px;border-bottom: 1px solid rgb(245,245,245);margin-top: 20px; padding-bottom: 5px;"

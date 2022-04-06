@@ -18,7 +18,7 @@
       </div>
     </div>
     <div style="display: flex;">
-      <div style="width: 80%;margin:0px auto;min-width: 1000px" class="search-tabs">
+      <div style="width: 80%;margin:0px auto;min-width: 1205px" class="search-tabs">
         <el-tabs v-model="activeName" @tab-click="handleTabsClick">
           <el-tab-pane label="综合" name="1">
             <div
@@ -92,7 +92,9 @@
                   <div
                     class="hover-color"
                     style="font-size: 12px;line-height: 20px;padding: 8px 10px"
-                  >王侯将相宁有种乎，几千年了这句话还有很多国家说不出来</div>
+                  ><span style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;overflow: hidden;">
+                    王侯将相宁有种乎，几千年了这句话还有很多国家说不出来，世界还是不太平的
+                    </span> </div>
                   <div
                     style="font-size: 12px;color: rgb(180,180,180);display: flex;padding: 5px 10px; "
                   >

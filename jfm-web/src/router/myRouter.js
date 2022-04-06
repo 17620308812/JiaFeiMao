@@ -44,5 +44,9 @@ export default new Router({
             path: '/activity',
             component: () => import('@/pages/activity/activity.vue')
         },
+        {
+            path: '/wallpaper',
+            component: () => import('@/pages/wallpaper/wallpaper.vue')
+        },
     ]
 })

@@ -5,7 +5,7 @@
       <ul>
         <router-link :class="[isIndex === true ? 'index' : 'other']" tag="li" to="/index">主页</router-link>
         <router-link :class="[isIndex === true ? 'index' : 'other']" tag="li" to="/category">博客</router-link>
-        <li :class="[isIndex === true ? 'index' : 'other']">学院</li>
+        <router-link :class="[isIndex === true ? 'index' : 'other']" tag="li" to="/wallpaper">壁纸</router-link>
         <li :class="[isIndex === true ? 'index' : 'other']">下载</li>
         <li :class="[isIndex === true ? 'index' : 'other']">论坛</li>
         <li :class="[isIndex === true ? 'index' : 'other']">问答</li>
@@ -71,7 +71,7 @@ export default {
       console.log(this.searchText);
     },
     handelChangePath(path) {
-      if (path === "/index" || path === "/") {
+      if (path === "/index" || path === "/" ||  path === "/wallpaper") {
         this.isIndex = true;
       } else {
         this.isIndex = false;
