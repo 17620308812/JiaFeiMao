@@ -17,8 +17,8 @@ export default new Router({
         },
         // 博客
         {
-            path: '/blog',
-            component: () => import('@/pages/header/blog/blog.vue')
+            path: '/novel',
+            component: () => import('@/pages/header/novel/novel.vue')
         },
         //壁纸
         {
@@ -45,8 +45,13 @@ export default new Router({
             path: '/live',
             component: () => import('@/pages/header/live/live.vue')
         },
-         // 搜索
-         {
+        // 下载
+        {
+            path: '/downloadApp',
+            component: () => import('@/pages/header/downloadApp/downloadApp.vue')
+        },
+        // 搜索
+        {
             path: '/search',
             component: () => import('@/pages/header/search/searchIndex.vue')
         },
@@ -60,7 +65,7 @@ export default new Router({
             path: '/register',
             component: () => import('@/pages/header/user/register.vue')
         },
-       
+
         {
             path: '/video',
             component: () => import('@/pages/videoPlay/videoIndex.vue')

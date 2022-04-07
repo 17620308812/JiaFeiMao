@@ -12,8 +12,8 @@
         <router-link
           :class="[isIndex === true ? 'index' : 'other']"
           tag="li"
-          to="/blog"
-          >博客</router-link
+          to="/novel"
+          >小说</router-link
         >
         <router-link
           :class="[isIndex === true ? 'index' : 'other']"
@@ -45,14 +45,18 @@
           to="/live"
           >直播</router-link
         >
-        <li :class="[isIndex === true ? 'index' : 'other']">
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/downloadApp"
+        >
           <div style="display: flex">
             <span>下载APP</span>
             <div style="padding-top: 10px; height: 40px">
               <IconShouji :size="30" />
             </div>
           </div>
-        </li>
+        </router-link>
       </ul>
     </div>
 
