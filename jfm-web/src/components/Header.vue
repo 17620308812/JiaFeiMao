@@ -3,18 +3,52 @@
     <div class="fix-header-left">
       <img src="~@/resource/logo.png" />
       <ul>
-        <router-link :class="[isIndex === true ? 'index' : 'other']" tag="li" to="/index">主页</router-link>
-        <router-link :class="[isIndex === true ? 'index' : 'other']" tag="li" to="/category">博客</router-link>
-        <router-link :class="[isIndex === true ? 'index' : 'other']" tag="li" to="/wallpaper">壁纸</router-link>
-        <li :class="[isIndex === true ? 'index' : 'other']">下载</li>
-        <li :class="[isIndex === true ? 'index' : 'other']">论坛</li>
-        <li :class="[isIndex === true ? 'index' : 'other']">问答</li>
-        <li :class="[isIndex === true ? 'index' : 'other']">直播</li>
-        <li :class="[isIndex === true ? 'index' : 'other']">会员</li>
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/index"
+          >主页</router-link
+        >
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/blog"
+          >博客</router-link
+        >
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/wallpaper"
+          >壁纸</router-link
+        >
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/cartoon"
+          >漫画</router-link
+        >
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/forum"
+          >论坛</router-link
+        >
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/questions"
+          >问答</router-link
+        >
+        <router-link
+          :class="[isIndex === true ? 'index' : 'other']"
+          tag="li"
+          to="/live"
+          >直播</router-link
+        >
         <li :class="[isIndex === true ? 'index' : 'other']">
           <div style="display: flex">
             <span>下载APP</span>
-            <div style="padding-top: 10px;height: 40px;">
+            <div style="padding-top: 10px; height: 40px">
               <IconShouji :size="30" />
             </div>
           </div>
@@ -22,10 +56,19 @@
       </ul>
     </div>
 
-    <div style="width: 30%; line-height: 50px;margin:auto;">
-      <div :style="{'display':this.$route.path==='/search'?'none':''}">
-        <el-input placeholder="请输入内容" size="small" v-model="searchText" class="input-with-select">
-          <el-button slot="append" icon="el-icon-search" @click="handleSearchBtn"></el-button>
+    <div style="width: 30%; line-height: 50px; margin: auto">
+      <div :style="{ display: this.$route.path === '/search' ? 'none' : '' }">
+        <el-input
+          placeholder="请输入内容"
+          size="small"
+          v-model="searchText"
+          class="input-with-select"
+        >
+          <el-button
+            slot="append"
+            icon="el-icon-search"
+            @click="handleSearchBtn"
+          ></el-button>
         </el-input>
       </div>
     </div>
@@ -38,12 +81,14 @@
         tag="div"
         :class="['login-btn', isIndex === true ? 'index' : 'other']"
         to="/login"
-      >登陆</router-link>
+        >登陆</router-link
+      >
       <router-link
         tag="div"
         :class="['register-btn', isIndex === true ? 'index' : 'other']"
         to="/register"
-      >注册</router-link>
+        >注册</router-link
+      >
       <el-badge :value="200" :max="99" class="item">
         <el-button type="danger" size="small">评论</el-button>
       </el-badge>
@@ -57,12 +102,12 @@ import { IconShouji } from "@/components/colorFont";
 export default {
   name: "Header",
   components: {
-    IconShouji
+    IconShouji,
   },
   data() {
     return {
       searchText: "",
-      isIndex: true
+      isIndex: true,
     };
   },
   methods: {
@@ -71,12 +116,12 @@ export default {
       console.log(this.searchText);
     },
     handelChangePath(path) {
-      if (path === "/index" || path === "/" ||  path === "/wallpaper") {
+      if (path === "/index" || path === "/" || path === "/wallpaper") {
         this.isIndex = true;
       } else {
         this.isIndex = false;
       }
-    }
+    },
   },
   created() {
     this.handelChangePath(this.$route.path);
@@ -84,8 +129,8 @@ export default {
   watch: {
     $route(to) {
       this.handelChangePath(to.path);
-    }
-  }
+    },
+  },
 };
 </script>
 

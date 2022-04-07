@@ -1,5 +1,6 @@
 <template>
-  <div style="padding-bottom: 20px">
+  <div style="padding-bottom: 20px;min-height: 600px;
+    height: calc(100vh - 295px);">
     <div
       style="
         margin-top: 50px;
@@ -10,11 +11,11 @@
     >
       <div style="position: relative;margin: 0 auto;width: 700px;">
         <img
-          src="~@/pages/user/resource/1646811103_225981.png"
+          src="~@/pages/header/user/resource/1646811103_225981.png"
           style="height:90px;top: 0px;position: absolute;left: 80px;"
         />
         <img
-          src="~@/pages/user/resource/visit.png"
+          src="~@/pages/header/user/resource/visit.png"
           style="height:100px;position: absolute;right: 0px;"
         />
       </div>

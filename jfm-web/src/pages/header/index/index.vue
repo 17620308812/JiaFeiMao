@@ -727,9 +727,9 @@ import {
   JfmIconKetang,
   JfmIconYinle
 } from "@/components/colorFont.js";
-import TuiGuangVideo from "@/pages/index/components/tuiguang.vue";
-import Huodong from "@/pages/index/components/huodong.vue";
-import IndexItem from "@/pages/index/components/indexItem.vue";
+import TuiGuangVideo from "@/pages/header/index/components/tuiguang.vue";
+import Huodong from "@/pages/header/index/components/huodong.vue";
+import IndexItem from "@/pages/header/index/components/indexItem.vue";
 
 export default {
   name: "Index",

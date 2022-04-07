@@ -1,12 +1,30 @@
 <template>
   <div class="main">
-    <div style="padding-top: 20px;padding-bottom: 20px;margin:0 auto; width: 90%">
-      <div style="display: flex;margin-top: 10px">
-        <div style="display: flex;margin: 0 auto;">
+    <div
+      style="
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        width: 90%;
+      "
+    >
+      <div style="display: flex; margin-top: 10px">
+        <div style="display: flex; margin: 0 auto">
           <div
-            style="width: 100px;height: 90px;border-radius: 3px;box-shadow: 0px 0px 5px 5px #1afa29;background:linear-gradient(to top,rgba(0,0,0,.5) 0,rgba(0,0,0,.1) 100%);margin: 0px 15px"
+            style="
+              width: 100px;
+              height: 90px;
+              border-radius: 3px;
+              box-shadow: 0px 0px 5px 5px #1afa29;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.5) 0,
+                rgba(0, 0, 0, 0.1) 100%
+              );
+              margin: 0px 15px;
+            "
           >
-            <div style="text-align: center;padding-top:15px">
+            <div style="text-align: center; padding-top: 15px">
               <svg
                 t="1649151143762"
                 class="icon"
@@ -29,12 +47,23 @@
                 />
               </svg>
             </div>
-            <div style="text-align: center;color:#1afa29">最新</div>
+            <div style="text-align: center; color: #1afa29">最新</div>
           </div>
           <div
-            style="width: 100px;height: 90px;border-radius: 3px;box-shadow: 0px 0px 5px 5px #b760f0;background:linear-gradient(to top,rgba(0,0,0,.5) 0,rgba(0,0,0,.1) 100%);margin: 0px 15px"
+            style="
+              width: 100px;
+              height: 90px;
+              border-radius: 3px;
+              box-shadow: 0px 0px 5px 5px #b760f0;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.5) 0,
+                rgba(0, 0, 0, 0.1) 100%
+              );
+              margin: 0px 15px;
+            "
           >
-            <div style="text-align: center;padding-top:15px">
+            <div style="text-align: center; padding-top: 15px">
               <svg
                 t="1649151703218"
                 class="icon"
@@ -52,12 +81,23 @@
                 />
               </svg>
             </div>
-            <div style="text-align: center;color:#b760f0;">排行榜</div>
+            <div style="text-align: center; color: #b760f0">排行榜</div>
           </div>
           <div
-            style="width: 100px;height: 90px;border-radius: 3px;box-shadow: 0px 0px 5px 5px #d55;background:linear-gradient(to top,rgba(0,0,0,.5) 0,rgba(0,0,0,.1) 100%);margin: 0px 15px"
+            style="
+              width: 100px;
+              height: 90px;
+              border-radius: 3px;
+              box-shadow: 0px 0px 5px 5px #d55;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.5) 0,
+                rgba(0, 0, 0, 0.1) 100%
+              );
+              margin: 0px 15px;
+            "
           >
-            <div style="text-align: center;padding-top:15px">
+            <div style="text-align: center; padding-top: 15px">
               <svg
                 t="1649151798920"
                 class="icon"
@@ -75,12 +115,23 @@
                 />
               </svg>
             </div>
-            <div style="text-align: center;color:#d55;">随机</div>
+            <div style="text-align: center; color: #d55">随机</div>
           </div>
           <div
-            style="width: 100px;height: 90px;border-radius: 3px;box-shadow: 0px 0px 5px 5px #fb3;background:linear-gradient(to top,rgba(0,0,0,.5) 0,rgba(0,0,0,.1) 100%);margin: 0px 15px"
+            style="
+              width: 100px;
+              height: 90px;
+              border-radius: 3px;
+              box-shadow: 0px 0px 5px 5px #fb3;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.5) 0,
+                rgba(0, 0, 0, 0.1) 100%
+              );
+              margin: 0px 15px;
+            "
           >
-            <div style="text-align: center;padding-top:15px">
+            <div style="text-align: center; padding-top: 15px">
               <svg
                 t="1649151882266"
                 class="icon"
@@ -103,12 +154,23 @@
                 />
               </svg>
             </div>
-            <div style="text-align: center;color:#fb3;">上传</div>
+            <div style="text-align: center; color: #fb3">上传</div>
           </div>
           <div
-            style="width: 100px;height: 90px;border-radius: 3px;box-shadow: 0px 0px 5px 5px #e73;background:linear-gradient(to top,rgba(0,0,0,.5) 0,rgba(0,0,0,.1) 100%);margin: 0px 15px"
+            style="
+              width: 100px;
+              height: 90px;
+              border-radius: 3px;
+              box-shadow: 0px 0px 5px 5px #e73;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.5) 0,
+                rgba(0, 0, 0, 0.1) 100%
+              );
+              margin: 0px 15px;
+            "
           >
-            <div style="text-align: center;padding-top:15px">
+            <div style="text-align: center; padding-top: 15px">
               <svg
                 t="1649151978355"
                 class="icon"
@@ -136,25 +198,38 @@
                 />
               </svg>
             </div>
-            <div style="text-align: center;color:#e73;">论坛</div>
+            <div style="text-align: center; color: #e73">论坛</div>
           </div>
         </div>
       </div>
-      <div style="display: flex;margin-top: 35px">
+      <div style="display: flex; margin-top: 35px">
         <div
-          style="display: flex;margin: 0 auto;background: rgba(255, 255, 255, 0.1);box-shadow: rgb(0 0 0 / 60%) 2px 2px 4px;padding: 0px 10px;"
+          style="
+            display: flex;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: rgb(0 0 0 / 60%) 2px 2px 4px;
+            padding: 0px 10px;
+          "
         >
           <input
             type="text"
             class="search"
             placeholder="Search..."
-            style="height: 45px;
-                 background: 0 0;
-                 border: none;
-                 box-shadow: none;
-                 color: #fff;text-shadow: 1px 1px 0 rgb(0 0 0 / 50%);font-size:20px;outline: none;padding:0 5px;width: 700px"
+            style="
+              height: 45px;
+              background: 0 0;
+              border: none;
+              box-shadow: none;
+              color: #fff;
+              text-shadow: 1px 1px 0 rgb(0 0 0 / 50%);
+              font-size: 20px;
+              outline: none;
+              padding: 0 5px;
+              width: 700px;
+            "
           />
-          <div style="padding-top:7px;">
+          <div style="padding-top: 7px">
             <svg
               t="1649154501154"
               class="icon"
@@ -188,11 +263,13 @@
             </svg>
           </div>
           <div
-            style="height: 30px;
-    border-left: 3px solid rgba(255,255,255,.5);
-    margin: 7px 15px 0px 15px;"
+            style="
+              height: 30px;
+              border-left: 3px solid rgba(255, 255, 255, 0.5);
+              margin: 7px 15px 0px 15px;
+            "
           ></div>
-          <div style="padding-top:10px;">
+          <div style="padding-top: 10px">
             <svg
               t="1649154696111"
               class="icon"
@@ -213,36 +290,47 @@
         </div>
       </div>
       <!-- tags -->
-      <div style="overflow: hidden;margin-top:40px;width: 75%;margin: 25px auto">
-        <div v-for="item in tags" :key="item" style="float:left;margin: 5px 20px;overflow:hidden">
-          <span style="color:#87a989">#</span>
-          <span class="tags-style">{{item}}</span>
+      <div
+        style="
+          overflow: hidden;
+          margin-top: 40px;
+          width: 75%;
+          margin: 25px auto;
+        "
+      >
+        <div
+          v-for="item in tags"
+          :key="item"
+          style="float: left; margin: 5px 20px; overflow: hidden"
+        >
+          <span style="color: #87a989">#</span>
+          <span class="tags-style">{{ item }}</span>
         </div>
       </div>
-      <div style="margin-top: -15px;text-align: center;font-size: 20px">
-        <span style="color:#87a989">#</span>
-        <span style="color: white;cursor: pointer">更多标签</span>
+      <div style="margin-top: -15px; text-align: center; font-size: 20px">
+        <span style="color: #87a989">#</span>
+        <span style="color: white; cursor: pointer">更多标签</span>
       </div>
-      <div style="margin-top:15px;display:flex;margin: 15px 0px">
-        <div style="width:25%;padding: 0px 10px">
+      <div style="margin-top: 15px; display: flex; margin: 15px 0px">
+        <div style="width: 25%; padding: 0px 10px">
           <img
             src="~@/resource/index-scroll/index-scroll-1.jpg"
             style="width: 100%; height: 100%; border-radius: 5px"
           />
         </div>
-        <div style="width:25%;padding: 0px 10px">
+        <div style="width: 25%; padding: 0px 10px">
           <img
             src="~@/resource/index-scroll/index-scroll-2.jpg"
             style="width: 100%; height: 100%; border-radius: 5px"
           />
         </div>
-        <div style="width:25%;padding: 0px 10px">
+        <div style="width: 25%; padding: 0px 10px">
           <img
             src="~@/resource/index-scroll/index-scroll-3.jpg"
             style="width: 100%; height: 100%; border-radius: 5px"
           />
         </div>
-        <div style="width:25%;padding: 0px 10px">
+        <div style="width: 25%; padding: 0px 10px">
           <img
             src="~@/resource/index-scroll/index-scroll-4.jpg"
             style="width: 100%; height: 100%; border-radius: 5px"
@@ -250,55 +338,135 @@
         </div>
       </div>
       <div
-        style="background: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,.2) 10%,rgba(0,0,0,.2) 90%,rgba(0,0,0,0) 100%);
-        height: 70px;margin: 20px 0px;text-align:center;line-height: 70px;"
+        style="
+          background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.2) 10%,
+            rgba(0, 0, 0, 0.2) 90%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          height: 70px;
+          margin: 20px 0px;
+          text-align: center;
+          line-height: 70px;
+        "
       >
-        <span style="color: white;font-size: 22px">单击页签查看更多</span>
-        <span style="color: #0cd;margin-left:30px;font-size:14px">或者继续浏览</span>
+        <span style="color: white; font-size: 22px">单击页签查看更多</span>
+        <span style="color: #0cd; margin-left: 30px; font-size: 14px"
+          >或者继续浏览</span
+        >
       </div>
-      <div style="margin-top:15px;margin: 15px 0px;overflow:hidden">
-        <div style="width:20%;float:left" v-for="item in 10" :key="item">
-          <div style="margin: 0 8px 20px 8px;padding-top: 60%;position: relative;">
+      <div style="margin-top: 15px; margin: 15px 0px; overflow: hidden">
+        <div style="width: 20%; float: left" v-for="item in 10" :key="item">
+          <div
+            style="margin: 0 8px 20px 8px; padding-top: 60%; position: relative"
+          >
             <img
-              :src="require('@/resource/index-scroll/index-scroll-'+(item % 5 +1) +'.jpg')"
-              style="width: 100%; border-radius: 5px;position: absolute;height: 100%;top: 0px;"
+              :src="
+                require('@/resource/index-scroll/index-scroll-' +
+                  ((item % 5) + 1) +
+                  '.jpg')
+              "
+              style="
+                width: 100%;
+                border-radius: 5px;
+                position: absolute;
+                height: 100%;
+                top: 0px;
+              "
             />
           </div>
         </div>
       </div>
-      <div style="margin-top: -15px;overflow:hidden">
-        <div style="width:calc(100% / 6);float:left" v-for="item in 6" :key="item">
-          <div style="margin: 0 8px 20px 8px;padding-top: 60%;position: relative;">
+      <div style="margin-top: -15px; overflow: hidden">
+        <div
+          style="width: calc(100% / 6); float: left"
+          v-for="item in 6"
+          :key="item"
+        >
+          <div
+            style="margin: 0 8px 20px 8px; padding-top: 60%; position: relative"
+          >
             <img
-              :src="require('@/resource/index-scroll/index-scroll-'+(item % 5 +1) +'.jpg')"
-              style="width: 100%; border-radius: 5px;position: absolute;height: 100%;top: 0px;"
+              :src="
+                require('@/resource/index-scroll/index-scroll-' +
+                  ((item % 5) + 1) +
+                  '.jpg')
+              "
+              style="
+                width: 100%;
+                border-radius: 5px;
+                position: absolute;
+                height: 100%;
+                top: 0px;
+              "
             />
           </div>
         </div>
       </div>
-      <div style="overflow:hidden">
-        <div style="width:calc(100% / 8);float:left" v-for="item in 8" :key="item">
-          <div style="margin: 0 8px 20px 8px;padding-top: 60%;position: relative;">
+      <div style="overflow: hidden">
+        <div
+          style="width: calc(100% / 8); float: left"
+          v-for="item in 8"
+          :key="item"
+        >
+          <div
+            style="margin: 0 8px 20px 8px; padding-top: 60%; position: relative"
+          >
             <img
-              :src="require('@/resource/index-scroll/index-scroll-'+(item % 5 +1) +'.jpg')"
-              style="width: 100%; border-radius: 10px;position: absolute;height: 100%;top: 0px;"
+              :src="
+                require('@/resource/index-scroll/index-scroll-' +
+                  ((item % 5) + 1) +
+                  '.jpg')
+              "
+              style="
+                width: 100%;
+                border-radius: 10px;
+                position: absolute;
+                height: 100%;
+                top: 0px;
+              "
             />
           </div>
         </div>
       </div>
 
-      <div style="margin-top: 25px;display: flex;justify-content: space-between;">
-        <div style="width: 40%;background: rgba(0,0,0,.2);text-align: left;padding:20px 10px">
-          <div style="padding:0px 0px 10px 10px;color: white">最多发布的作者</div>
-          <div style="display: flex;border-top: 1px solid rgba(255,255,255,0.3);padding:10px" v-for="item in 8" :key="item">
+      <div
+        style="margin-top: 25px; display: flex; justify-content: space-between"
+      >
+        <div
+          style="
+            width: 40%;
+            background: rgba(0, 0, 0, 0.2);
+            text-align: left;
+            padding: 20px 10px;
+          "
+        >
+          <div style="padding: 0px 0px 10px 10px; color: white">
+            最多发布的作者
+          </div>
+          <div
+            style="
+              display: flex;
+              border-top: 1px solid rgba(255, 255, 255, 0.3);
+              padding: 10px;
+            "
+            v-for="item in 8"
+            :key="item"
+          >
             <img
-              :src="require('@/resource/index-scroll/index-scroll-'+(item % 5 +1) +'.jpg')"
-              style="width: 36px; height: 36px; border-radius: 5px;"
+              :src="
+                require('@/resource/index-scroll/index-scroll-' +
+                  ((item % 5) + 1) +
+                  '.jpg')
+              "
+              style="width: 36px; height: 36px; border-radius: 5px"
             />
-            <div style="font-size:12px;margin-left: 15px;">
-              <div style="color: white;padding-bottom:2px">
+            <div style="font-size: 12px; margin-left: 15px">
+              <div style="color: white; padding-bottom: 2px">
                 <span>加菲猫</span>
-                <span style="vertical-align: middle;margin-left:3px;">
+                <span style="vertical-align: middle; margin-left: 3px">
                   <svg
                     t="1649263434217"
                     class="icon"
@@ -318,13 +486,61 @@
                 </span>
               </div>
               <div>
-                <span style="color:#2ab559">太阳当空照</span>
-                <span style="color:white; margin-left:5px;">- 13个小时前发布</span>
+                <span style="color: #2ab559">太阳当空照</span>
+                <span style="color: white; margin-left: 5px"
+                  >- 13个小时前发布</span
+                >
               </div>
             </div>
           </div>
+          <div style="margin: 30px 0px; text-align: center">
+            <span
+              style="
+                background-color: #a1c25a;
+                border-radius: 10px;
+                padding: 10px 50px;
+              "
+              >查看更多!</span
+            >
+          </div>
         </div>
-        <div style="width: 40%;background: rgba(0,0,0,.2);text-align: left;padding:20px 10px">123</div>
+        <div
+          style="
+            width: 40%;
+            background: rgba(0, 0, 0, 0.2);
+            text-align: left;
+            padding: 20px 10px;
+            color: white;
+          "
+        >
+          <div style="padding: 0px 0px 10px 10px">统计数据</div>
+          <div
+            style="
+              border-top: 1px solid rgba(255, 255, 255, 0.3);
+              padding: 10px;
+              line-height: 25px;
+            "
+          >
+            <div>拥有925672张高质量壁纸，浏览量达1996次！</div>
+            <div style="margin: 20px 0px">
+              我们有755988个很棒的用户，其中591个现在在线！
+            </div>
+            <div>
+              不确定要搜索什么？我们相信至少有一个75785用户创建的标签会帮助你找到一些东西！
+            </div>
+
+            <div style="margin-top: 50px">
+              Have 925,672 high quality wallpapers which have been viewed a
+              total of 1996 times!
+            </div>
+            <div style="margin: 20px 0px">
+              We have 755,988 awesome users, of whom 591 are online right now!
+            </div>
+            <div>
+              Not sure what to search for? We're sure at least one of our 75,785 user created tags will help you find something!
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -352,16 +568,16 @@ export default {
         "阿克奈兹",
         "蒂法·洛克哈特",
         "艺术品",
-        "坂町"
-      ]
+        "坂町",
+      ],
     };
-  }
+  },
 };
 </script>
 
 <style>
 .main {
-  background: url("~@/pages/wallpaper/resource/blue-gradients.020-wh.jpg") top
+  background: url("~@/pages/header/wallpaper/resource/blue-gradients.020-wh.jpg") top
       center/cover no-repeat fixed,
     #171717;
   padding-top: 55px;

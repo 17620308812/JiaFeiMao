@@ -180,7 +180,7 @@ export default {
 }
 
 .search-logo {
-  background-image: url("~@/pages/search/resource/1646807300_429213.png");
+  background-image: url("~@/pages/header/search/resource/1646807300_429213.png");
   width: 125px;
   height: 40px;
   background-repeat: no-repeat;
