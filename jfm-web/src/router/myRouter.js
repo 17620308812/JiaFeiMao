@@ -15,7 +15,7 @@ export default new Router({
             path: '/index',
             component: Index
         },
-        // 博客
+        // 小说
         {
             path: '/novel',
             component: () => import('@/pages/header/novel/novel.vue')
