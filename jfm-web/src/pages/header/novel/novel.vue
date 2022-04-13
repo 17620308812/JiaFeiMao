@@ -10,6 +10,7 @@
   >
     <div class="top-left"></div>
     <div class="top-right"></div>
+    <!-- 类别 -->
     <div style="width: 80%; margin: 0px auto; padding-top: 30px">
       <div
         style="
@@ -536,7 +537,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 强烈推荐 -->
     <div
       style="
         width: 80%;
@@ -545,20 +546,31 @@
         border-radius: 10px;
       "
     >
-      <div style="padding: 20px; margin-top: 20px; display: flex">
-        <div style="width: calc(100% - 500px)">
+      <div style="padding: 20px 20px 0px 20px; margin-top: 20px; display: flex">
+        <div style="width: calc(100% - 400px)">
           <div
             style="
               font-size: 20px;
               font-weight: 700;
-              border-bottom: 1px solid gray;
+              border-bottom: 2px solid gray;
               padding-bottom: 10px;
+              position: relative;
             "
           >
-            编辑强推
+            <span>编辑强推</span>
+            <span class="edit-push"></span>
           </div>
           <div>
-            <div style="width: calc(100% / 3); float: left;padding: 20px 0px;border-top:1px solid #d9d5d5" v-for="item in 9" :key="item">
+            <div
+              style="
+                width: calc(100% / 3);
+                float: left;
+                padding: 20px 0px;
+                border-top: 1px solid #d9d5d5;
+              "
+              v-for="item in 9"
+              :key="item"
+            >
               <div style="margin-right: 20px; display: flex">
                 <div>
                   <img
@@ -567,7 +579,7 @@
                   />
                 </div>
                 <div style="padding-left: 10px">
-                  <div style="color:#1a1a1a;">千金散尽还复来</div>
+                  <div style="color: #1a1a1a">千金散尽还复来</div>
                   <div style="padding: 10px 0px">
                     <span
                       style="
@@ -632,9 +644,411 @@
             </div>
           </div>
         </div>
-        <div></div>
+        <div style="width: 400px; padding-left: 30px">
+          <div
+            style="
+              font-size: 20px;
+              font-weight: 700;
+              border-bottom: 2px solid gray;
+              padding-bottom: 10px;
+              position: relative;
+            "
+          >
+            <span>风格尚</span>
+            <span class="fashion-pavilion"></span>
+          </div>
+          <div
+            style="border-top: 1px solid #d9d5d5; padding: 6px 0px"
+            v-for="item in 12"
+            :key="item"
+          >
+            <span style="color: grey; margin-right: 5px">[轻小说]</span>
+            <span style="font-size: 15px">今日的砖头额外的烫手{{ item }}</span>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- 图片分割  -->
+    <div
+      style="width: 80%; margin: 20px auto; height: 100px; position: relative"
+    >
+      <img
+        src="~@/pages/header/novel/resource/wallhaven-pkw6y3.jpg"
+        style="width: 100%; height: 100%; border-radius: 5px"
+      />
+      <img
+        src="~@/pages/header/novel/resource/1649836188_778692.png"
+        alt=""
+        style="width: 40%; position: absolute; right: 10%; top: 15px"
+      />
+    </div>
+    <!-- 第一部分 -->
+    <div
+      style="
+        width: 80%;
+        margin: 0px auto;
+        background-color: white;
+        border-radius: 10px;
+      "
+    >
+      <div style="overflow: hidden; padding: 20px; margin-left: -20px">
+        <div style="float: left; width: 25%" v-for="ic in 4" :key="ic">
+          <div style="margin-left: 20px">
+            <div
+              style="
+                font-size: 20px;
+                font-weight: 700;
+                border-bottom: 2px solid gray;
+                padding-bottom: 10px;
+                position: relative;
+              "
+            >
+              <span>热销榜</span>
+            </div>
+            <div style="display: flex; margin-top: 10px; margin-bottom: 5px">
+              <div style="width: calc(100% - 75px)">
+                <div
+                  style="
+                    background-color: #f76d9c;
+                    font-size: 12px;
+                    color: white;
+                    display: inline-block;
+                    padding: 0px 2px;
+                  "
+                >
+                  NO.1
+                </div>
+                <div style="font-size: 15px; margin-top: 5px">
+                  千金散尽还复来
+                </div>
+                <div style="color: #f76d9c; font-size: 15px; margin: 5px 0px">
+                  阅读最多
+                </div>
+                <div style="font-size: 12px; color: #a6a6a6">轻小说·南之柱</div>
+              </div>
+              <div>
+                <img
+                  src="~@/resource/index-event/wallhaven-gjvdvl.jpg"
+                  style="width: 75px; height: 95px; border-radius: 2px"
+                />
+              </div>
+            </div>
+            <div style="line-height: 32px; border-top: 1px solid #c1bcbc">
+              <span
+                style="
+                  text-align: center;
+                  background: rgb(132, 231, 214);
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: white;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >2</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px"
+                >163</span
+              >
+            </div>
+            <div style="line-height: 32px; border-top: 1px solid #c1bcbc">
+              <span
+                style="
+                  text-align: center;
+                  background: #81de87;
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: white;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >3</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px"
+                >163</span
+              >
+            </div>
+            <div
+              style="line-height: 32px; border-top: 1px solid #c1bcbc"
+              v-for="i1 in 7"
+              :key="i1"
+            >
+              <span
+                style="
+                  text-align: center;
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: #666;
+                  background: #ededed;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >{{ i1 + 3 }}</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px">{{
+                196 + i1
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  第二部分 -->
+    <div
+      style="
+        width: 80%;
+        margin: 0px auto;
+        background-color: white;
+        border-radius: 10px;
+      "
+    >
+      <div
+        style="padding: 20px 20px 20px 20px; margin-top: 20px; display: flex"
+      >
+        <div style="width: calc(100% - 300px)">
+          <div
+            style="
+              font-size: 20px;
+              font-weight: 700;
+              border-bottom: 2px solid gray;
+              padding-bottom: 10px;
+              position: relative;
+            "
+          >
+            <span>新书推荐</span>
+          </div>
+          <div style="display: flex">
+            <div style="width: 300px"></div>
+            <div style="width: calc(100% - 300px)">
+              <div
+                style="
+                  width: 50%;
+                  float: left;
+                  padding: 20px 0px;
+                  border-top: 1px solid #d9d5d5;
+                "
+                v-for="item in 6"
+                :key="item"
+              >
+                <div style="margin-right: 20px; display: flex">
+                  <div>
+                    <img
+                      src="~@/resource/index-event/wallhaven-gjvdvl.jpg"
+                      style="width: 75px; height: 100px; border-radius: 2px"
+                    />
+                  </div>
+                  <div style="padding-left: 10px">
+                    <div style="color: #1a1a1a">千金散尽还复来</div>
+                    <div style="padding: 10px 0px">
+                      <span
+                        style="
+                          display: -webkit-box;
+                          -webkit-box-orient: vertical;
+                          -webkit-line-clamp: 2;
+                          overflow: hidden;
+                          font-size: 12px;
+                          color: gray;
+                        "
+                      >
+                        如果太胖就积极运动，皮肤不好就改善饮食，五官改变不了就改变气质，不懂穿衣就去学，永远不要让自己停止美好
+                      </span>
+                    </div>
+                    <div
+                      style="font-size: 13px; height: 25px; line-height: 25px"
+                    >
+                      <span style="display: inline-flex; vertical-align: middle"
+                        ><svg
+                          t="1649758478717"
+                          class="icon"
+                          viewBox="0 0 1024 1024"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          p-id="3240"
+                          width="25"
+                          height="25"
+                        >
+                          <path
+                            d="M512 860.8C320 860.8 163.2 704 163.2 512S320 163.2 512 163.2 860.8 320 860.8 512 704 860.8 512 860.8z m172.8-272c-9.6-6.4-19.2-9.6-32-12.8-28.8-6.4-64-9.6-86.4-38.4 0 0-12.8-12.8 16-44.8 28.8-32 28.8-83.2 22.4-121.6-6.4-38.4-44.8-64-86.4-64-41.6 0-80 25.6-86.4 64-6.4 38.4-3.2 89.6 22.4 121.6 28.8 32 16 44.8 16 44.8-22.4 28.8-57.6 32-86.4 38.4-12.8 3.2-22.4 6.4-32 12.8-19.2 9.6-9.6 96-9.6 96h348.8c-6.4 0 0-83.2-6.4-96z"
+                            p-id="3241"
+                            fill="#707070"
+                          ></path></svg></span
+                      ><span
+                        style="
+                          overflow: hidden;
+                          height: 18px;
+                          margin-top: 1px;
+                          padding-right: 10px;
+                          white-space: nowrap;
+                          color: #a6a6a6;
+                        "
+                        >加菲猫</span
+                      >
+                      <span
+                        style="
+                          float: right;
+                          overflow: hidden;
+                          max-width: 52px;
+                          height: 16px;
+                          line-height: 16px;
+                          margin-top: 4px;
+                          padding: 0 3px;
+                          text-align: center;
+                          color: #a6a6a6;
+                          border: 1px solid #e7e7e7;
+                          border-radius: 1px;
+                        "
+                        >轻小说</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="width: 300px">
+          <div style="margin-left: 20px">
+            <div
+              style="
+                font-size: 20px;
+                font-weight: 700;
+                border-bottom: 2px solid gray;
+                padding-bottom: 10px;
+                position: relative;
+              "
+            >
+              <span>热销榜</span>
+            </div>
+            <div style="display: flex; margin-top: 10px; margin-bottom: 5px">
+              <div style="width: calc(100% - 75px)">
+                <div
+                  style="
+                    background-color: #f76d9c;
+                    font-size: 12px;
+                    color: white;
+                    display: inline-block;
+                    padding: 0px 2px;
+                  "
+                >
+                  NO.1
+                </div>
+                <div style="font-size: 15px; margin-top: 5px">
+                  千金散尽还复来
+                </div>
+                <div style="color: #f76d9c; font-size: 15px; margin: 5px 0px">
+                  阅读最多
+                </div>
+                <div style="font-size: 12px; color: #a6a6a6">轻小说·南之柱</div>
+              </div>
+              <div>
+                <img
+                  src="~@/resource/index-event/wallhaven-gjvdvl.jpg"
+                  style="width: 75px; height: 95px; border-radius: 2px"
+                />
+              </div>
+            </div>
+            <div style="line-height: 32px; border-top: 1px solid #c1bcbc">
+              <span
+                style="
+                  text-align: center;
+                  background: rgb(132, 231, 214);
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: white;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >2</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px"
+                >163</span
+              >
+            </div>
+            <div style="line-height: 32px; border-top: 1px solid #c1bcbc">
+              <span
+                style="
+                  text-align: center;
+                  background: #81de87;
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: white;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >3</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px"
+                >163</span
+              >
+            </div>
+            <div
+              style="line-height: 32px; border-top: 1px solid #c1bcbc"
+              v-for="i1 in 7"
+              :key="i1"
+            >
+              <span
+                style="
+                  text-align: center;
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: #666;
+                  background: #ededed;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >{{ i1 + 3 }}</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px">
+                九品
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 图片分割 -->
+    <div
+      style="width: 80%; margin: 20px auto; height: 100px; position: relative"
+    >
+      <img
+        src="~@/pages/header/novel/resource/_20220413145041.png"
+        style="width: 100%; height: 100%; border-radius: 5px"
+      />
+      <img
+        src="~@/pages/header/novel/resource/1649836103_198466.png"
+        alt=""
+        style="width: 40%; position: absolute; right: 10%; top: 15px"
+      />
+    </div>
+    <!--第三部分  -->
+    <div
+      style="
+        width: 80%;
+        margin: 0px auto;
+        background-color: white;
+        border-radius: 10px;
+      "
+    ></div>
+    <!--第四部分  -->
+    <div
+      style="
+        width: 80%;
+        margin: 0px auto;
+        background-color: white;
+        border-radius: 10px;
+      "
+    ></div>
   </div>
 </template>
 
@@ -696,5 +1110,25 @@ export default {
   right: 0px;
   background: url("~@/pages/header/novel/resource/index_flower_right.84235.png")
     no-repeat;
+}
+
+.edit-push {
+  width: 90px;
+  height: 48px;
+  position: absolute;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+  background-position: 0 0;
+  right: 0;
+  top: -11px;
+}
+
+.fashion-pavilion {
+  width: 43px;
+  height: 50px;
+  position: absolute;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+  background-position: 0 -52px;
+  right: 0;
+  top: -13px;
 }
 </style>
