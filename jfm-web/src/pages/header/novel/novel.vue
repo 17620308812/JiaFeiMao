@@ -823,7 +823,108 @@
             <span>新书推荐</span>
           </div>
           <div style="display: flex">
-            <div style="width: 300px"></div>
+            <div style="width: 300px">
+              <div style="padding-left: 100px; padding-top: 70px">
+                <div class="kuang">
+                  <div
+                    :class="['item', classType[0]]"
+                    @click="handleBookRotation(classType[0])"
+                  >
+                    <img
+                      src="~@/pages/header/novel/resource/book (1).png"
+                      style="width: 75px; height: 95px; border-radius: 2px"
+                    />
+                  </div>
+                  <div
+                    :class="['item', classType[1]]"
+                    @click="handleBookRotation(classType[1])"
+                  >
+                    <img
+                      src="~@/pages/header/novel/resource/book (2).png"
+                      style="width: 75px; height: 95px; border-radius: 2px"
+                    />
+                  </div>
+                  <div
+                    :class="['item', classType[2]]"
+                    @click="handleBookRotation(classType[2])"
+                  >
+                    <img
+                      src="~@/pages/header/novel/resource/book (3).png"
+                      style="width: 75px; height: 95px; border-radius: 2px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style="font-weight: 700; text-align: center; font-size: 18px"
+              >
+                千金散尽还复来
+              </div>
+              <div
+                style="
+                  font-size: 12px;
+                  color: gray;
+                  text-align: center;
+                  margin: 6px 0px;
+                "
+              >
+                加菲猫
+              </div>
+              <div style="font-size: 12px; text-align: center">
+                <span
+                  style="
+                    color: #ffa100;
+                    border: 1px solid #ffa100;
+                    padding: 0px 5px;
+                  "
+                  >古代</span
+                ><span
+                  style="
+                    color: #ff3955;
+                    border: 1px solid #ff3955;
+                    margin: 0px 5px;
+                    padding: 0px 5px;
+                  "
+                  >已完结</span
+                ><span
+                  style="
+                    color: #4284ed;
+                    border: 1px solid #4284ed;
+                    padding: 0px 5px;
+                  "
+                  >24.88万</span
+                >
+              </div>
+              <div
+                style="
+                  font-size: 12px;
+                  color: gray;
+                  padding: 10px 20px 25px 20px;
+                "
+              >
+                <span
+                  style="
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                    overflow: hidden;
+                  "
+                >
+                  每个人的生活里都有阴影，但是若没这些阴影，又如何能知道我们正站在光里。人远比自己想象的要坚强！做好自己该做的，有爱或无爱，都安然对待。凡事不要想得太复杂，想多头疼，想通心疼，手不要握得太紧，东西会碎，手会疼。改变身边的每个人，改变身边的每件事，唯一不变的就是此时此刻的勇气。卸去一天的重负，轻轻闭上你的眼睛，让快乐悄悄进入你的梦乡，让幸福静静守在你的身旁，让我的祝福为你建造一个美好的梦境。生活中，我们在哀叹生命不幸，在等待希望的瞬间，时间像一只顽皮的小精灵窃笑着与我们擦肩而去。时间一天一天地过支，童年的无无忧无虑早已如梦般散去，少年的浪漫往事，也伴随着日历飘逸在岁月的风中……时光飞逝。
+                </span>
+              </div>
+              <div style="text-align: center; color: white">
+                <span
+                  style="
+                    border-color: #f01742;
+                    background: #f01742;
+                    padding: 5px 30px;
+                    border-radius: 20px;
+                  "
+                  >书籍详情</span
+                >
+              </div>
+            </div>
             <div style="width: calc(100% - 300px)">
               <div
                 style="
@@ -1039,7 +1140,318 @@
         background-color: white;
         border-radius: 10px;
       "
-    ></div>
+    >
+      <div
+        style="padding: 20px 20px 20px 20px; margin-top: 20px; display: flex"
+      >
+        <div style="width: calc(100% - 300px)">
+          <div
+            style="
+              font-size: 20px;
+              font-weight: 700;
+              border-bottom: 2px solid gray;
+              padding-bottom: 10px;
+              position: relative;
+            "
+          >
+            <span>新书推荐</span>
+          </div>
+          <div style="display: flex">
+            <div style="width: 300px">
+              <div style="padding-left: 100px; padding-top: 70px">
+                <div class="kuang">
+                  <div
+                    :class="['item', classType[0]]"
+                    @click="handleBookRotation(classType[0])"
+                  >
+                    <img
+                      src="~@/pages/header/novel/resource/book (1).png"
+                      style="width: 75px; height: 95px; border-radius: 2px"
+                    />
+                  </div>
+                  <div
+                    :class="['item', classType[1]]"
+                    @click="handleBookRotation(classType[1])"
+                  >
+                    <img
+                      src="~@/pages/header/novel/resource/book (2).png"
+                      style="width: 75px; height: 95px; border-radius: 2px"
+                    />
+                  </div>
+                  <div
+                    :class="['item', classType[2]]"
+                    @click="handleBookRotation(classType[2])"
+                  >
+                    <img
+                      src="~@/pages/header/novel/resource/book (3).png"
+                      style="width: 75px; height: 95px; border-radius: 2px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style="font-weight: 700; text-align: center; font-size: 18px"
+              >
+                千金散尽还复来
+              </div>
+              <div
+                style="
+                  font-size: 12px;
+                  color: gray;
+                  text-align: center;
+                  margin: 6px 0px;
+                "
+              >
+                加菲猫
+              </div>
+              <div style="font-size: 12px; text-align: center">
+                <span
+                  style="
+                    color: #ffa100;
+                    border: 1px solid #ffa100;
+                    padding: 0px 5px;
+                  "
+                  >古代</span
+                ><span
+                  style="
+                    color: #ff3955;
+                    border: 1px solid #ff3955;
+                    margin: 0px 5px;
+                    padding: 0px 5px;
+                  "
+                  >已完结</span
+                ><span
+                  style="
+                    color: #4284ed;
+                    border: 1px solid #4284ed;
+                    padding: 0px 5px;
+                  "
+                  >24.88万</span
+                >
+              </div>
+              <div
+                style="
+                  font-size: 12px;
+                  color: gray;
+                  padding: 10px 20px 25px 20px;
+                "
+              >
+                <span
+                  style="
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                    overflow: hidden;
+                  "
+                >
+                  每个人的生活里都有阴影，但是若没这些阴影，又如何能知道我们正站在光里。人远比自己想象的要坚强！做好自己该做的，有爱或无爱，都安然对待。凡事不要想得太复杂，想多头疼，想通心疼，手不要握得太紧，东西会碎，手会疼。改变身边的每个人，改变身边的每件事，唯一不变的就是此时此刻的勇气。卸去一天的重负，轻轻闭上你的眼睛，让快乐悄悄进入你的梦乡，让幸福静静守在你的身旁，让我的祝福为你建造一个美好的梦境。生活中，我们在哀叹生命不幸，在等待希望的瞬间，时间像一只顽皮的小精灵窃笑着与我们擦肩而去。时间一天一天地过支，童年的无无忧无虑早已如梦般散去，少年的浪漫往事，也伴随着日历飘逸在岁月的风中……时光飞逝。
+                </span>
+              </div>
+              <div style="text-align: center; color: white">
+                <span
+                  style="
+                    border-color: #f01742;
+                    background: #f01742;
+                    padding: 5px 30px;
+                    border-radius: 20px;
+                  "
+                  >书籍详情</span
+                >
+              </div>
+            </div>
+            <div style="width: calc(100% - 300px)">
+              <div
+                style="
+                  width: 50%;
+                  float: left;
+                  padding: 20px 0px;
+                  border-top: 1px solid #d9d5d5;
+                "
+                v-for="item in 6"
+                :key="item"
+              >
+                <div style="margin-right: 20px; display: flex">
+                  <div>
+                    <img
+                      src="~@/resource/index-event/wallhaven-gjvdvl.jpg"
+                      style="width: 75px; height: 100px; border-radius: 2px"
+                    />
+                  </div>
+                  <div style="padding-left: 10px">
+                    <div style="color: #1a1a1a">千金散尽还复来</div>
+                    <div style="padding: 10px 0px">
+                      <span
+                        style="
+                          display: -webkit-box;
+                          -webkit-box-orient: vertical;
+                          -webkit-line-clamp: 2;
+                          overflow: hidden;
+                          font-size: 12px;
+                          color: gray;
+                        "
+                      >
+                        如果太胖就积极运动，皮肤不好就改善饮食，五官改变不了就改变气质，不懂穿衣就去学，永远不要让自己停止美好
+                      </span>
+                    </div>
+                    <div
+                      style="font-size: 13px; height: 25px; line-height: 25px"
+                    >
+                      <span style="display: inline-flex; vertical-align: middle"
+                        ><svg
+                          t="1649758478717"
+                          class="icon"
+                          viewBox="0 0 1024 1024"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          p-id="3240"
+                          width="25"
+                          height="25"
+                        >
+                          <path
+                            d="M512 860.8C320 860.8 163.2 704 163.2 512S320 163.2 512 163.2 860.8 320 860.8 512 704 860.8 512 860.8z m172.8-272c-9.6-6.4-19.2-9.6-32-12.8-28.8-6.4-64-9.6-86.4-38.4 0 0-12.8-12.8 16-44.8 28.8-32 28.8-83.2 22.4-121.6-6.4-38.4-44.8-64-86.4-64-41.6 0-80 25.6-86.4 64-6.4 38.4-3.2 89.6 22.4 121.6 28.8 32 16 44.8 16 44.8-22.4 28.8-57.6 32-86.4 38.4-12.8 3.2-22.4 6.4-32 12.8-19.2 9.6-9.6 96-9.6 96h348.8c-6.4 0 0-83.2-6.4-96z"
+                            p-id="3241"
+                            fill="#707070"
+                          ></path></svg></span
+                      ><span
+                        style="
+                          overflow: hidden;
+                          height: 18px;
+                          margin-top: 1px;
+                          padding-right: 10px;
+                          white-space: nowrap;
+                          color: #a6a6a6;
+                        "
+                        >加菲猫</span
+                      >
+                      <span
+                        style="
+                          float: right;
+                          overflow: hidden;
+                          max-width: 52px;
+                          height: 16px;
+                          line-height: 16px;
+                          margin-top: 4px;
+                          padding: 0 3px;
+                          text-align: center;
+                          color: #a6a6a6;
+                          border: 1px solid #e7e7e7;
+                          border-radius: 1px;
+                        "
+                        >轻小说</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="width: 300px">
+          <div style="margin-left: 20px">
+            <div
+              style="
+                font-size: 20px;
+                font-weight: 700;
+                border-bottom: 2px solid gray;
+                padding-bottom: 10px;
+                position: relative;
+              "
+            >
+              <span>热销榜</span>
+            </div>
+            <div style="display: flex; margin-top: 10px; margin-bottom: 5px">
+              <div style="width: calc(100% - 75px)">
+                <div
+                  style="
+                    background-color: #f76d9c;
+                    font-size: 12px;
+                    color: white;
+                    display: inline-block;
+                    padding: 0px 2px;
+                  "
+                >
+                  NO.1
+                </div>
+                <div style="font-size: 15px; margin-top: 5px">
+                  千金散尽还复来
+                </div>
+                <div style="color: #f76d9c; font-size: 15px; margin: 5px 0px">
+                  阅读最多
+                </div>
+                <div style="font-size: 12px; color: #a6a6a6">轻小说·南之柱</div>
+              </div>
+              <div>
+                <img
+                  src="~@/resource/index-event/wallhaven-gjvdvl.jpg"
+                  style="width: 75px; height: 95px; border-radius: 2px"
+                />
+              </div>
+            </div>
+            <div style="line-height: 32px; border-top: 1px solid #c1bcbc">
+              <span
+                style="
+                  text-align: center;
+                  background: rgb(132, 231, 214);
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: white;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >2</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px"
+                >163</span
+              >
+            </div>
+            <div style="line-height: 32px; border-top: 1px solid #c1bcbc">
+              <span
+                style="
+                  text-align: center;
+                  background: #81de87;
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: white;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >3</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px"
+                >163</span
+              >
+            </div>
+            <div
+              style="line-height: 32px; border-top: 1px solid #c1bcbc"
+              v-for="i1 in 7"
+              :key="i1"
+            >
+              <span
+                style="
+                  text-align: center;
+                  display: revert;
+                  padding: 1px 5px;
+                  font-size: 12px;
+                  color: #666;
+                  background: #ededed;
+                  margin-right: 10px;
+                  border-radius: 3px;
+                "
+                >{{ i1 + 3 }}</span
+              >
+              <span style="font-size: 14px">千金散尽还复来</span>
+              <span style="float: right; color: #b3b3b3; font-size: 12px">
+                九品
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--第四部分  -->
     <div
       style="
@@ -1048,7 +1460,110 @@
         background-color: white;
         border-radius: 10px;
       "
-    ></div>
+    >
+      <div
+        style="
+          overflow: hidden;
+          padding: 10px 20px 0px 20px;
+          margin-top: 20px;
+          margin-left: -20px;
+        "
+      >
+        <div
+          style="float: left; width: 25%; margin-top: 10px; margin-bottom: 20px"
+          v-for="ic in 8"
+          :key="ic"
+        >
+          <div style="margin-left: 20px">
+            <div
+              style="
+                font-size: 18px;
+                border-bottom: 2px solid gray;
+                padding-bottom: 10px;
+                position: relative;
+              "
+            >
+              <span>热销榜</span>
+              <span :class="'edit-push-' + ic"></span>
+            </div>
+            <div
+              style="
+                display: flex;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                border-bottom: 1px solid #d9d9d9;
+              "
+            >
+              <div style="width: calc(100% - 75px)">
+                <div style="font-size: 15px; margin-top: 5px">
+                  千金散尽还复来
+                </div>
+
+                <div
+                  style="
+                    font-size: 12px;
+                    color: #a6a6a6;
+                    margin-top: 10px;
+                    padding-right: 30px;
+                  "
+                >
+                  <span
+                    style="
+                      display: -webkit-box;
+                      -webkit-box-orient: vertical;
+                      -webkit-line-clamp: 2;
+                      overflow: hidden;
+                    "
+                  >
+                    凡事不要想得太复杂，想多头疼，想通心疼，手不要握得太紧，东西会碎，手会疼。改变身边的每个人，改变身边的每件事，唯一不变的就是此时此刻的勇气。卸去一天的重负，轻轻闭上你的眼睛，让快乐悄悄进入你的梦乡，让幸福静静守在你的身旁，让我的祝福为你建造一个美好的梦境。
+                  </span>
+                </div>
+              </div>
+              <div style="padding-right: 15px">
+                <img
+                  src="~@/resource/index-event/wallhaven-gjvdvl.jpg"
+                  style="width: 65px; height: 85px; border-radius: 2px"
+                />
+              </div>
+            </div>
+            <div
+              style="
+                line-height: 32px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+              "
+              v-for="i1 in 4"
+              :key="i1"
+            >
+              <span style="font-size: 14px; color: #7c7878"
+                >千金散尽还复来</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 图片分割 -->
+    <div
+      style="
+        width: 80%;
+        margin: 20px auto 0px auto;
+        height: 100px;
+        position: relative;
+        padding-bottom: 20px;
+      "
+    >
+      <img
+        src="~@/pages/header/novel/resource/_20220413145041.png"
+        style="width: 100%; height: 100%; border-radius: 5px"
+      />
+      <img
+        src="~@/pages/header/novel/resource/1649836103_198466.png"
+        alt=""
+        style="width: 40%; position: absolute; right: 10%; top: 15px"
+      />
+    </div>
   </div>
 </template>
 
@@ -1058,6 +1573,7 @@ export default {
   data() {
     return {
       lastType: "",
+      classType: ["left", "middle", "right"],
     };
   },
   methods: {
@@ -1077,6 +1593,24 @@ export default {
       this.lastType = selectKey;
 
       this.$refs.carousel.setActiveItem(selectKey);
+    },
+    handleBookRotation(value) {
+      if (value === "left") {
+        this.classType = [
+          this.classType[1],
+          this.classType[2],
+          this.classType[0],
+        ];
+      } else if (value === "middle") {
+        return;
+      } else if (value === "right") {
+        this.classType = [
+          this.classType[2],
+          this.classType[0],
+          this.classType[1],
+        ];
+      }
+      console.log(this.classType);
     },
   },
 };
@@ -1122,6 +1656,79 @@ export default {
   top: -11px;
 }
 
+.edit-push-1 {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  width: 39px;
+  height: 33px;
+  background-position: -141px -38px;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+}
+.edit-push-2 {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 41px;
+  height: 34px;
+  background-position: -141px 0;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+}
+.edit-push-3 {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 35px;
+  height: 31px;
+  background-position: -87px -106px;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+}
+.edit-push-4 {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: 42px;
+  height: 32px;
+  background-position: 0 -106px;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+}
+.edit-push-5 {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 37px;
+  height: 31px;
+  background-position: -46px -106px;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+}
+.edit-push-6 {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 42px;
+  height: 39px;
+  background-position: -47px -52px;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+}
+.edit-push-7 {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  width: 43px;
+  height: 38px;
+  background-position: -94px 0;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+}
+.edit-push-8 {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  width: 35px;
+  height: 33px;
+  background-position: 0 -142px;
+  background-image: url("~@/pages/header/novel/resource/sprite.666d2.png");
+}
+
 .fashion-pavilion {
   width: 43px;
   height: 50px;
@@ -1130,5 +1737,36 @@ export default {
   background-position: 0 -52px;
   right: 0;
   top: -13px;
+}
+
+.kuang {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  cursor: pointer;
+}
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 95px;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.kuang .left {
+  left: -70px;
+  filter: blur(1px);
+  z-index: 3;
+}
+.kuang .middle {
+  left: 0px;
+  transform: scale(1.3);
+  z-index: 4;
+}
+.kuang .right {
+  left: 70px;
+  filter: blur(1px);
+  z-index: 3;
 }
 </style>
