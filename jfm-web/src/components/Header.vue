@@ -36,8 +36,8 @@
         <router-link
           :class="[isIndex === true ? 'index' : 'other']"
           tag="li"
-          to="/questions"
-          >问答</router-link
+          to="/game"
+          >游戏</router-link
         >
         <router-link
           :class="[isIndex === true ? 'index' : 'other']"
