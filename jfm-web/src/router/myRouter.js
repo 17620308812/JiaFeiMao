@@ -37,8 +37,8 @@ export default new Router({
         },
         // 问答
         {
-            path: '/questions',
-            component: () => import('@/pages/header/questions/questions.vue')
+            path: '/game',
+            component: () => import('@/pages/header/game/game.vue')
         },
         // 直播
         {
