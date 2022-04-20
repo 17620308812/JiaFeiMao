@@ -1,70 +1,363 @@
 <template>
-  <div style="margin-top: 50px;box-shadow: inset 0px 4px 4px 0px rgb(242 242 242);">
-    <div style="display:flex;position:relative;height:400px;">
-      <div style="left: 10%;" class="move-image" @click="handleMoveClick('left')">&lt;</div>
+  <div
+    style="margin-top: 50px; box-shadow: inset 0px 4px 4px 0px rgb(242 242 242)"
+  >
+    <div style="display: flex; position: relative; height: 400px">
+      <div
+        style="left: 10%"
+        class="move-image"
+        @click="handleMoveClick('left')"
+      >
+        &lt;
+      </div>
       <div class="move-image" @click="handleMoveClick('right')">></div>
       <div
-        style="opacity: 0.5; background-color: black; z-index: 2;"
+        style="opacity: 0.5; background-color: black; z-index: 2"
         class="move-item .move-image-left"
       ></div>
       <div
-        style="opacity: 0.5; background-color: black; z-index: 2;left:50%"
+        style="opacity: 0.5; background-color: black; z-index: 2; left: 50%"
         class="move-item .move-image-right"
       ></div>
-      <div :class="['move-item',moveClass[item-1]]" v-for="item in 5" :key="item">
+      <div
+        :class="['move-item', moveClass[item - 1]]"
+        v-for="item in 5"
+        :key="item"
+      >
         <img
-          :src="require('@/resource/index-scroll/index-scroll-'+item+'.jpg')"
-          style="width: 100%; height: 100%;"
+          :src="
+            require('@/resource/index-scroll/index-scroll-' + item + '.jpg')
+          "
+          style="width: 100%; height: 100%"
         />
       </div>
     </div>
     <div
-      style="width: 100%;
-    padding: 26px 0;
-    font-size: 16px;
-    color: #fff;
-    background-color: #212121;"
+      style="
+        width: 100%;
+        padding: 26px 0;
+        font-size: 16px;
+        color: #fff;
+        background-color: #212121;
+      "
     >
-      <div style="justify-content: space-evenly;margin: auto;display:flex; max-width: 1200px;">
-        <div
-          v-for="item in [ '热血', '古风', '玄幻', '奇幻', '悬疑', '都市', '历史', '武侠仙侠', '游戏竞技', '悬疑灵异', '架空', '青春', '西幻', '现代', '全部 >']"
-          :key="item"
-        >{{item}}</div>
-      </div>
-    </div>
-    <div>
-        
-    </div>
-    <div
-      style="    padding: 60px 0 16px;
-    display: flex;
-    align-items: center;
-    color: rgba(0,0,0,.87);"
-    >
-      <div style="font-size: 32px;
-    line-height: 45px;
-    flex: 1;">为你推荐</div>
       <div
-        style="height: 34px;
-    width: 90px;
-    background-color: rgba(50,170,255,.16);
-    border-radius: 20px;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-    color: #32aaff;"
+        style="
+          justify-content: space-evenly;
+          margin: auto;
+          display: flex;
+          max-width: 1200px;
+        "
       >
         <div
-          style="margin-right: 4px;
-    width: 12px;
-    height: 12px;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAxZJREFUSA21VU1IVFEUPufN6KgbcRGZWYsWZQiBjs+KaNUPudAoZ4ZKChcVZEQtQqiI0kWLIkpoURBZkITzYz+LwopAgmqokUIKqlU/JEa0KNPSN+/0ncfMNDJT6TSd4c67955zvu+8e847l+kPsjwoc38w+ZloFQlVE9Nsx1zoE55DQjRQ4KIr0WZ+/zsY+GbKiutS8X2CjgF0C0AKMi1+7TCThVXIbVB7NqIMAm9I/CJ0Dk5lGDYMbmFcJTdFiy0akRKyxseokg0yYdeE0Qg7A0RfEcyuQT/3YJ2SKQQAb4PRGUQOe7qDqHZHffw6ZZ1lUt8nCy2LuqBal1C3Dwb4hM5xxMUpAjMkG+NCEVVgsysW4H06n64guE68zWG1N5g2I8Ih26a7DoF5TebZE07SSoF+Ieaj7cyMl5mZeIPSDadWgI+B7Bu8ZxkKEZ+kDihKwdbf5KMduYA7oSygnQC/D/ASBdc9Y2lEKhHrNigsEOw9ymw7xjn88VtaBPCqdFdj0iYfonchsf1PAvwyXTmTuRmWatuie/BxIk/6ujFZqwuQhJObuTzjNhXhvDvTfXEUo24cTxXAtXJi6cqZzlGa6p+BoUkuVzCXmz7oM99iIPq4grosPaX8C74J+qywaCjz8w+PMkXYzxxgppr/QeBG/Q+gdhttIR8IuvNBUhuSgyie1UUeWs/eiMxBFt4pMGp2STTAL/6FxBuWKrHpuWKwiyqNWDMPo0Z7cFTIM50WEaQlN1FfgJ+Ct7bvXsV2elFRIR3AhvbzNXVh6sgNnsgM0xH4atsexXE4nTUVbW1QNuBNIom74GIhUdvDAI9Ph6zhpng+jtJZBNiq9i6Dtj728WWdpwh0gZ6+B0ZdCZKnyEnL33KyrE8WT1h0Ce6mYuAk9sf8fFLnKlMIdKMuKNr8zmPo3SD49cPoBq7IR54CGkGe4mjvFdivR/U1IWMNiYC+GLgBk5ErlkoGgW6aQSnH530cyk0gms6l3+sx6NCDZn6j/umSlSBpoES49VuwXokoaxBOGZ5KOIzxCuO2x0WRbMDQOfITQ9UJmSVQi4gAAAAASUVORK5CYII=);
-    background-size: contain;
-    background-repeat: no-repeat;"
-        ></div>
-        <div style>换一批</div>
+          v-for="item in [
+            '热血',
+            '古风',
+            '玄幻',
+            '奇幻',
+            '悬疑',
+            '都市',
+            '历史',
+            '武侠仙侠',
+            '游戏竞技',
+            '悬疑灵异',
+            '架空',
+            '青春',
+            '西幻',
+            '现代',
+            '全部 >',
+          ]"
+          :key="item"
+        >
+          {{ item }}
+        </div>
+      </div>
+    </div>
+    <div style="width: calc(60% + 100px); margin: 0px auto; display: flex">
+      <div style="width: calc(100% - 100px)">
+        <div>
+          <div
+            style="
+              padding: 40px 0 16px;
+              display: flex;
+              align-items: center;
+              color: rgba(0, 0, 0, 0.87);
+            "
+          >
+            <div
+              style="font-size: 32px; line-height: 45px; flex: 1"
+              id="为你推荐"
+            >
+              为你推荐
+            </div>
+            <div
+              style="
+                height: 34px;
+                width: 90px;
+                background-color: rgba(50, 170, 255, 0.16);
+                border-radius: 20px;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                color: #32aaff;
+              "
+            >
+              <div
+                style="
+                  margin-right: 4px;
+                  width: 12px;
+                  height: 12px;
+                  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAxZJREFUSA21VU1IVFEUPufN6KgbcRGZWYsWZQiBjs+KaNUPudAoZ4ZKChcVZEQtQqiI0kWLIkpoURBZkITzYz+LwopAgmqokUIKqlU/JEa0KNPSN+/0ncfMNDJT6TSd4c67955zvu+8e847l+kPsjwoc38w+ZloFQlVE9Nsx1zoE55DQjRQ4KIr0WZ+/zsY+GbKiutS8X2CjgF0C0AKMi1+7TCThVXIbVB7NqIMAm9I/CJ0Dk5lGDYMbmFcJTdFiy0akRKyxseokg0yYdeE0Qg7A0RfEcyuQT/3YJ2SKQQAb4PRGUQOe7qDqHZHffw6ZZ1lUt8nCy2LuqBal1C3Dwb4hM5xxMUpAjMkG+NCEVVgsysW4H06n64guE68zWG1N5g2I8Ih26a7DoF5TebZE07SSoF+Ieaj7cyMl5mZeIPSDadWgI+B7Bu8ZxkKEZ+kDihKwdbf5KMduYA7oSygnQC/D/ASBdc9Y2lEKhHrNigsEOw9ymw7xjn88VtaBPCqdFdj0iYfonchsf1PAvwyXTmTuRmWatuie/BxIk/6ujFZqwuQhJObuTzjNhXhvDvTfXEUo24cTxXAtXJi6cqZzlGa6p+BoUkuVzCXmz7oM99iIPq4grosPaX8C74J+qywaCjz8w+PMkXYzxxgppr/QeBG/Q+gdhttIR8IuvNBUhuSgyie1UUeWs/eiMxBFt4pMGp2STTAL/6FxBuWKrHpuWKwiyqNWDMPo0Z7cFTIM50WEaQlN1FfgJ+Ct7bvXsV2elFRIR3AhvbzNXVh6sgNnsgM0xH4atsexXE4nTUVbW1QNuBNIom74GIhUdvDAI9Ph6zhpng+jtJZBNiq9i6Dtj728WWdpwh0gZ6+B0ZdCZKnyEnL33KyrE8WT1h0Ce6mYuAk9sf8fFLnKlMIdKMuKNr8zmPo3SD49cPoBq7IR54CGkGe4mjvFdivR/U1IWMNiYC+GLgBk5ErlkoGgW6aQSnH530cyk0gms6l3+sx6NCDZn6j/umSlSBpoES49VuwXokoaxBOGZ5KOIzxCuO2x0WRbMDQOfITQ9UJmSVQi4gAAAAASUVORK5CYII=);
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                "
+              ></div>
+              <div style>换一批</div>
+            </div>
+          </div>
+          <div
+            style="display: flex; margin-right: -10px; margin-bottom: 15px"
+            v-for="i1 in 2"
+            :key="i1"
+          >
+            <div v-for="item in 6" :key="item" style="width: calc(100% / 6)">
+              <div style="margin-right: 10px">
+                <img
+                  :src="
+                    require('@/pages/header/novel/resource/book (' +
+                      ((item % 3) + 1) +
+                      ').png')
+                  "
+                  style="width: 100%; border-radius: 2px"
+                />
+                <div
+                  style="
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: rgba(0, 0, 0, 0.87);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  千金散尽还复来
+                </div>
+                <div
+                  style="
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: #999;
+                    padding: 2px 0;
+                    display: inline-block;
+                  "
+                >
+                  科幻
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            style="
+              padding: 40px 0 16px;
+              display: flex;
+              align-items: center;
+              color: rgba(0, 0, 0, 0.87);
+            "
+          >
+            <div
+              style="font-size: 32px; line-height: 45px; flex: 1"
+              id="热门速递"
+            >
+              热门速递
+            </div>
+            <div
+              style="
+                height: 34px;
+                width: 90px;
+                background-color: rgba(50, 170, 255, 0.16);
+                border-radius: 20px;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                color: #32aaff;
+              "
+            >
+              <div
+                style="
+                  margin-right: 4px;
+                  width: 12px;
+                  height: 12px;
+                  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAxZJREFUSA21VU1IVFEUPufN6KgbcRGZWYsWZQiBjs+KaNUPudAoZ4ZKChcVZEQtQqiI0kWLIkpoURBZkITzYz+LwopAgmqokUIKqlU/JEa0KNPSN+/0ncfMNDJT6TSd4c67955zvu+8e847l+kPsjwoc38w+ZloFQlVE9Nsx1zoE55DQjRQ4KIr0WZ+/zsY+GbKiutS8X2CjgF0C0AKMi1+7TCThVXIbVB7NqIMAm9I/CJ0Dk5lGDYMbmFcJTdFiy0akRKyxseokg0yYdeE0Qg7A0RfEcyuQT/3YJ2SKQQAb4PRGUQOe7qDqHZHffw6ZZ1lUt8nCy2LuqBal1C3Dwb4hM5xxMUpAjMkG+NCEVVgsysW4H06n64guE68zWG1N5g2I8Ih26a7DoF5TebZE07SSoF+Ieaj7cyMl5mZeIPSDadWgI+B7Bu8ZxkKEZ+kDihKwdbf5KMduYA7oSygnQC/D/ASBdc9Y2lEKhHrNigsEOw9ymw7xjn88VtaBPCqdFdj0iYfonchsf1PAvwyXTmTuRmWatuie/BxIk/6ujFZqwuQhJObuTzjNhXhvDvTfXEUo24cTxXAtXJi6cqZzlGa6p+BoUkuVzCXmz7oM99iIPq4grosPaX8C74J+qywaCjz8w+PMkXYzxxgppr/QeBG/Q+gdhttIR8IuvNBUhuSgyie1UUeWs/eiMxBFt4pMGp2STTAL/6FxBuWKrHpuWKwiyqNWDMPo0Z7cFTIM50WEaQlN1FfgJ+Ct7bvXsV2elFRIR3AhvbzNXVh6sgNnsgM0xH4atsexXE4nTUVbW1QNuBNIom74GIhUdvDAI9Ph6zhpng+jtJZBNiq9i6Dtj728WWdpwh0gZ6+B0ZdCZKnyEnL33KyrE8WT1h0Ce6mYuAk9sf8fFLnKlMIdKMuKNr8zmPo3SD49cPoBq7IR54CGkGe4mjvFdivR/U1IWMNiYC+GLgBk5ErlkoGgW6aQSnH530cyk0gms6l3+sx6NCDZn6j/umSlSBpoES49VuwXokoaxBOGZ5KOIzxCuO2x0WRbMDQOfITQ9UJmSVQi4gAAAAASUVORK5CYII=);
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                "
+              ></div>
+              <div style>换一批</div>
+            </div>
+          </div>
+          <div
+            style="display: flex; margin-right: -10px; margin-bottom: 15px"
+            v-for="i1 in 2"
+            :key="i1"
+          >
+            <div v-for="item in 4" :key="item" style="width: 25%">
+              <div style="margin-right: 10px">
+                <img
+                  :src="
+                    require('@/resource/index-scroll/index-scroll-' +
+                      item +
+                      '.jpg')
+                  "
+                  style="width: 100%; height: 145px; border-radius: 2px"
+                />
+                <div
+                  style="
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: rgba(0, 0, 0, 0.87);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  千金散尽还复来
+                </div>
+                <div
+                  style="
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: #999;
+                    padding: 2px 0;
+                    display: inline-block;
+                  "
+                >
+                  科幻
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-for="i2 in ['都市生活', '古风冒险', '奇幻异界']" :key="i2">
+          <div
+            style="
+              padding: 40px 0 16px;
+              display: flex;
+              align-items: center;
+              color: rgba(0, 0, 0, 0.87);
+            "
+          >
+            <div style="font-size: 32px; line-height: 45px; flex: 1" :id="i2">
+              {{ i2 }}
+            </div>
+            <div
+              style="
+                height: 34px;
+                width: 90px;
+                background-color: rgba(50, 170, 255, 0.16);
+                border-radius: 20px;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                color: #32aaff;
+              "
+            >
+              <div
+                style="
+                  margin-right: 4px;
+                  width: 12px;
+                  height: 12px;
+                  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAAAAXNSR0IArs4c6QAAANVJREFUOBGd1DEOgjAUBuC/hU2NF/AarsbZwYXEQ5q4OhNXL+HgBQy4SWp/CAQKtK+8pEB4/UqTPh5g43g1aw4+S0MTFAqvAnjvb+YghvVEg9QA26rCXYp1flGlTnC2C3ztWEmxarfGLxERc5EkwemZqUebd+8dZCIGD2AMHkEpnoQSPAtD2At9OAhdbMFnA+w0E0siDSH3bFlleaZK71Zd1K+mWehD3OUkDKFJKEEjKEUDGIM6GItqWPcc22/YOuyL4A9MxGgqR+HHUuqfU5MOXJe0xz+eL6j+9ueG6wAAAABJRU5ErkJggg==);
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                "
+              ></div>
+              <div style>换一批</div>
+            </div>
+          </div>
+          <div style="display: flex; margin-right: -10px; margin-bottom: 15px">
+            <div v-for="item in 6" :key="item" style="width: calc(100% / 6)">
+              <div style="margin-right: 10px">
+                <img
+                  :src="
+                    require('@/pages/header/novel/resource/book (' +
+                      ((item % 3) + 1) +
+                      ').png')
+                  "
+                  style="width: 100%; border-radius: 2px"
+                />
+                <div
+                  style="
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: rgba(0, 0, 0, 0.87);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  千金散尽还复来
+                </div>
+                <div
+                  style="
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: #999;
+                    padding: 2px 0;
+                    display: inline-block;
+                  "
+                >
+                  科幻
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100px; padding-top: 40px; text-align: right">
+        <div style="position: sticky; top: 0">
+          <img
+            src="~@/pages/header/cartoon/resource/333.png"
+            style="width: 60%"
+          />
+          <div
+            style="
+              display: inline-block;
+              border: 2px solid #bfbfbf;
+              color: #787878;
+              border-radius: 3px;
+              font-size: 14px;
+              margin-top: -5px;
+            "
+          >
+            <div
+              :style="{
+                padding: '5px 10px',
+                'border-bottom':
+                  i3 === '奇幻异界' ? 'none' : '1px solid #bfbfbf',
+              }"
+              class="anchor-link"
+              @click="anchorLink(i3)"
+              v-for="i3 in [
+                '为你推荐',
+                '热门速递',
+                '都市生活',
+                '古风冒险',
+                '奇幻异界',
+              ]"
+              :key="i3"
+            >
+              {{ i3 }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -80,8 +373,8 @@ export default {
         "move-image-left",
         "move-image-middle",
         "move-image-right",
-        "move-image-right-right"
-      ]
+        "move-image-right-right",
+      ],
     };
   },
   methods: {
@@ -93,12 +386,20 @@ export default {
         this.moveClass.push(this.moveClass[0]);
         this.moveClass.splice(0, 1);
       }
-    }
-  }
+    },
+    anchorLink(id) {
+      document.querySelector("#" + id).scrollIntoView(true);
+    },
+  },
 };
 </script>
 
 <style scoped>
+.anchor-link:hover {
+  background-color: #d7f5ff;
+  cursor: pointer;
+}
+
 .move-image {
   color: white;
   left: 90%;
