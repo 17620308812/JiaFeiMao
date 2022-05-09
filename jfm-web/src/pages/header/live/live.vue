@@ -154,7 +154,7 @@
                       v-model="barrage"
                       active-color="#409eff"
                       :width="35"
-                      inactive-color="gray"
+                      inactive-color="white"
                     ></el-switch>
                   </span>
                   <span style="margin-right: 10px">
@@ -702,7 +702,7 @@
             <span style="margin-left: 10px">节目预告</span>
           </div>
           <div style="height: calc(250px - 50px)">
-            <div style="display: flex;font-size:14px ">
+            <div style="display: flex; font-size: 14px">
               <div
                 style="
                   position: relative;
@@ -790,7 +790,11 @@
                 </div>
               </div>
             </div>
-            <div style="display: flex;font-size:14px" v-for="i3 in 3" :key="i3">
+            <div
+              style="display: flex; font-size: 14px"
+              v-for="i3 in 3"
+              :key="i3"
+            >
               <div
                 style="
                   position: relative;
