@@ -369,8 +369,8 @@ export default {
   name: "DownloadApp",
   data() {
     return {
-      version: "安卓版",
-      updateType: "安卓版"
+      version: "TV版",
+      updateType: "TV版"
     };
   }
 };
