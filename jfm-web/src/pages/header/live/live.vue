@@ -1,25 +1,57 @@
 <template>
   <div
-    style="      margin-top: 50px;      box-shadow: inset 0px 4px 4px 0px rgb(242 242 242);      background-color: #f3f3f3;    "
+    style="
+      margin-top: 50px;
+      box-shadow: inset 0px 4px 4px 0px rgb(242 242 242);
+      background-color: #f3f3f3;
+    "
   >
+    <!-- 第一部分 -->
     <div class="t-bg">
-      <div style="padding: 30px 0px;width: 77%; margin: 0px auto">
+      <div style="padding: 30px 0px; width: 77%; margin: 0px auto">
         <div
-          style="            display: flex;            height: 0px;            padding-bottom: 50%;            overflow: hidden;            position: relative;          "
+          style="
+            display: flex;
+            height: 0px;
+            padding-bottom: 50%;
+            overflow: hidden;
+            position: relative;
+          "
         >
           <div
-            style="              width: calc(100% - 200px);              position: absolute;              top: 0px;              bottom: 0px;            "
+            style="
+              width: calc(100% - 200px);
+              position: absolute;
+              top: 0px;
+              bottom: 0px;
+            "
           >
             <div style>
               <img
-                :src="                  require('@/resource/index-scroll/index-scroll-' + 2 + '.jpg')                "
+                :src="
+                  require('@/resource/index-scroll/index-scroll-' + 2 + '.jpg')
+                "
                 style="width: 100%; height: 100%"
               />
               <div
-                style="                  display: inline-flex;                  position: absolute;                  bottom: 0px;                  background-color: rgba(0, 0, 0, 0.5);                  left: 0px;                  width: 100%;                  line-height: 40px;                  height: 40px;                "
+                style="
+                  display: inline-flex;
+                  position: absolute;
+                  bottom: 0px;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  left: 0px;
+                  width: 100%;
+                  line-height: 40px;
+                  height: 40px;
+                "
               >
                 <span
-                  style="                    display: inline-flex;                    align-items: center;                    margin-left: 5px;                    margin-right: 20px;                  "
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    margin-left: 5px;
+                    margin-right: 20px;
+                  "
                 >
                   <svg
                     t="1652061582281"
@@ -56,7 +88,9 @@
                     />
                   </svg>
                 </span>
-                <div style="display: inline-flex; position: absolute; right: 0px">
+                <div
+                  style="display: inline-flex; position: absolute; right: 0px"
+                >
                   <span style="display: inline-flex; align-items: center">
                     <svg
                       t="1652063716813"
@@ -76,7 +110,11 @@
                     </svg>
                   </span>
                   <span
-                    style="                      display: inline-flex;                      align-items: center;                      margin: 0px 10px;                    "
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      margin: 0px 10px;
+                    "
                   >
                     <svg
                       t="1652061804827"
@@ -96,14 +134,22 @@
                     </svg>
                   </span>
                   <span
-                    style="                      width: 100px;                      display: inline-grid;                      align-items: center; ;                    "
+                    style="
+                      width: 100px;
+                      display: inline-grid;
+                      align-items: center; ;
+                    "
                     class="jfm-sound"
                   >
                     <el-slider v-model="soundValue"></el-slider>
                   </span>
                   <span
                     :class="barrage ? 'jfm-dan1' : 'jfm-dan2'"
-                    style="                      display: inline-flex;                      align-items: center;                      margin: 0px 10px 0px 20px;                    "
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      margin: 0px 10px 0px 20px;
+                    "
                   >
                     <el-switch
                       v-model="barrage"
@@ -114,9 +160,19 @@
                   </span>
                   <span style="margin-right: 10px">
                     <span
-                      style="                        background-color: #ef9808;                        padding: 0px 15px;                        height: 25px;                        display: inline-flex;                        align-items: center;                        border-radius: 15px;                      "
+                      style="
+                        background-color: #ef9808;
+                        padding: 0px 15px;
+                        height: 25px;
+                        display: inline-flex;
+                        align-items: center;
+                        border-radius: 15px;
+                      "
                     >
-                      <span style="color: white; font-size: 12px; margin-right: 8px">进入直播间</span>
+                      <span
+                        style="color: white; font-size: 12px; margin-right: 8px"
+                        >进入直播间</span
+                      >
                       <span>
                         <svg
                           t="1652062703166"
@@ -142,22 +198,45 @@
             </div>
           </div>
           <div
-            style="              width: 200px;              background-color: rgba(0, 0, 0, 0.5);              position: absolute;              right: 0px;              overflow: auto;              bottom: 0px;              overflow: auto;              top: 0px;            "
+            style="
+              width: 200px;
+              background-color: rgba(0, 0, 0, 0.5);
+              position: absolute;
+              right: 0px;
+              overflow: auto;
+              bottom: 0px;
+              overflow: auto;
+              top: 0px;
+            "
             class="hidden-scroll"
           >
             <div style="margin: 0px 10px; padding-bottom: 7px">
               <div
                 v-for="item in 10"
                 :key="item"
-                style="                  position: relative;                  margin-top: 7px;                  border-radius: 7px;                  overflow: hidden;                "
+                style="
+                  position: relative;
+                  margin-top: 7px;
+                  border-radius: 7px;
+                  overflow: hidden;
+                "
                 @click="selectedKey = item"
               >
                 <img
-                  :src="                    require('@/resource/index-scroll/index-scroll-' +                      ((item % 5) + 1) +                      '.jpg')                  "
+                  :src="
+                    require('@/resource/index-scroll/index-scroll-' +
+                      ((item % 5) + 1) +
+                      '.jpg')
+                  "
                   style="width: 100%; height: 100%; display: block"
                 />
                 <div
-                  style="                    position: absolute;                    inset: 0px;                    background-color: rgba(0, 0, 0, 0.5);                    z-index: 2;                  "
+                  style="
+                    position: absolute;
+                    inset: 0px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    z-index: 2;
+                  "
                   :class="selectedKey === item ? 'right-1-img' : ''"
                 ></div>
               </div>
@@ -166,11 +245,25 @@
         </div>
       </div>
     </div>
+    <!-- 第二部分 -->
     <div style="width: 77%; margin: 0px auto">
-      <div style="display: flex; margin-right: -17px; margin-top: 30px" v-for="i2 in 2" :key="i2">
-        <div style="width: 50%; padding-right: 10px" v-for="item in 2" :key="item">
+      <div
+        style="display: flex; margin-right: -17px; margin-top: 30px"
+        v-for="i2 in 2"
+        :key="i2"
+      >
+        <div
+          style="width: 50%; padding-right: 10px"
+          v-for="item in 2"
+          :key="item"
+        >
           <div
-            style="              display: inline-flex;              align-items: end;              color: #5a5a5a;              margin-bottom: 8px;            "
+            style="
+              display: inline-flex;
+              align-items: end;
+              color: #5a5a5a;
+              margin-bottom: 8px;
+            "
           >
             <span style="display: inline-flex">
               <svg
@@ -195,7 +288,9 @@
                 />
               </svg>
             </span>
-            <span style="font-size: 18px; margin: 0px 15px 0px 5px">金融策略</span>
+            <span style="font-size: 18px; margin: 0px 15px 0px 5px"
+              >金融策略</span
+            >
             <span style="font-size: 14px">股票</span>
             <span style="margin: 0px 10px">·</span>
             <span>基金</span>
@@ -211,7 +306,12 @@
           <div style="display: flex">
             <div style="width: calc(100% / 3)" v-for="i1 in 3" :key="i1">
               <div
-                style="                  position: relative;                  overflow: hidden;                  border-radius: 5px;                  margin-right: 10px;                "
+                style="
+                  position: relative;
+                  overflow: hidden;
+                  border-radius: 5px;
+                  margin-right: 10px;
+                "
                 class="index-mouse-mover"
               >
                 <div style="width: 100%; height: 100px">
@@ -221,12 +321,24 @@
                   />
                 </div>
                 <div class="mover-text">
-                  <p>余固知謇謇之为患兮，忍而不能舍也。指九天以为正兮，夫惟灵修之故也</p>
+                  <p>
+                    余固知謇謇之为患兮，忍而不能舍也。指九天以为正兮，夫惟灵修之故也
+                  </p>
                   <div
-                    style="                      color: antiquewhite;                      margin-top: 7px;                      font-size: 13px;                      display: inline-flex;                      align-items: center;                    "
+                    style="
+                      color: antiquewhite;
+                      margin-top: 7px;
+                      font-size: 13px;
+                      display: inline-flex;
+                      align-items: center;
+                    "
                   >
                     <span
-                      style="                        margin-right: 10px;                        display: inline-flex;                        align-items: center;                      "
+                      style="
+                        margin-right: 10px;
+                        display: inline-flex;
+                        align-items: center;
+                      "
                     >
                       <svg
                         t="1652080765356"
@@ -263,8 +375,14 @@
                     <span>路演直通</span>
                   </div>
                   <div
-                    style="                      color: antiquewhite;                      font-size: 13px;                      margin-top: 0px;                    "
-                  >123.0万观看</div>
+                    style="
+                      color: antiquewhite;
+                      font-size: 13px;
+                      margin-top: 0px;
+                    "
+                  >
+                    123.0万观看
+                  </div>
                 </div>
               </div>
             </div>
@@ -282,7 +400,10 @@
                 arrow="never"
                 :interval="5000"
                 ref="carousel"
-                @change="                  (curIndex, preIndex) =>                    handleCarouselChange(curIndex + 1, preIndex)                "
+                @change="
+                  (curIndex, preIndex) =>
+                    handleCarouselChange(curIndex + 1, preIndex)
+                "
               >
                 <el-carousel-item name="1">
                   <img
@@ -320,27 +441,47 @@
               <ul>
                 <li @click="handleIndexSelect('1')">
                   <div
-                    :class="                      currentSelect === '1'                        ? 'index-selected'                        : 'no-index-selected'                    "
+                    :class="
+                      currentSelect === '1'
+                        ? 'index-selected'
+                        : 'no-index-selected'
+                    "
                   ></div>
                 </li>
                 <li @click="handleIndexSelect('2')">
                   <div
-                    :class="                      currentSelect === '2'                        ? 'index-selected'                        : 'no-index-selected'                    "
+                    :class="
+                      currentSelect === '2'
+                        ? 'index-selected'
+                        : 'no-index-selected'
+                    "
                   ></div>
                 </li>
                 <li @click="handleIndexSelect('3')">
                   <div
-                    :class="                      currentSelect === '3'                        ? 'index-selected'                        : 'no-index-selected'                    "
+                    :class="
+                      currentSelect === '3'
+                        ? 'index-selected'
+                        : 'no-index-selected'
+                    "
                   ></div>
                 </li>
                 <li @click="handleIndexSelect('4')">
                   <div
-                    :class="                      currentSelect === '4'                        ? 'index-selected'                        : 'no-index-selected'                    "
+                    :class="
+                      currentSelect === '4'
+                        ? 'index-selected'
+                        : 'no-index-selected'
+                    "
                   ></div>
                 </li>
                 <li @click="handleIndexSelect('5')">
                   <div
-                    :class="                      currentSelect === '5'                        ? 'index-selected'                        : 'no-index-selected'                    "
+                    :class="
+                      currentSelect === '5'
+                        ? 'index-selected'
+                        : 'no-index-selected'
+                    "
                   ></div>
                 </li>
               </ul>
@@ -348,10 +489,25 @@
           </div>
         </div>
         <div
-          style="            width: calc(100% / 3);            margin-right: 15px;            border-radius: 5px;            background-color: white;            position: relative;            overflow: hidden;          "
+          style="
+            width: calc(100% / 3);
+            margin-right: 15px;
+            border-radius: 5px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+          "
         >
           <div
-            style="              position: absolute;              background-color: orange;              right: -30px;              top: -30px;              width: 60px;              transform: rotate(45deg);              height: 60px;            "
+            style="
+              position: absolute;
+              background-color: orange;
+              right: -30px;
+              top: -30px;
+              width: 60px;
+              transform: rotate(45deg);
+              height: 60px;
+            "
           ></div>
           <div style="position: absolute; right: 3px; top: 3px">
             <svg
@@ -372,36 +528,90 @@
             </svg>
           </div>
           <div
-            style="              color: orange;              padding-left: 40px;              font-size: 25px;              line-height: 60px;              height: 60px;              white-space: nowrap;              overflow: hidden;              text-overflow: ellipsis;            "
-          >05.09-05.15-赛事安排</div>
+            style="
+              color: orange;
+              padding-left: 40px;
+              font-size: 25px;
+              line-height: 60px;
+              height: 60px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            "
+          >
+            05.09-05.15-赛事安排
+          </div>
           <div style="color: #424242">
             <div
-              style="                display: flex;                line-height: 40px;                border-top: 1px solid rgb(222, 222, 222);              "
+              style="
+                display: flex;
+                line-height: 40px;
+                border-top: 1px solid rgb(222, 222, 222);
+              "
               v-for="i3 in 3"
               :key="i3"
             >
               <span
-                style="                  background-color: orange;                  width: 15px;                  height: 15px;                  display: block;                  border-radius: 15px;                  margin: 12px;                "
+                style="
+                  background-color: orange;
+                  width: 15px;
+                  height: 15px;
+                  display: block;
+                  border-radius: 15px;
+                  margin: 12px;
+                "
               ></span>
               <div
-                style="                  width: calc(100% - 100px);                  text-overflow: ellipsis;                  white-space: nowrap;                  overflow: hidden;                "
-              >2020英雄联盟全球总决赛主题曲MV《所向无前》</div>
+                style="
+                  width: calc(100% - 100px);
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                "
+              >
+                2020英雄联盟全球总决赛主题曲MV《所向无前》
+              </div>
               <div style="width: 50px; color: gray">09-17</div>
             </div>
             <div style="padding: 0px 12px">
               <span
-                style="                  background-color: #d5d5d5;                  color: #2a2a2a;                  padding: 2px 10px;                  border-radius: 10px;                  font-size: 14px;                  margin-right: 20px;                  float: left;                  margin-bottom: 10px;                "
-                v-for="i4 in [                  '正则FAQ',                  '广告规范',                  '加强自律公告',                  '商业广告互动规范',                ]"
+                style="
+                  background-color: #d5d5d5;
+                  color: #2a2a2a;
+                  padding: 2px 10px;
+                  border-radius: 10px;
+                  font-size: 14px;
+                  margin-right: 20px;
+                  float: left;
+                  margin-bottom: 10px;
+                "
+                v-for="i4 in [
+                  '正则FAQ',
+                  '广告规范',
+                  '加强自律公告',
+                  '商业广告互动规范',
+                ]"
                 :key="i4"
-              >{{ i4 }}</span>
+                >{{ i4 }}</span
+              >
             </div>
           </div>
         </div>
         <div
-          style="            width: calc(100% / 3);            margin-right: 15px;            border-radius: 5px;            background-color: white;          "
+          style="
+            width: calc(100% / 3);
+            margin-right: 15px;
+            border-radius: 5px;
+            background-color: white;
+          "
         >
           <div
-            style="              margin: 10px 20px 5px 20px;              display: inline-flex;              align-items: center;              font-size: 20px;            "
+            style="
+              margin: 10px 20px 5px 20px;
+              display: inline-flex;
+              align-items: center;
+              font-size: 20px;
+            "
           >
             <span>
               <svg
@@ -500,9 +710,16 @@
           <div style="height: calc(250px - 50px)">
             <div style="display: flex; font-size: 14px">
               <div
-                style="                  position: relative;                  border-left: 2px solid #e4e7ed;                  margin-left: 30px;                  padding-bottom: 5px;                "
+                style="
+                  position: relative;
+                  border-left: 2px solid #e4e7ed;
+                  margin-left: 30px;
+                  padding-bottom: 5px;
+                "
               >
-                <div style="position: absolute; border-radius: 50%; left: -14px">
+                <div
+                  style="position: absolute; border-radius: 50%; left: -14px"
+                >
                   <svg
                     t="1652089671229"
                     class="icon"
@@ -521,18 +738,35 @@
                   </svg>
                 </div>
                 <div style="margin-bottom: 10px; margin-left: 20px">
-                  <span style="color: orange; font-weight: bold">2020-02-32</span>
+                  <span style="color: orange; font-weight: bold"
+                    >2020-02-32</span
+                  >
                   <span style="margin: 0px 10px">今天的砖额外的烫手</span>
                 </div>
                 <div
-                  style="                    position: relative;                    height: 70px;                    border-radius: 5px;                    overflow: hidden;                    margin-left: 20px;                  "
+                  style="
+                    position: relative;
+                    height: 70px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin-left: 20px;
+                  "
                 >
                   <img
                     src="~@/resource/index-scroll/index-scroll-5.jpg"
                     style="width: 100%; height: 100%"
                   />
                   <div
-                    style="                      position: absolute;                      top: 0px;                      right: 0px;                      background-color: #00a6ff;                      bottom: 0px;                      width: 60px;                      text-align: center;                      padding-top: 10px;                    "
+                    style="
+                      position: absolute;
+                      top: 0px;
+                      right: 0px;
+                      background-color: #00a6ff;
+                      bottom: 0px;
+                      width: 60px;
+                      text-align: center;
+                      padding-top: 10px;
+                    "
                   >
                     <div>
                       <svg
@@ -562,15 +796,33 @@
                 </div>
               </div>
             </div>
-            <div style="display: flex; font-size: 14px" v-for="i3 in 3" :key="i3">
+            <div
+              style="display: flex; font-size: 14px"
+              v-for="i3 in 3"
+              :key="i3"
+            >
               <div
-                style="                  position: relative;                  border-left: 2px solid #e4e7ed;                  margin-left: 30px;                "
+                style="
+                  position: relative;
+                  border-left: 2px solid #e4e7ed;
+                  margin-left: 30px;
+                "
               >
                 <div
-                  style="                    position: absolute;                    border-radius: 50%;                    width: 15px;                    height: 15px;                    left: -9px;                    top: 3px;                    background-color: rgb(228, 231, 237);                  "
+                  style="
+                    position: absolute;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    left: -9px;
+                    top: 3px;
+                    background-color: rgb(228, 231, 237);
+                  "
                 ></div>
                 <div style="margin-bottom: 10px; margin-left: 20px">
-                  <span style="color: #009cf7; font-weight: bold">2020-02-32</span>
+                  <span style="color: #009cf7; font-weight: bold"
+                    >2020-02-32</span
+                  >
                   <span style="margin: 0px 10px">今天的砖额外的烫手</span>
                 </div>
               </div>
@@ -579,72 +831,274 @@
         </div>
       </div>
     </div>
+    <!-- 第三部分 -->
     <div class="t2-bg">
-      <div style="display:flex;width: 77%; margin: 40px auto 0px auto;padding-top:40px;padding-bottom: 20px;">
-        <div style="width:75%;position:relative;margin-right: 20px">
-          <div style="display: inline-flex; align-items: center;margin-bottom:10px">
+      <div
+        style="
+          display: flex;
+          width: 77%;
+          margin: 40px auto 0px auto;
+          padding-top: 40px;
+          padding-bottom: 20px;
+        "
+      >
+        <div style="width: 75%; position: relative; margin-right: 20px">
+          <div
+            style="
+              display: inline-flex;
+              align-items: center;
+              margin-bottom: 10px;
+            "
+          >
             <span>
               <img
                 src="~@/pages/header/live/resource/column-hot-game_9a7e2.png"
                 alt
-                style="width: 32px; height: 32px;"
+                style="width: 32px; height: 32px"
               />
             </span>
             <span
-              style="font-size: 26px; color: #fff; height: 33px;    line-height: 33px;    font-weight: 400;margin:0px 10px 0px 5px"
-            >热门分类</span>
+              style="
+                font-size: 26px;
+                color: #fff;
+                height: 33px;
+                line-height: 33px;
+                font-weight: 400;
+                margin: 0px 10px 0px 5px;
+              "
+              >热门分类</span
+            >
             <span
-              style="padding: 0 15px;    border: 1px solid #e2e2e2;    border-radius: 15px;    background: hsla(0,0%,100%,.8);    float: left;    height: 26px;    line-height: 26px;    margin-right: 5px;"
-              v-for="i5 in ['网游竞技','单机热油','娱乐天地','手游休闲']"
+              style="
+                padding: 0 15px;
+                border: 1px solid #e2e2e2;
+                border-radius: 15px;
+                background: hsla(0, 0%, 100%, 0.8);
+                float: left;
+                height: 26px;
+                line-height: 26px;
+                margin-right: 5px;
+              "
+              v-for="i5 in ['网游竞技', '单机热油', '娱乐天地', '手游休闲']"
               :key="i5"
-            >{{i5}}</span>
+              >{{ i5 }}</span
+            >
             <span
-              style="color: hsla(0,0%,100%,.7);    font-size: 14px;    line-height: 35px;position:absolute;right:0px"
+              style="
+                color: hsla(0, 0%, 100%, 0.7);
+                font-size: 14px;
+                line-height: 35px;
+                position: absolute;
+                right: 0px;
+              "
             >
               <span>当前共有</span>
-              <span style="color: #ff9600;    padding: 0 5px;    font-weight: 400;">751</span>
+              <span style="color: #ff9600; padding: 0 5px; font-weight: 400"
+                >751</span
+              >
               <span>款游戏直播</span>
-              <span style="margin-left:10px">
+              <span style="margin-left: 10px">
                 <span>更多</span>
                 <i class="index-more-icon"></i>
               </span>
             </span>
           </div>
-          <div style="margin-right: -15px">
-            <div v-for="i6 in 12" :key="i6" style="width: calc(100% / 6);float:left;margin-bottom:15px;">
-              <div style="margin-right:15px;background-color: white;border-radius:10px;text-align: center;padding:10px 0px 20px 0px">
+          <div style="margin-right: -15px; overflow: hidden">
+            <div
+              v-for="i6 in 12"
+              :key="i6"
+              style="width: calc(100% / 6); float: left; margin-bottom: 15px"
+            >
+              <div
+                style="
+                  margin-right: 15px;
+                  background-color: white;
+                  border-radius: 7px;
+                  text-align: center;
+                  padding: 10px 0px 20px 0px;
+                "
+              >
                 <img
                   src="~@/pages/header/live/resource/1663-MS.png"
-                  style="width: 80%;"
+                  style="width: 80%"
                 />
-                <div style="font-size: 14px;text-align: center;
-    line-height: 19px;">娱乐</div>
-                <div style="margin-top: 2px;
-    line-height: 16px;    text-align: center;
-    color: #999;font-size: 12px;">1828场直播</div>
+                <div
+                  style="font-size: 14px; text-align: center; line-height: 19px"
+                >
+                  娱乐
+                </div>
+                <div
+                  style="
+                    margin-top: 2px;
+                    line-height: 16px;
+                    text-align: center;
+                    color: #999;
+                    font-size: 12px;
+                  "
+                >
+                  1828场直播
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div style="position:relative;width:calc(25% - 20px)">
-          <div style="display: inline-flex;    align-items: center;">
+        <div style="position: relative; width: calc(25% - 20px)">
+          <div
+            style="
+              display: inline-flex;
+              align-items: center;
+              margin-bottom: 10px;
+            "
+          >
             <span>
               <img
                 src="~@/pages/header/live/resource/column-start_3a045.png"
                 alt
-                style="width: 32px;    height: 32px;"
+                style="width: 32px; height: 32px"
               />
             </span>
-            <span style="font-size: 26px;    line-height: 43px;    color: #fff;margin-left:5px">明星大神</span>
             <span
-              style="color: hsla(0,0%,100%,.7);    font-size: 14px;    line-height: 35px;position:absolute;right:0px"
+              style="
+                font-size: 26px;
+                line-height: 33px;
+                color: #fff;
+                margin-left: 5px;
+              "
+              >明星大神</span
+            >
+            <span
+              style="
+                color: hsla(0, 0%, 100%, 0.7);
+                font-size: 14px;
+                line-height: 35px;
+                position: absolute;
+                right: 0px;
+              "
             >
               <span>成为主播</span>
               <i class="index-more-icon"></i>
             </span>
           </div>
+          <div
+            style="
+              background-color: white;
+              border-radius: 7px;
+              padding: 15px;
+              height: 332px;
+              overflow: auto;
+            "
+            class="hidden-scroll"
+          >
+            <div
+              style="display: flex; margin-bottom: 10px"
+              v-for="i6 in 6"
+              :key="i6"
+            >
+              <div style="position: relative">
+                <img
+                  src="~@/resource/index-scroll/index-scroll-5.jpg"
+                  style="width: 60px; height: 60px; border-radius: 70px"
+                />
+                <img
+                  src="~@/pages/header/live/resource/aaa.gif"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 40px;
+                    right: 0px;
+                    transform: rotate(180deg);
+                  "
+                />
+              </div>
+              <div style="margin: 5px 0px 0px 10px">
+                <div style="font-weight: 600; font-size: 14px">加菲猫</div>
+                <div style="color: #959595; font-size: 12px; margin-top: 2px">
+                  心有多大，舞台就有多刺激。今天的砖还是同样的烫手
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+    <!-- 第四部分 -->
+    <div
+      style="width: 77%; margin: 40px auto; height: 100px; position: relative"
+    >
+      <img
+        src="~@/pages/header/novel/resource/_20220413145041.png"
+        style="width: 100%; height: 100%; border-radius: 5px"
+      />
+      <img
+        src="~@/pages/header/novel/resource/1649836103_198466.png"
+        alt=""
+        style="width: 40%; position: absolute; right: 10%; top: 15px"
+      />
+    </div>
+    <!-- 第五部分 -->
+    <div style="width: 77%; margin: 0px auto">
+      <div style="color: #5a5a5a; margin-bottom: 8px; position: relative">
+        <span style="display: inline-flex; vertical-align: bottom">
+          <svg
+            t="1652074662458"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="23764"
+            width="30"
+            height="30"
+          >
+            <path
+              d="M1018.368 621.056c-33.28-289.792-92.16-497.152-279.04-497.152-94.72 0-143.36 97.28-227.84 104.96-87.04-7.68-133.12-104.96-227.84-104.96-186.88 0-245.76 207.36-276.992 494.592-17.92 153.6-2.56 281.6 92.16 281.6 133.12 0 138.24-120.32 233.472-176.64 35.84-17.92 115.2-26.112 181.76-28.16 66.56 2.56 145.92 10.24 181.76 28.16 94.72 56.32 99.84 176.64 233.472 176.64 91.648 2.56 104.448-125.44 89.088-279.04z m-732.672-26.112C211.968 593.408 153.6 532.48 155.648 458.752c1.536-71.168 58.88-128.512 130.048-130.048 73.216-0.512 132.608 58.368 133.12 131.584v2.048c0 73.216-59.392 132.608-133.12 132.608z m596.992-107.52h-104.96v105.472h-51.2V487.424h-104.96v-51.2h104.96v-102.4h51.2v102.4h104.96v51.2z"
+              fill="#3366FF"
+              p-id="23765"
+            />
+            <path
+              d="M208.896 461.824c0 20.48 8.192 39.936 23.04 53.76 14.336 14.336 33.792 22.528 53.76 23.04 20.48 0 39.936-8.192 53.76-23.04 14.336-14.336 22.528-33.28 23.552-53.76 0-20.48-8.192-39.936-23.04-53.76-14.336-14.336-33.792-22.528-53.76-23.04-20.48 0-39.936 8.192-53.76 23.04-15.36 13.824-23.552 33.792-23.552 53.76z"
+              fill="#AEC9FF"
+              p-id="23766"
+            />
+          </svg>
+        </span>
+        <span style="font-size: 18px; margin: 0px 15px 0px 10px">金融策略</span>
+        <span
+          v-for="i7 in 9"
+          :key="i7"
+          style="
+            background-color: white;
+            padding: 0px 10px;
+            border-radius: 20px;
+            border: 1px solid #d7d7d7;
+            margin-right: 5px;
+            line-height: 25px;
+            font-size: 14px;
+            display: inline-block;
+          "
+          >股票</span
+        >
+        <span
+          style="
+            color: hsla(0, 0%, 100%, 0.7);
+            font-size: 14px;
+            line-height: 35px;
+            position: absolute;
+            right: 0px;
+          "
+        >
+          <span style="color: #ff9600; padding: 0 5px; font-weight: 400"
+            >751</span
+          >
+          <span style="color: #727272">个主播正在直播</span>
+          <span style="margin-left: 10px; color: #2c2c2c">
+            <span>更多</span>
+            <i class="index-more-icon"></i>
+          </span>
+        </span>
+      </div>
+      <div></div>
     </div>
   </div>
 </template><script>
@@ -655,7 +1109,7 @@ export default {
       soundValue: "",
       barrage: true,
       selectedKey: 1,
-      currentSelect: "1"
+      currentSelect: "1",
     };
   },
   methods: {
@@ -665,8 +1119,8 @@ export default {
     },
     handleCarouselChange(val) {
       this.currentSelect = String(val);
-    }
-  }
+    },
+  },
 };
 </script><style lang="less" scoped>
 .index-more-icon {
@@ -678,7 +1132,9 @@ export default {
   height: 12px;
   margin-left: 3px;
   display: inline-block;
+  filter: invert(0.7);
 }
+
 .jfm-dan1 /deep/ .el-switch__core:after {
   content: "弹";
   font-size: 10px;
@@ -686,25 +1142,31 @@ export default {
   line-height: 16px;
   color: #00a1d6;
 }
+
 .jfm-dan2 /deep/ .el-switch__core:after {
   content: "弹";
   font-size: 10px;
   padding-left: 2px;
   line-height: 16px;
 }
+
 .jfm-sound /deep/ .el-slider__button {
   width: 14px;
   height: 14px;
 }
+
 .jfm-sound /deep/ .el-slider__runway {
   margin: 10px 0;
 }
+
 .hidden-scroll::-webkit-scrollbar {
   display: none;
 }
+
 .right-1-img {
   display: none;
 }
+
 .index-mouse-mover {
   .mover-text {
     position: absolute;
@@ -725,6 +1187,7 @@ export default {
     }
   }
 }
+
 .index-mouse-mover:hover {
   .mover-text {
     top: 0px;
@@ -732,6 +1195,7 @@ export default {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     height: 100%;
+
     p {
       white-space: normal;
       height: 36px;
@@ -739,14 +1203,17 @@ export default {
     }
   }
 }
+
 .index-scroll-select {
   position: absolute;
   z-index: 2;
   top: 180px;
   right: 30px;
+
   ul {
     list-style: none;
   }
+
   ul li {
     display: inline-block;
     vertical-align: middle;
@@ -758,6 +1225,7 @@ export default {
     text-align: center;
     cursor: pointer;
   }
+
   .index-selected {
     width: 20px;
     height: 20px;
@@ -766,6 +1234,7 @@ export default {
     background-size: auto 100%;
     margin: 0 auto;
   }
+
   .no-index-selected {
     width: 10px;
     height: 10px;
@@ -774,10 +1243,12 @@ export default {
     margin: 0 auto;
   }
 }
+
 .t-bg {
   background: #fff url("~@/pages/header/live/resource/bg2.png") no-repeat;
   background-size: 100%;
 }
+
 .t2-bg {
   background: #fff url("~@/pages/header/live/resource/wallhaven-g7gool.jpg")
     no-repeat;
