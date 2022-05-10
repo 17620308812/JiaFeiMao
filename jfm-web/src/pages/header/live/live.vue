@@ -3,7 +3,7 @@
     style="
       margin-top: 50px;
       box-shadow: inset 0px 4px 4px 0px rgb(242 242 242);
-      background-color: #f3f3f3;
+      background-color: #f3f3f3;overflow: hidden;
     "
   >
     <!-- 第一部分 -->
@@ -88,9 +88,7 @@
                     />
                   </svg>
                 </span>
-                <div
-                  style="display: inline-flex; position: absolute; right: 0px"
-                >
+                <div style="display: inline-flex; position: absolute; right: 0px">
                   <span style="display: inline-flex; align-items: center">
                     <svg
                       t="1652063716813"
@@ -169,10 +167,7 @@
                         border-radius: 15px;
                       "
                     >
-                      <span
-                        style="color: white; font-size: 12px; margin-right: 8px"
-                        >进入直播间</span
-                      >
+                      <span style="color: white; font-size: 12px; margin-right: 8px">进入直播间</span>
                       <span>
                         <svg
                           t="1652062703166"
@@ -247,16 +242,8 @@
     </div>
     <!-- 第二部分 -->
     <div style="width: 77%; margin: 0px auto">
-      <div
-        style="display: flex; margin-right: -17px; margin-top: 30px"
-        v-for="i2 in 2"
-        :key="i2"
-      >
-        <div
-          style="width: 50%; padding-right: 10px"
-          v-for="item in 2"
-          :key="item"
-        >
+      <div style="display: flex; margin-right: -17px; margin-top: 30px" v-for="i2 in 2" :key="i2">
+        <div style="width: 50%; padding-right: 10px" v-for="item in 2" :key="item">
           <div
             style="
               display: inline-flex;
@@ -288,9 +275,7 @@
                 />
               </svg>
             </span>
-            <span style="font-size: 18px; margin: 0px 15px 0px 5px"
-              >金融策略</span
-            >
+            <span style="font-size: 18px; margin: 0px 15px 0px 5px">金融策略</span>
             <span style="font-size: 14px">股票</span>
             <span style="margin: 0px 10px">·</span>
             <span>基金</span>
@@ -321,9 +306,7 @@
                   />
                 </div>
                 <div class="mover-text">
-                  <p>
-                    余固知謇謇之为患兮，忍而不能舍也。指九天以为正兮，夫惟灵修之故也
-                  </p>
+                  <p>余固知謇謇之为患兮，忍而不能舍也。指九天以为正兮，夫惟灵修之故也</p>
                   <div
                     style="
                       color: antiquewhite;
@@ -380,9 +363,7 @@
                       font-size: 13px;
                       margin-top: 0px;
                     "
-                  >
-                    123.0万观看
-                  </div>
+                  >123.0万观看</div>
                 </div>
               </div>
             </div>
@@ -538,9 +519,7 @@
               overflow: hidden;
               text-overflow: ellipsis;
             "
-          >
-            05.09-05.15-赛事安排
-          </div>
+          >05.09-05.15-赛事安排</div>
           <div style="color: #424242">
             <div
               style="
@@ -568,9 +547,7 @@
                   white-space: nowrap;
                   overflow: hidden;
                 "
-              >
-                2020英雄联盟全球总决赛主题曲MV《所向无前》
-              </div>
+              >2020英雄联盟全球总决赛主题曲MV《所向无前》</div>
               <div style="width: 50px; color: gray">09-17</div>
             </div>
             <div style="padding: 0px 12px">
@@ -592,8 +569,7 @@
                   '商业广告互动规范',
                 ]"
                 :key="i4"
-                >{{ i4 }}</span
-              >
+              >{{ i4 }}</span>
             </div>
           </div>
         </div>
@@ -717,9 +693,7 @@
                   padding-bottom: 5px;
                 "
               >
-                <div
-                  style="position: absolute; border-radius: 50%; left: -14px"
-                >
+                <div style="position: absolute; border-radius: 50%; left: -14px">
                   <svg
                     t="1652089671229"
                     class="icon"
@@ -738,9 +712,7 @@
                   </svg>
                 </div>
                 <div style="margin-bottom: 10px; margin-left: 20px">
-                  <span style="color: orange; font-weight: bold"
-                    >2020-02-32</span
-                  >
+                  <span style="color: orange; font-weight: bold">2020-02-32</span>
                   <span style="margin: 0px 10px">今天的砖额外的烫手</span>
                 </div>
                 <div
@@ -796,11 +768,7 @@
                 </div>
               </div>
             </div>
-            <div
-              style="display: flex; font-size: 14px"
-              v-for="i3 in 3"
-              :key="i3"
-            >
+            <div style="display: flex; font-size: 14px" v-for="i3 in 3" :key="i3">
               <div
                 style="
                   position: relative;
@@ -820,9 +788,7 @@
                   "
                 ></div>
                 <div style="margin-bottom: 10px; margin-left: 20px">
-                  <span style="color: #009cf7; font-weight: bold"
-                    >2020-02-32</span
-                  >
+                  <span style="color: #009cf7; font-weight: bold">2020-02-32</span>
                   <span style="margin: 0px 10px">今天的砖额外的烫手</span>
                 </div>
               </div>
@@ -866,8 +832,7 @@
                 font-weight: 400;
                 margin: 0px 10px 0px 5px;
               "
-              >热门分类</span
-            >
+            >热门分类</span>
             <span
               style="
                 padding: 0 15px;
@@ -881,8 +846,7 @@
               "
               v-for="i5 in ['网游竞技', '单机热油', '娱乐天地', '手游休闲']"
               :key="i5"
-              >{{ i5 }}</span
-            >
+            >{{ i5 }}</span>
             <span
               style="
                 color: hsla(0, 0%, 100%, 0.7);
@@ -893,9 +857,7 @@
               "
             >
               <span>当前共有</span>
-              <span style="color: #ff9600; padding: 0 5px; font-weight: 400"
-                >751</span
-              >
+              <span style="color: #ff9600; padding: 0 5px; font-weight: 400">751</span>
               <span>款游戏直播</span>
               <span style="margin-left: 10px">
                 <span>更多</span>
@@ -918,15 +880,8 @@
                   padding: 10px 0px 20px 0px;
                 "
               >
-                <img
-                  src="~@/pages/header/live/resource/1663-MS.png"
-                  style="width: 80%"
-                />
-                <div
-                  style="font-size: 14px; text-align: center; line-height: 19px"
-                >
-                  娱乐
-                </div>
+                <img src="~@/pages/header/live/resource/1663-MS.png" style="width: 80%" />
+                <div style="font-size: 14px; text-align: center; line-height: 19px">娱乐</div>
                 <div
                   style="
                     margin-top: 2px;
@@ -935,9 +890,7 @@
                     color: #999;
                     font-size: 12px;
                   "
-                >
-                  1828场直播
-                </div>
+                >1828场直播</div>
               </div>
             </div>
           </div>
@@ -964,8 +917,7 @@
                 color: #fff;
                 margin-left: 5px;
               "
-              >明星大神</span
-            >
+            >明星大神</span>
             <span
               style="
                 color: hsla(0, 0%, 100%, 0.7);
@@ -976,7 +928,7 @@
               "
             >
               <span>成为主播</span>
-              <i class="index-more-icon"></i>
+              <i class="index-more-icon" style="filter:none"></i>
             </span>
           </div>
           <div
@@ -989,11 +941,7 @@
             "
             class="hidden-scroll"
           >
-            <div
-              style="display: flex; margin-bottom: 10px"
-              v-for="i6 in 6"
-              :key="i6"
-            >
+            <div style="display: flex; margin-bottom: 10px" v-for="i6 in 6" :key="i6">
               <div style="position: relative">
                 <img
                   src="~@/resource/index-scroll/index-scroll-5.jpg"
@@ -1014,9 +962,9 @@
               </div>
               <div style="margin: 5px 0px 0px 10px">
                 <div style="font-weight: 600; font-size: 14px">加菲猫</div>
-                <div style="color: #959595; font-size: 12px; margin-top: 2px">
-                  心有多大，舞台就有多刺激。今天的砖还是同样的烫手
-                </div>
+                <div
+                  style="color: #959595; font-size: 12px; margin-top: 2px"
+                >心有多大，舞台就有多刺激。今天的砖还是同样的烫手</div>
               </div>
             </div>
           </div>
@@ -1024,21 +972,19 @@
       </div>
     </div>
     <!-- 第四部分 -->
-    <div
-      style="width: 77%; margin: 40px auto; height: 100px; position: relative"
-    >
+    <div style="width: 77%; margin: 40px auto; height: 100px; position: relative">
       <img
         src="~@/pages/header/novel/resource/_20220413145041.png"
         style="width: 100%; height: 100%; border-radius: 5px"
       />
       <img
         src="~@/pages/header/novel/resource/1649836103_198466.png"
-        alt=""
+        alt
         style="width: 40%; position: absolute; right: 10%; top: 15px"
       />
     </div>
     <!-- 第五部分 -->
-    <div style="width: 77%; margin: 0px auto">
+    <div style="width: 77%; margin: 0px auto;margin-bottom:50px" v-for="i10 in 3" :key="i10">
       <div style="color: #5a5a5a; margin-bottom: 8px; position: relative">
         <span style="display: inline-flex; vertical-align: bottom">
           <svg
@@ -1065,7 +1011,7 @@
         </span>
         <span style="font-size: 18px; margin: 0px 15px 0px 10px">金融策略</span>
         <span
-          v-for="i7 in 9"
+          v-for="i7 in 10"
           :key="i7"
           style="
             background-color: white;
@@ -1077,8 +1023,7 @@
             font-size: 14px;
             display: inline-block;
           "
-          >股票</span
-        >
+        >股票</span>
         <span
           style="
             color: hsla(0, 0%, 100%, 0.7);
@@ -1088,9 +1033,7 @@
             right: 0px;
           "
         >
-          <span style="color: #ff9600; padding: 0 5px; font-weight: 400"
-            >751</span
-          >
+          <span style="color: #ff9600; padding: 0 5px; font-weight: 400">751</span>
           <span style="color: #727272">个主播正在直播</span>
           <span style="margin-left: 10px; color: #2c2c2c">
             <span>更多</span>
@@ -1098,7 +1041,51 @@
           </span>
         </span>
       </div>
-      <div></div>
+      <div style="display:flex;margin-right: -20px;">
+        <div style="width: 25%" v-for="i9 in 4" :key="i9">
+          <div
+            style="margin-right: 20px;background-color: white;border-radius: 10px;padding-bottom:10px;"
+          >
+            <div style="position:relative">
+              <img
+                src="~@/resource/index-scroll/index-scroll-5.jpg"
+                style="width:100%;border-top-left-radius: 10px; border-top-right-radius: 10px;display:block"
+              />
+              <span
+                style="background: rgba(31,105,255,.8);min-width: 46px;
+    padding: 0 4px;
+    height: 19px;
+    line-height: 19px;
+    color: #fff;
+    border-radius: 3px;font-size:13px;position:absolute;top:5px;right:5px;"
+              >蓝光10M</span>
+              <div class="j1">
+                <img src="~@/pages/header/live/resource/play-icon_fbf7f.png" />
+              </div>
+            </div>
+            <div
+              style="height: 20px;
+    margin-top: 8px;
+    padding: 0 23px 0 8px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;color: #333;"
+            >五一快乐</div>
+            <div style="display:flex;line-height: 30px;position:relative;margin-top:5px">
+              <img
+                src="~@/resource/index-scroll/index-scroll-5.jpg"
+                style="width:30px; height: 30px; border-radius: 30px;margin:0px 5px;"
+              />
+              <div style="color: #999;font-size:14px">加菲猫</div>
+              <span style="position:absolute;right:10px">
+                <i class="num-icon"></i>
+                <span style="    font-size: 12px;color: #999;">206.8万</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -1111,7 +1098,7 @@ export default {
       soundValue: "",
       barrage: true,
       selectedKey: 1,
-      currentSelect: "1",
+      currentSelect: "1"
     };
   },
   methods: {
@@ -1121,14 +1108,53 @@ export default {
     },
     handleCarouselChange(val) {
       this.currentSelect = String(val);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="less" scoped>
+.j1 {
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  img {
+    align-self: center;
+    margin: 0 auto;
+    transform: scale(2);
+    transition: all 0.3s ease-out;
+    opacity: 0;
+  }
+}
+
+.j1:hover {
+  position: absolute;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  img {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin: 0 auto;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.num-icon {
+  display: inline-block;
+  width: 12px;
+  height: 16px;
+  margin: 0 4px 0 2px;
+  vertical-align: -3px;
+  background: url("~@/pages/header/live/resource/people_icon_fa6d9.png") 50%
+    no-repeat;
+  background-size: cover;
+}
+
 .index-more-icon {
-  background: url(https://a.msstatic.com/huya/main3/widget/index-recomGame/img/arrow_77dd1.png);
+  background: url("~@/pages/header/live/resource/arrow_77dd1.png");
   background-size: cover;
   position: relative;
   top: 1px;
