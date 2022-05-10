@@ -1101,7 +1101,9 @@
       <div></div>
     </div>
   </div>
-</template><script>
+</template>
+
+<script>
 export default {
   name: "Live",
   data() {
@@ -1122,7 +1124,9 @@ export default {
     },
   },
 };
-</script><style lang="less" scoped>
+</script>
+
+<style lang="less" scoped>
 .index-more-icon {
   background: url(https://a.msstatic.com/huya/main3/widget/index-recomGame/img/arrow_77dd1.png);
   background-size: cover;
